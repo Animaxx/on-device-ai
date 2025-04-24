@@ -328,7 +328,7 @@ section {
 }
 
 .feature-media {
-    height: 180px;
+    height: 300px;
     width: 100%;
     background-color: #e9ecef;
     border-radius: 8px;
@@ -356,6 +356,16 @@ section {
 .features-cta {
     text-align: center;
     margin-top: 60px;
+    position: relative;
+    z-index: 10; /* Ensure it's above any background elements */
+    pointer-events: auto; /* Explicitly enable pointer events */
+}
+
+.features-cta .app-store-button {
+    pointer-events: auto; /* Ensure the button is clickable */
+    display: inline-block;
+    position: relative;
+    z-index: 11;
 }
 
 /* News Section */
@@ -455,18 +465,68 @@ footer p {
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
+    .hero {
+        position: relative;
+        overflow: hidden;
+    }
+    
     .hero-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
+        position: relative;
+        z-index: 2;
     }
     
     .hero-text {
         max-width: 100%;
+        background-color: rgba(248, 249, 250, 0.85);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        margin-bottom: 0;
+    }
+    
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none; /* Prevent blocking interactions */
     }
     
     .device-mockup {
         transform: none;
-        margin-bottom: 40px;
+        margin-bottom: 0;
+        max-width: 85%;
+        height: 100%;
+        opacity: 0.8;
+        pointer-events: none; /* Prevent blocking interactions */
+    }
+    
+    .mockup-image {
+        object-fit: contain;
+        pointer-events: none; /* Ensure the image doesn't capture clicks */
+    }
+
+    /* Ensure that only the hero section background elements ignore pointer events */
+    #home .hero-image,
+    #home .device-mockup,
+    #home .mockup-image {
+        pointer-events: none;
+    }
+    
+    /* Make sure other sections' elements remain interactive */
+    #features, #features *,
+    #news, #news *,
+    #contact, #contact * {
+        pointer-events: auto;
     }
 }
 
