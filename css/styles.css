@@ -50,7 +50,7 @@ h2 {
 .subtitle {
     font-size: 1.6em;
     font-weight: 500;
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
     margin-top: 0;
     margin-bottom: 20px;
     letter-spacing: -0.3px;
@@ -63,7 +63,7 @@ h3 {
 }
 
 .highlight {
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
 }
 
 .section-intro {
@@ -95,13 +95,13 @@ header .container {
 .logo a {
     font-size: 1.4em;
     font-weight: 600;
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .logo a:hover {
-    color: #0056b3;
+    color: #007a99; /* Updated from #0056b3 */
 }
 
 header nav ul {
@@ -122,7 +122,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
 }
 
 header nav a::after {
@@ -133,7 +133,7 @@ header nav a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #007aff;
+    background-color: #5ac8fa; /* Updated from #007aff */
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
 }
@@ -144,7 +144,7 @@ header nav a:hover::after {
 }
 
 header nav a.active {
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
 }
 
 header nav a.active::after {
@@ -317,13 +317,13 @@ section {
 .feature-icon {
     width: 60px;
     height: 60px;
-    background-color: #f0f7ff;
+    background-color: #e0f5ff; /* Updated from #f0f7ff */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
     font-size: 24px;
 }
 
@@ -417,7 +417,7 @@ section {
 /* Contact Section */
 #contact {
     text-align: center;
-    background-color: #f0f7ff;
+    background-color: #e0f5ff; /* Updated from #f0f7ff */
     border-radius: 0;
 }
 
@@ -425,7 +425,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #007aff;
+    background-color: #5ac8fa; /* Updated from #007aff */
     color: #ffffff;
     padding: 14px 28px;
     border-radius: 30px;
@@ -433,12 +433,12 @@ section {
     font-weight: 500;
     margin-top: 30px;
     transition: all 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(90, 200, 250, 0.3); /* Updated shadow color */
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.4);
+    background-color: #007a99; /* Updated from #0056b3 */
+    box-shadow: 0 8px 20px rgba(90, 200, 250, 0.4); /* Updated shadow color */
     transform: translateY(-2px);
 }
 
@@ -467,7 +467,7 @@ footer nav ul {
 }
 
 footer nav a {
-    color: #007aff;
+    color: #5ac8fa; /* Updated from #007aff */
     text-decoration: none;
 }
 
