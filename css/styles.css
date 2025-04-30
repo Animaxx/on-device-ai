@@ -580,3 +580,28 @@ footer p {
         padding: 40px 0;
     }
 }
+
+/* Styles specific to policy pages */
+.policy-page main section {
+    padding: 40px 20px; /* Adjusted padding for policy sections, added horizontal padding */
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.policy-page main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.policy-page main h2 {
+    margin-top: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.policy-page main p {
+    margin-bottom: 1.2em;
+    line-height: 1.7;
+}
+.policy-page footer {
+    margin-top: 60px; /* Ensure space before footer */
+}
