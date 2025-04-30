@@ -196,7 +196,7 @@ section {
 
 .device-mockup {
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
     aspect-ratio: 9/19; /* Adjusted aspect ratio to show more content */
     background-color: transparent; /* Changed from white to transparent */
     border-radius: 50px;
