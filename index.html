@@ -40,6 +40,8 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Anime.js for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
     <div class="background-gradient"></div>
@@ -53,8 +55,9 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#technology">Technology</a></li>
                     <li><a href="#features">Features</a></li>
-                    <!-- <li><a href="#news">News</a></li> -->
+                    <li><a href="#privacy">Privacy</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -65,18 +68,132 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>On Device AI</h1>
-                        <h2 class="subtitle">AI that respects your privacy</h2>
-                        <p>The Best Large Language Models (LLMs) and real-time voice transcription directly on your Device, without internet!</p>
-                        <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="app-store-button">
+                        <h1 class="hero-title">
+                            <span class="title-line-1">On Device AI</span>
+                            <span class="title-line-2">AI that respects your privacy</span>
+                        </h1>
+                        <p class="hero-description">Transform voice into text instantly and collaborate with powerful AI teams - all offline and private. The Best Large Language Models (LLMs) and real-time voice transcription directly on your Device, without internet!</p>
+                        <div class="hero-features">
+                            <div class="hero-feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Private</span>
+                            </div>
+                            <div class="hero-feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Lightning Fast</span>
+                            </div>
+                            <div class="hero-feature">
+                                <i class="fas fa-wifi-slash"></i>
+                                <span>Works Offline</span>
+                            </div>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="app-store-button enhanced">
                             <img src="images/app-store-badge.svg" alt="Download on the App Store">
                         </a>
                         <p class="platforms">Available for iOS, macOS, and visionOS</p>
                     </div>
                     <div class="hero-image">
-                        <div class="device-mockup">
+                        <div class="device-mockup floating-device">
                             <!-- App screenshot mockup -->
                             <img src="images/phone_screen.png" alt="App Screenshot" class="mockup-image">
+                            <!-- Floating UI elements -->
+                            <div class="floating-ui-elements">
+                                <div class="ui-element ai-badge">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI Processing</span>
+                                </div>
+                                <div class="ui-element privacy-badge">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Private</span>
+                                </div>
+                                <div class="ui-element speed-badge">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Instant</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="technology-section">
+            <div class="container">
+                <h2>How <span class="highlight">On-Device AI</span> Works</h2>
+                <p class="section-intro">Experience the power of AI processing directly on your device, ensuring complete privacy and instant responses.</p>
+                
+                <div class="tech-comparison">
+                    <div class="comparison-item cloud-ai">
+                        <div class="comparison-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Traditional Cloud AI</h3>
+                        </div>
+                        <div class="workflow">
+                            <div class="workflow-step">
+                                <span class="step-icon">📱</span>
+                                <span class="step-text">Your Data</span>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-icon">☁️</span>
+                                <span class="step-text">Cloud Server</span>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-icon">🤖</span>
+                                <span class="step-text">AI Response</span>
+                            </div>
+                        </div>
+                        <div class="concerns">
+                            <div class="concern">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Privacy Risk</span>
+                            </div>
+                            <div class="concern">
+                                <i class="fas fa-clock"></i>
+                                <span>Network Delays</span>
+                            </div>
+                            <div class="concern">
+                                <i class="fas fa-wifi"></i>
+                                <span>Internet Required</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item on-device-ai">
+                        <div class="comparison-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3>On-Device AI</h3>
+                        </div>
+                        <div class="workflow">
+                            <div class="workflow-step">
+                                <span class="step-icon">📱</span>
+                                <span class="step-text">Your Data</span>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-icon">🧠</span>
+                                <span class="step-text">Local AI</span>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <span class="step-icon">⚡</span>
+                                <span class="step-text">Instant Response</span>
+                            </div>
+                        </div>
+                        <div class="benefits">
+                            <div class="benefit">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Private</span>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-bolt"></i>
+                                <span>Lightning Fast</span>
+                            </div>
+                            <div class="benefit">
+                                <i class="fa-solid fa-wifi-slash"></i>
+                                <span>Works Offline</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,72 +206,90 @@
                 <p class="section-intro">Experience the power of AI right on your device, with no network dependency. Say goodbye to network dependency and privacy concerns.</p>
                 
                 <div class="feature-list">
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="0">
                         <div class="feature-media">
                             <img src="screenshots/ai_settings.jpeg" alt="AI Settings Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Local Processing</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
-                            <h3>Offline AI, Anytime</h3>
-                            <p>Run top-tier models like Llama, Gemini, DeepSeek, Mistral, and more entirely on your device; with customizable settings to optimize your models for performance and accuracy.</p>
+                            <h3>Collaborative AI Teams</h3>
+                            <p>Create sophisticated AI teams where different specialized agents work together on complex tasks. Run top-tier models like Llama, Gemma, Phi, Qwen, DeepSeek, and more entirely on your device.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="100">
                         <div class="feature-media">
                             <img src="screenshots/voice_memo.jpeg" alt="Voice Memo Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Voice AI</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
                             <h3>Voice Notes & Transcription</h3>
                             <p>Instantly record, transcribe, summarize, and translate audio securely on-device. Navigate recordings with word-level precision and process content in multiple languages while maintaining complete privacy.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="200">
                         <div class="feature-media">
                             <img src="screenshots/remote_connect.jpeg" alt="Remote Connect Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-link"></i>
+                                    <span>Encrypted Connection</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
                             <h3>Remote Connect with Mac</h3>
-                            <p>Encrypted Connect your iOS or Vision Pro App to your Mac for superior processing power. Run larger models, utilize expanded context windows, and enjoy dramatically improved response times.</p>
+                            <p>Encrypted Connect your iOS or Vision Pro App to your Mac for superior processing power. Run larger models, utilize expanded context windows, and enjoy dramatically improved response times. Keep On-Device AI readily available in your Mac's menu bar for instant access.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-search"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="300">
                         <div class="feature-media">
                             <img src="screenshots/search.jpeg" alt="Web Search Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-search"></i>
+                                    <span>AI Analysis</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
                             <h3>Built-In Web Search</h3>
                             <p>Search the web directly within the app with AI-powered analysis that transforms results into coherent summaries. Ask complex questions about current events and receive structured responses while maintaining privacy.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-user-gear"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="400">
                         <div class="feature-media">
                             <img src="screenshots/personas.jpeg" alt="AI Personas Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-user-robot"></i>
+                                    <span>Custom AI</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
                             <h3>AI Personas at Your Fingertips</h3>
                             <p>Create custom AI roles with unique personalities, expertise, and preferred models. Seamlessly switch between different AI specialists for coding, writing, research, or coaching with just a tap.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <!-- <div class="feature-icon">
-                            <i class="fas fa-link"></i>
-                        </div> -->
+                    <div class="feature-item" data-anime-delay="500">
                         <div class="feature-media">
                             <img src="screenshots/context_integration.jpeg" alt="Context Integration Screenshot">
+                            <div class="feature-overlay">
+                                <div class="tech-indicator">
+                                    <i class="fas fa-brain"></i>
+                                    <span>Smart Context</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="feature-description">
                             <h3>Smart Context Integration</h3>
@@ -171,30 +306,123 @@
             </div>
         </section>
 
-        <!-- <section id="news">
+        <section id="privacy" class="privacy-section">
             <div class="container">
-                <h2>Latest <span class="highlight">News</span></h2>
-                <p class="section-intro">Stay updated with the latest developments and updates.</p>
+                <h2>Your Data <span class="highlight">Stays With You</span></h2>
+                <p class="section-intro">Complete privacy by design. Your conversations, voice recordings, and personal data never leave your device.</p>
                 
-                <div class="news-placeholder">
-                    <p>News articles will be coming soon!</p>
-                    <div class="placeholder-articles">
-                        <div class="article-card"></div>
-                        <div class="article-card"></div>
-                        <div class="article-card"></div>
+                <div class="privacy-showcase">
+                    <div class="privacy-visual">
+                        <div class="device-boundary">
+                            <div class="data-flow">
+                                <div class="data-point">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Voice Input</span>
+                                </div>
+                                <div class="data-point">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI Processing</span>
+                                </div>
+                                <div class="data-point">
+                                    <i class="fas fa-comment"></i>
+                                    <span>Text Output</span>
+                                </div>
+                            </div>
+                            <div class="privacy-shield">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Protected</span>
+                            </div>
+                        </div>
+                        <div class="external-blocked">
+                            <i class="fas fa-ban"></i>
+                            <span>Zero Data Leakage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-benefits">
+                        <div class="privacy-benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Complete Anonymity</h3>
+                                <p>No accounts, no data collection, no tracking. Your identity and usage patterns remain completely private.</p>
+                            </div>
+                        </div>
+                        <div class="privacy-benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Offline First</h3>
+                                <p>Core AI features work completely offline. When online features are used, only minimal metadata is transmitted.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+
+        <section id="platforms" class="platforms-section">
+            <div class="container">
+                <h2>Available on <span class="highlight">All Your Devices</span></h2>
+                <p class="section-intro">Seamlessly sync across iOS, macOS, and visionOS with encrypted cloud synchronization.</p>
+                
+                <div class="platform-showcase">
+                    <div class="platform-device ios">
+                        <div class="device-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h3>iOS</h3>
+                        <p>iPhone and iPad</p>
+                        <ul>
+                            <li>Voice transcription on the go</li>
+                            <li>Optimized for mobile AI processing</li>
+                            <li>Siri Shortcuts integration</li>
+                        </ul>
+                    </div>
+                    <div class="platform-device macos">
+                        <div class="device-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>macOS</h3>
+                        <p>Mac computers</p>
+                        <ul>
+                            <li>Maximum AI model performance</li>
+                            <li>Large context window support</li>
+                            <li>Remote iOS device connection</li>
+                        </ul>
+                    </div>
+                    <div class="platform-device visionos">
+                        <div class="device-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <h3>visionOS</h3>
+                        <p>Apple Vision Pro</p>
+                        <ul>
+                            <li>Immersive AI interactions</li>
+                            <li>Spatial computing integration</li>
+                            <li>Hand gesture controls</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="app-store-button primary">
+                        <img src="images/app-store-badge.svg" alt="Download on the App Store">
+                    </a>
+                    <p class="download-note">Free download • No ADs • Privacy first</p>
+                </div>
+            </div>
+        </section>
 
         <section id="contact">
             <div class="container">
                 <h2>Get in <span class="highlight">Touch</span></h2>
                 <p>Have questions or feedback? love to hear from you!</p>
-                <a href="mailto:animax.development@gmail.com" class="contact-button">
+                <a href="mailto:developer@ondevice-ai.app" class="contact-button">
                     <i class="fas fa-envelope"></i> Send me an Email
                 </a>
-                <!-- <p><small>E-Mail: animax.development@gmail.com</small></p> -->
             </div>
         </section>
     </main>
