@@ -441,13 +441,13 @@ section {
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
 }
 
-.app-store-button.enhanced {
+/* .app-store-button.enhanced {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(90, 200, 250, 0.1) 100%);
     padding: 8px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-}
+} */
 
 /* Animations */
 @keyframes fadeInUp {
