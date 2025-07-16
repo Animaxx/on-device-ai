@@ -252,7 +252,7 @@ section {
 
 .hero-title .title-line-1 {
     display: block;
-    font-size: 3.2em;
+    font-size: 1.4em;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: var(--text-primary);
@@ -262,7 +262,7 @@ section {
 
 .hero-title .title-line-2 {
     display: block;
-    font-size: 1.6em;
+    font-size: 0.6em;
     font-weight: 500;
     color: var(--primary-blue-light);
     letter-spacing: -0.3px;
@@ -1346,30 +1346,21 @@ footer p {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        position: relative;
-        z-index: 2;
-        gap: 40px;
     }
-    
+
     .hero-text {
         max-width: 100%;
-        background: rgba(248, 249, 250, 0.95);
-        padding: 40px;
-        border-radius: var(--border-radius-large);
-        box-shadow: var(--shadow-medium);
-        backdrop-filter: blur(15px);
-        margin-bottom: 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        order: 2;
     }
-    
+
     .hero-title .title-line-1 {
-        font-size: 2.8em;
+        font-size: 2.5em;
     }
-    
+
     .hero-title .title-line-2 {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
-    
+
     .hero-features {
         justify-content: center;
         gap: 20px;
@@ -1427,7 +1418,7 @@ footer p {
     }
     
     h1 {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
     
     .hero-title .title-line-1 {
@@ -1435,11 +1426,11 @@ footer p {
     }
     
     .hero-title .title-line-2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     
     h2 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     
     .hero {
@@ -1527,16 +1518,15 @@ footer p {
 
 @media (max-width: 480px) {
     .hero-title .title-line-1 {
-        font-size: 1.8em;
-        line-height: 1.2;
+        font-size: 2em;
     }
-    
+
     .hero-title .title-line-2 {
         font-size: 1.1em;
     }
-    
+
     .hero-description {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     
     .hero-text {
