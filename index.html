@@ -241,6 +241,12 @@
                         <p class="platforms">Available for iOS, macOS, and visionOS</p>
                     </div>
                     <div class="hero-image">
+                        <!-- Glow orbs background -->
+                        <div class="glow-orbs">
+                            <div class="glow-orb orb-1"></div>
+                            <div class="glow-orb orb-2"></div>
+                            <div class="glow-orb orb-3"></div>
+                        </div>
                         <div class="device-mockup floating-device">
                             <!-- App screenshot mockup -->
                             <img src="images/phone_screen.png" alt="App Screenshot" class="mockup-image">
@@ -262,6 +268,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Floating particles container -->
+                <div class="particles-container" id="hero-particles"></div>
             </div>
         </section>
 
@@ -318,7 +326,9 @@
                         </div>
                         <div class="feature-description">
                             <h3>Professional Text-to-Speech</h3>
-                            <p>Generate natural, professional quality speech from any text using Apple voices or the advanced Kokoro voice engine. Create audio content, narrate summaries, and bring your text to life with realistic voices - all processed securely on your device.</p>
+                            <p>Generate natural, professional quality speech from any text using Apple voices or the
+                                advanced Kokoro voice engine. Create audio content, narrate summaries, and bring your
+                                text to life with realistic voices - all processed securely on your device.</p>
                         </div>
                     </div>
                     <div class="feature-item" data-anime-delay="300">
@@ -480,10 +490,18 @@
                                     <i class="fas fa-microphone"></i>
                                     <span>Voice Input</span>
                                 </div>
+                                <svg class="flow-arrow" viewBox="0 0 40 20" width="40" height="20">
+                                    <path class="flow-line" d="M0 10 L30 10 M25 5 L30 10 L25 15" fill="none"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
                                 <div class="data-point">
                                     <i class="fas fa-brain"></i>
                                     <span>AI Processing</span>
                                 </div>
+                                <svg class="flow-arrow" viewBox="0 0 40 20" width="40" height="20">
+                                    <path class="flow-line" d="M0 10 L30 10 M25 5 L30 10 L25 15" fill="none"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
                                 <div class="data-point">
                                     <i class="fas fa-comment"></i>
                                     <span>Text Output</span>

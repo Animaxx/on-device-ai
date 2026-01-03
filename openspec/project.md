@@ -18,9 +18,17 @@ On Device AI Website is the public marketing site for the On Device AI applicati
   - Single global stylesheet `css/styles.css` using CSS custom properties (`:root` variables) for colors, spacing, and shadows.
   - Responsive layout using flexbox and CSS grid; no CSS framework.
 - Interactivity and animations:
-  - Custom scroll, hover, and animation logic in `js/main.js`.
-  - IntersectionObserver for scroll-triggered animations.
-  - Anime.js via CDN for enhanced motion effects.
+  - Custom scroll, hover, and animation logic in `js/main.js` using a centralized `MotionController` pattern.
+  - Motion tokens (durations, easings) defined in CSS custom properties and mirrored in JS for consistency.
+  - Reduced motion support via `prefers-reduced-motion` media query detection.
+  - IntersectionObserver for scroll-triggered reveal and stagger animations.
+  - Anime.js via CDN for enhanced motion effects (glow orbs, floating particles, SVG path animations).
+  - Single rAF-batched scroll listener for parallax and header effects to avoid performance issues.
+- Visual enhancements:
+  - Hero glow orbs with animated opacity and floating movement.
+  - Floating particle effects with multi-color palette (blue, purple, indigo).
+  - SVG flow arrows in privacy section with stroke-dashoffset drawing animation.
+  - Icon hover effects with scale and wiggle animations.
 - Icons and assets:
   - Font Awesome 6 via CDN for icons.
   - App Store badge, screenshots, and marketing images under `images/` and `screenshots/`.
