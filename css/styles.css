@@ -48,7 +48,9 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--text-primary);
     margin-top: 1.5em;
     margin-bottom: 0.8em;
@@ -455,6 +457,7 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -462,9 +465,12 @@ section {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: perspective(1000px) rotateY(-10deg) translateY(0px);
     }
+
     50% {
         transform: perspective(1000px) rotateY(-10deg) translateY(-10px);
     }
@@ -475,6 +481,7 @@ section {
         opacity: 0.6;
         transform: translateY(0px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(-5px);
@@ -482,12 +489,29 @@ section {
 }
 
 /* Animation delays for staggered feature cards */
-.feature-item:nth-child(1) { animation-delay: 0.1s; }
-.feature-item:nth-child(2) { animation-delay: 0.2s; }
-.feature-item:nth-child(3) { animation-delay: 0.3s; }
-.feature-item:nth-child(4) { animation-delay: 0.4s; }
-.feature-item:nth-child(5) { animation-delay: 0.5s; }
-.feature-item:nth-child(6) { animation-delay: 0.6s; }
+.feature-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feature-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.feature-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.feature-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
 
 /* Technology section animations */
 .comparison-item {
@@ -503,9 +527,17 @@ section {
 }
 
 /* Platform device animations */
-.platform-device:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.2s both; }
-.platform-device:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.4s both; }
-.platform-device:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.6s both; }
+.platform-device:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.platform-device:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.platform-device:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
 
 /* Features Section */
 #features {
@@ -522,7 +554,7 @@ section {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 20% 80%, rgba(90, 200, 250, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(90, 200, 250, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(90, 200, 250, 0.05) 0%, transparent 50%);
     z-index: 0;
 }
 
@@ -954,13 +986,15 @@ footer p {
     font-weight: bold;
 }
 
-.concerns, .benefits {
+.concerns,
+.benefits {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.concern, .benefit {
+.concern,
+.benefit {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1006,13 +1040,11 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(71, 85, 105, 0.1) 10px,
-        rgba(71, 85, 105, 0.1) 20px
-    );
+    background: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(71, 85, 105, 0.1) 10px,
+            rgba(71, 85, 105, 0.1) 20px);
     z-index: 0;
 }
 
@@ -1174,6 +1206,110 @@ footer p {
     line-height: 1.6;
 }
 
+/* FAQ Section */
+.faq-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(90, 200, 250, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.faq-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-light);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(90, 200, 250, 0.3);
+}
+
+.faq-item summary {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--primary-blue-light);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.faq-item[open] summary {
+    background: rgba(90, 200, 250, 0.05);
+    border-bottom: 1px solid rgba(90, 200, 250, 0.1);
+}
+
+.faq-item p {
+    padding: 0 25px 25px;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Platforms Section */
 .platforms-section {
     padding: 100px 0;
@@ -1239,7 +1375,7 @@ footer p {
     box-shadow: var(--shadow-strong);
 }
 
-.platform-device > * {
+.platform-device>* {
     position: relative;
     z-index: 1;
 }
@@ -1264,7 +1400,7 @@ footer p {
     font-size: 1.4em;
 }
 
-.platform-device > p {
+.platform-device>p {
     color: var(--text-secondary);
     margin-bottom: 25px;
     font-weight: 500;
@@ -1320,16 +1456,16 @@ footer p {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .privacy-showcase {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .privacy-visual {
         order: 2;
     }
-    
+
     .privacy-benefits {
         order: 1;
     }
@@ -1342,7 +1478,7 @@ footer p {
         padding: 80px 0 60px;
         min-height: 70vh;
     }
-    
+
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -1365,7 +1501,7 @@ footer p {
         justify-content: center;
         gap: 20px;
     }
-    
+
     .hero-image {
         position: absolute;
         top: 0;
@@ -1379,7 +1515,7 @@ footer p {
         align-items: center;
         pointer-events: none;
     }
-    
+
     .device-mockup {
         transform: none;
         margin-bottom: 0;
@@ -1388,24 +1524,24 @@ footer p {
         opacity: 0.8;
         pointer-events: none;
     }
-    
+
     .floating-ui-elements {
         display: none;
     }
-    
+
     .comparison-item {
         padding: 30px;
     }
-    
+
     .workflow {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .workflow-arrow {
         transform: rotate(90deg);
     }
-    
+
     .platform-showcase {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1416,101 +1552,102 @@ footer p {
     .container {
         padding: 0 15px;
     }
-    
+
     h1 {
         font-size: 2.8em;
     }
-    
+
     .hero-title .title-line-1 {
         font-size: 2.2em;
     }
-    
+
     .hero-title .title-line-2 {
         font-size: 1.2em;
     }
-    
+
     h2 {
         font-size: 2em;
     }
-    
+
     .hero {
         padding: 60px 0 40px;
         min-height: 60vh;
     }
-    
+
     .hero-text {
         padding: 30px 25px;
     }
-    
+
     .hero-description {
         font-size: 1.1em;
     }
-    
+
     .hero-features {
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
-    
+
     .hero-feature {
         padding: 10px 18px;
         font-size: 0.9em;
     }
-    
+
     header nav ul {
         gap: 20px;
     }
-    
+
     header nav a {
         font-size: 0.9em;
     }
-    
+
     .feature-list {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .feature-item {
         padding: 25px;
     }
-    
+
     .feature-media {
         height: 250px;
     }
-    
+
     section {
         padding: 60px 0;
     }
-    
+
     .technology-section,
     .privacy-section,
     .platforms-section,
+    .faq-section,
     #contact {
         padding: 80px 0;
     }
-    
+
     .tech-comparison {
         gap: 25px;
     }
-    
+
     .comparison-item {
         padding: 25px;
     }
-    
+
     .privacy-benefit {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
-    
+
     .platform-device {
         padding: 30px 25px;
     }
-    
+
     .download-section {
         padding: 30px 20px;
     }
-    
+
     footer nav ul {
         gap: 25px;
     }
@@ -1528,44 +1665,44 @@ footer p {
     .hero-description {
         font-size: 1.1em;
     }
-    
+
     .hero-text {
         padding: 25px 20px;
     }
-    
+
     h2 {
         font-size: 1.6em;
     }
-    
+
     .section-intro {
         font-size: 1em;
     }
-    
+
     .feature-media {
         height: 200px;
     }
-    
+
     .comparison-item {
         padding: 20px;
     }
-    
+
     .workflow-step {
         min-width: 60px;
     }
-    
+
     .step-icon {
         font-size: 1.5em;
     }
-    
+
     .step-text {
         font-size: 0.8em;
     }
-    
+
     .contact-button {
         padding: 14px 24px;
         font-size: 1em;
     }
-    
+
     footer nav ul {
         flex-direction: column;
         gap: 15px;
@@ -1591,6 +1728,7 @@ html {
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     ::before,
     ::after {
@@ -1602,12 +1740,13 @@ html {
 
 /* Print styles */
 @media print {
+
     .floating-ui-elements,
     .app-store-button,
     header nav {
         display: none !important;
     }
-    
+
     body {
         background: white !important;
         color: black !important;
