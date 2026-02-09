@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Models - On Device AI Docs</title>
+    <meta name="description" content="Analyze images, screenshots, and documents with on-device vision AI models in On Device AI.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/vision-models.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="./" class="active">Docs</a></li><li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li><li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li></ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li></ul></div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="text-to-speech.html">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="vision-models.html" class="active">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li></ul></div>
+        </aside>
+        <main class="docs-content">
+            <h1>Vision Models</h1>
+            <p>Vision Language Models (VLMs) let you analyze images, screenshots, diagrams, and documents directly in your conversations. The AI can "see" and understand visual content.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#supported-models">Supported Models</a></li>
+                    <li><a href="#usage">Using Vision Models</a></li>
+                    <li><a href="#vlm-vs-ocr">VLM vs OCR Processing</a></li>
+                    <li><a href="#camera">Camera Integration</a></li>
+                    <li><a href="#tips">Tips for Best Results</a></li>
+                </ul>
+            </div>
+
+            <h2 id="supported-models">Supported Models</h2>
+            <p>On Device AI supports vision models through both inference engines:</p>
+            <ul>
+                <li><strong>GGUF (llama.cpp):</strong> Vision-capable GGUF models with multimodal projection</li>
+                <li><strong>MLX:</strong> MLX-optimized vision models (e.g., Qwen3 VL)</li>
+                <li><strong>Cloud APIs:</strong> Vision-capable cloud models from OpenAI, Anthropic, Google, etc.</li>
+            </ul>
+            <p>Vision models are identified by a <code>[VLM]</code> tag in the model picker.</p>
+
+            <h2 id="usage">Using Vision Models</h2>
+            <ol class="steps">
+                <li><strong>Select a VLM model</strong><p>Choose a vision-capable model from the model picker (look for the [VLM] tag).</p></li>
+                <li><strong>Attach an image</strong><p>Use the camera button, photo library, or paste an image into the chat.</p></li>
+                <li><strong>Ask about the image</strong><p>Type your question about the image. Examples: "What's in this image?", "Read the text in this screenshot", "Describe this diagram".</p></li>
+            </ol>
+
+            <h2 id="vlm-vs-ocr">VLM vs OCR Processing</h2>
+            <p>The app handles images differently depending on whether you're using a vision model:</p>
+            <ul>
+                <li><strong>VLM models:</strong> The raw image is passed directly to the model for visual understanding. No OCR step needed — the model processes pixels directly.</li>
+                <li><strong>Non-VLM models:</strong> Images are processed with OCR (Optical Character Recognition) to extract text, which is then passed to the text-only model.</li>
+            </ul>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>For analyzing charts, diagrams, or complex visual layouts, use a VLM model. For simple text extraction from screenshots, either approach works well.</p>
+            </div>
+
+            <h2 id="camera">Camera Integration</h2>
+            <p>On iOS, you can use the camera directly within the app to capture images for analysis. This is great for:</p>
+            <ul>
+                <li>Scanning documents and receipts</li>
+                <li>Analyzing whiteboards and handwritten notes</li>
+                <li>Reading signs, labels, or physical text</li>
+                <li>Identifying objects or scenes</li>
+            </ul>
+
+            <h2 id="tips">Tips for Best Results</h2>
+            <ul>
+                <li>Use well-lit, clear images for better analysis</li>
+                <li>Crop images to focus on the relevant content</li>
+                <li>Be specific in your questions about what you want analyzed</li>
+                <li>For documents, ensure text is readable and not blurry</li>
+                <li>Larger VLM models generally produce more accurate analysis</li>
+            </ul>
+
+            <div class="docs-nav-footer">
+                <a href="web-search.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Web Search</span></a>
+                <a href="chat-flows.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Chat Flows</span></a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Smart App Banner for iOS -->
     <meta name="apple-itunes-app" content="app-id=6497060890">
 
-    <!-- Primary Meta Tags -->
-    <title>On Device AI App</title>
-    <meta name="title" content="On Device AI - Your Personal Privacy First AI with Voice Memo & Translation">
-    <meta name="description"
-        content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run DeepSeek, Gemma & Qwen locally. Voice transcription, document analysis, collaborative AI teams, and Knowledge Libraries - all with 100% privacy.">
-    <meta name="keywords"
-        content="voice memo, voice transcription, On Device AI, offline AI, privacy AI, LLM, Local LLM, Run LLM locally, iOS AI, macOS AI, visionOS AI">
-
+    <title>On Device AI - Private AI Assistant for iPhone, Mac & Vision Pro</title>
+    <meta name="description" content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run DeepSeek, Gemma & Qwen locally. Voice transcription, document analysis, collaborative AI teams, and Knowledge Libraries - all with 100% privacy.">
+    <meta name="keywords" content="On Device AI, offline AI, privacy AI, LLM, Local LLM, iOS AI, macOS AI, visionOS AI, voice transcription, knowledge library">
     <meta name="author" content="Zijie">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://OnDevice-ai.app/">
-    <meta property="og:title" content="On Device AI - Powerful AI Offline">
-    <meta property="og:description"
-        content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run DeepSeek, Gemma & Qwen locally. Voice transcription, document analysis, collaborative AI teams, and Knowledge Libraries - all with 100% privacy.">
+    <meta property="og:title" content="On Device AI - Powerful AI, 100% Private">
+    <meta property="og:description" content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run DeepSeek, Gemma & Qwen locally. Voice transcription, collaborative AI teams, and Knowledge Libraries.">
     <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://OnDevice-ai.app/">
-    <meta property="twitter:title" content="On Device AI - Powerful AI Offline">
-    <meta property="twitter:description"
-        content="Run powerful AI models and voice transcription directly on your device, with no internet required.">
+    <meta property="twitter:title" content="On Device AI - Powerful AI, 100% Private">
+    <meta property="twitter:description" content="Run powerful AI models and voice transcription directly on your device, with no internet required.">
     <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://OnDevice-ai.app/">
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Anime.js for smooth animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="css/animations.css">
 
-    <!-- JSON-LD Structured Data for AI Discoverability -->
+    <!-- JSON-LD: SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -55,11 +39,7 @@
         "operatingSystem": ["iOS", "macOS", "visionOS"],
         "applicationCategory": "UtilitiesApplication",
         "description": "Private AI assistant with voice transcription, document analysis, and collaborative AI teams - all running locally on your device with complete privacy.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "downloadUrl": "https://apps.apple.com/us/app/on-device-ai/id6497060890",
         "screenshot": "https://OnDevice-ai.app/images/phone_screen.png",
         "featureList": [
@@ -70,10 +50,13 @@
             "Vision Model Support",
             "Text-to-Speech with Kokoro TTS",
             "Document Analysis with OCR",
-            "Built-in Web Search"
+            "Built-in Web Search",
+            "Tool Calling",
+            "Cloud AI Providers (Optional)"
         ]
     }
     </script>
+    <!-- JSON-LD: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -84,7 +67,7 @@
                 "name": "What is On Device AI and how does it work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI is a privacy-first AI application that runs powerful language models like Llama, Gemma, Qwen, and DeepSeek directly on your iPhone, iPad, Mac, or Vision Pro. All AI processing happens locally on your device - your data never leaves your device and no internet connection is required for core features."
+                    "text": "On Device AI is a privacy-first AI application that runs powerful language models like Llama, Gemma, Qwen, and DeepSeek directly on your iPhone, iPad, Mac, or Vision Pro. All AI processing happens locally on your device."
                 }
             },
             {
@@ -92,60 +75,61 @@
                 "name": "Can On Device AI work completely offline?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! On Device AI is designed for 100% offline operation. Once you download an AI model, you can use voice transcription, document analysis, AI chat, and all core features without any internet connection. Your conversations and data stay completely private on your device."
+                    "text": "Yes! On Device AI is designed for 100% offline operation. Once you download an AI model, you can use voice transcription, document analysis, AI chat, and all core features without any internet connection."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What AI models are supported by On Device AI?",
+                "name": "What AI models are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI supports leading open-source models including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral, and more. You can also import custom GGUF models from Hugging Face. The app uses both llama.cpp and MLX inference engines for optimal performance on Apple Silicon."
+                    "text": "On Device AI supports Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral, and more. You can also import custom GGUF models. The app uses both llama.cpp and MLX inference engines for optimal performance on Apple Silicon."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How do Collaborative AI Teams work in On Device AI?",
+                "name": "How do Collaborative AI Teams work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Collaborative AI Teams let you create multi-agent workflows where specialized AI agents work together on complex tasks. For example, you can deploy a Market Analyst, Strategic Planner, and Risk Assessor team for comprehensive business planning, or use an Idea Generator, Story Developer, and Editor team for creative writing projects."
+                    "text": "Collaborative AI Teams let you create multi-agent workflows where specialized AI agents work together on complex tasks. Each agent can use a different model and role."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What devices are compatible with On Device AI?",
+                "name": "What devices are compatible?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI works on iPhone 14 and newer, iPad mini (7th gen) and newer, iPad Air (5th gen) and newer, iPad Pro (3rd gen) and newer, iPad (11th gen) and newer, all Apple Silicon Macs, and Apple Vision Pro. Devices with 6GB+ RAM provide optimal performance."
+                    "text": "On Device AI works on iPhone 14+, iPad mini (7th gen)+, iPad Air (5th gen)+, iPad Pro (3rd gen)+, all Apple Silicon Macs, and Apple Vision Pro. Devices with 6GB+ RAM provide optimal performance."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can I connect cloud AI providers to On Device AI?",
+                "name": "Can I connect cloud AI providers?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! While the app is 100% offline by default, you can optionally connect to cloud providers like OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, LM Studio, or Ollama when you need extra processing power. You can switch between local and cloud models within the same conversation."
+                    "text": "Yes! You can optionally connect to OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, LM Studio, or Ollama. Cloud providers are off by default and require explicit configuration."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What are Knowledge Libraries in On Device AI?",
+                "name": "What are Knowledge Libraries?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Knowledge Libraries are dedicated AI memory spaces for each project. You can create a Library for each project or client, group related PDFs, notes, web captures, and images together. The AI assistant then answers questions sourced directly from your active Library, providing focused and accurate responses."
+                    "text": "Knowledge Libraries are dedicated AI memory spaces for each project. Group PDFs, notes, web captures, and images together. The AI answers questions sourced directly from your active Library."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Does On Device AI support vision models for image analysis?",
+                "name": "Does it support vision models?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! On Device AI supports both local vision models (MLX and GGUF-based) and cloud vision APIs. You can analyze photos, screenshots, diagrams, and documents directly on your device with complete privacy, or use powerful cloud vision models for more detailed analysis."
+                    "text": "Yes! On Device AI supports both local vision models (MLX and GGUF-based) and cloud vision APIs. Analyze photos, screenshots, diagrams, and documents directly on your device."
                 }
             }
         ]
     }
     </script>
+    <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -153,388 +137,328 @@
         "name": "On Device AI",
         "url": "https://OnDevice-ai.app",
         "logo": "https://OnDevice-ai.app/images/icon.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "developer@ondevice-ai.app",
-            "contactType": "customer support"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [".hero-description", ".section-intro", ".faq-item p"]
-        }
+        "contactPoint": { "@type": "ContactPoint", "email": "developer@ondevice-ai.app", "contactType": "customer support" }
     }
     </script>
 </head>
-
 <body>
-    <div class="background-gradient"></div>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="#home">
-                    <img src="images/icon.png" alt="On Device AI Icon"
-                        style="height: 1.2em; margin-right: 0.3em; vertical-align: middle;">On Device AI
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#technology">Technology</a></li>
-                    <li><a href="#privacy">Privacy</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="logo">
+                <img src="images/icon.png" alt="On Device AI">
+                <span>On Device AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="docs/">Docs</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </button>
+                </li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
+
     <main>
+        <!-- ============ HERO ============ -->
         <section id="home" class="hero">
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-inner">
                     <div class="hero-text">
-                        <h1 class="hero-title">
-                            <span class="title-line-1">On Device AI</span>
-                            <span class="title-line-2">AI that respects your privacy</span>
+                        <h1>
+                            <span class="hero-title-line1">On Device AI</span>
+                            <span class="hero-title-line2">AI that respects your privacy</span>
                         </h1>
-                        <p class="hero-description">Transform voice into text instantly and collaborate with powerful AI
-                            teams - all offline and private. The Best Large Language Models (LLMs) and real-time voice
-                            transcription directly on your Device, without internet!</p>
-                        <div class="hero-features">
-                            <div class="hero-feature">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>100% Private</span>
-                            </div>
-                            <div class="hero-feature">
-                                <i class="fas fa-brain"></i>
-                                <span>Multiple AI models</span>
-                            </div>
-                            <div class="hero-feature">
-                                <i class="fas fa-eye"></i>
-                                <span>Multimodal support</span>
-                            </div>
-                            <div class="hero-feature">
-                                <i class="fas fa-download"></i>
-                                <span>Works Offline</span>
-                            </div>
-                            <div class="hero-feature">
-                                <i class="fas fa-microphone"></i>
-                                <span>Voice Note</span>
-                            </div>
-                            <div class="hero-feature">
-                                <i class="fas fa-volume-up"></i>
-                                <span>Text to speech</span>
-                            </div>
+                        <p class="hero-description">Transform voice into text, chat with powerful AI models, and build Knowledge Libraries. All offline and private. The best LLMs running directly on your device, no internet required.</p>
+                        <div class="hero-badges">
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                100% Private
+                            </span>
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Works Offline
+                            </span>
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                                Multiple AI Models
+                            </span>
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                                Voice Notes
+                            </span>
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                Vision Models
+                            </span>
+                            <span class="hero-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                                Text to Speech
+                            </span>
                         </div>
-                        <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890"
-                            class="app-store-button enhanced">
-                            <img src="images/app-store-badge.svg" alt="Download on the App Store">
-                        </a>
-                        <p class="platforms">Available for iOS, macOS, and visionOS</p>
+                        <div class="hero-cta">
+                            <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="btn-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                Download Free
+                            </a>
+                            <a href="docs/" class="btn-secondary">Read the Docs →</a>
+                        </div>
+                        <p class="hero-platforms">Available for iOS, macOS, and visionOS</p>
                     </div>
-                    <div class="hero-image">
-                        <!-- Glow orbs background -->
+                    <div class="hero-visual">
                         <div class="glow-orbs">
-                            <div class="glow-orb orb-1"></div>
-                            <div class="glow-orb orb-2"></div>
-                            <div class="glow-orb orb-3"></div>
+                            <div class="glow-orb glow-orb-1"></div>
+                            <div class="glow-orb glow-orb-2"></div>
+                            <div class="glow-orb glow-orb-3"></div>
                         </div>
                         <div class="device-mockup floating-device">
-                            <!-- App screenshot mockup -->
-                            <img src="images/phone_screen.png" alt="App Screenshot" class="mockup-image">
-                            <!-- Floating UI elements -->
-                            <div class="floating-ui-elements">
-                                <div class="ui-element ai-badge">
-                                    <i class="fas fa-brain"></i>
-                                    <span>AI Processing</span>
-                                </div>
-                                <div class="ui-element privacy-badge">
-                                    <i class="fas fa-lock"></i>
-                                    <span>Private</span>
-                                </div>
-                                <div class="ui-element speed-badge">
-                                    <i class="fas fa-bolt"></i>
-                                    <span>Instant</span>
-                                </div>
-                            </div>
+                            <img src="images/phone_screen.png" alt="On Device AI App Screenshot">
+                        </div>
+                        <div class="floating-badge badge-ai">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                            AI Processing
+                        </div>
+                        <div class="floating-badge badge-private">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            Private
+                        </div>
+                        <div class="floating-badge badge-speed">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Instant
                         </div>
                     </div>
                 </div>
-                <!-- Floating particles container -->
-                <div class="particles-container" id="hero-particles"></div>
             </div>
         </section>
 
-        <section id="features">
+        <!-- ============ FEATURES ============ -->
+        <section id="features" class="features section">
             <div class="container">
-                <h2>What Can <span class="highlight">On Device AI</span> Do?</h2>
-                <p class="section-intro">Experience powerful AI features right on your device, with no network
-                    dependency. Say goodbye to privacy concerns.</p>
-
-                <div class="feature-list">
-                    <div class="feature-item" data-anime-delay="0">
+                <div class="section-header reveal">
+                    <h2>What Can <span class="highlight">On Device AI</span> Do?</h2>
+                    <p>Powerful AI features right on your device, with no network dependency. Say goodbye to privacy concerns.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/ai_settings.jpeg" alt="AI Settings Screenshot">
+                            <img src="screenshots/ai_settings.jpeg" alt="Collaborative AI Teams">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-microchip"></i>
-                                    <span>Local Processing</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+                                Local Processing
                             </div>
                         </div>
-                        <div class="feature-description">
+                        <div class="feature-body">
                             <h3>Collaborative AI Teams</h3>
-                            <p>Create sophisticated AI teams where different specialized agents work together on complex
-                                tasks. Run top-tier models like Llama, Gemma, Phi, Qwen, DeepSeek, and more entirely on
-                                your device.</p>
+                            <p>Create sophisticated AI teams where specialized agents work together on complex tasks. Run models like Llama, Gemma, Qwen, DeepSeek entirely on your device.</p>
+                            <a href="docs/chat-flows.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
-                    <div class="feature-item" data-anime-delay="100">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/voice_memo.jpeg" alt="Voice Memo Screenshot">
+                            <img src="screenshots/voice_memo.jpeg" alt="Voice Notes & Transcription">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-microphone"></i>
-                                    <span>Voice AI</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                                Voice AI
                             </div>
                         </div>
-                        <div class="feature-description">
-                            <h3>Voice Notes & Transcription</h3>
-                            <p>Instantly record, transcribe, summarize, and translate audio securely on-device. Navigate
-                                recordings with word-level precision and process content in multiple languages while
-                                maintaining complete privacy.</p>
+                        <div class="feature-body">
+                            <h3>Voice Notes &amp; Transcription</h3>
+                            <p>Instantly record, transcribe, summarize, and translate audio on-device. Navigate recordings with word-level precision in multiple languages.</p>
+                            <a href="docs/voice-notes.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
-                    <div class="feature-item" data-anime-delay="200">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/speech_audio.png" alt="Text to Speech Screenshot">
+                            <img src="screenshots/speech_audio.png" alt="Text-to-Speech">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-volume-up"></i>
-                                    <span>Professional Audio</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                                Professional Audio
                             </div>
                         </div>
-                        <div class="feature-description">
+                        <div class="feature-body">
                             <h3>Professional Text-to-Speech</h3>
-                            <p>Generate natural, professional quality speech from any text using Apple voices or the
-                                advanced Kokoro voice engine. Create audio content, narrate summaries, and bring your
-                                text to life with realistic voices - all processed securely on your device.</p>
+                            <p>Generate natural, human-like speech using Apple voices or the Kokoro engine. Create audio content and narrate summaries — all on-device.</p>
+                            <a href="docs/text-to-speech.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
-                    <div class="feature-item" data-anime-delay="300">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/search.jpeg" alt="Web Search Screenshot">
+                            <img src="screenshots/search.jpeg" alt="Built-In Web Search">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-search"></i>
-                                    <span>AI Analysis</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                AI Analysis
                             </div>
                         </div>
-                        <div class="feature-description">
+                        <div class="feature-body">
                             <h3>Built-In Web Search</h3>
-                            <p>Search the web directly within the app with AI-powered analysis that transforms results
-                                into coherent summaries. Ask complex questions about current events and receive
-                                structured responses while maintaining privacy.</p>
+                            <p>Search the web with AI-powered analysis that transforms results into coherent summaries. Ask complex questions and get structured responses.</p>
+                            <a href="docs/web-search.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
-                    <div class="feature-item" data-anime-delay="400">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/personas.jpeg" alt="AI Personas Screenshot">
+                            <img src="screenshots/personas.jpeg" alt="AI Personas">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-user-robot"></i>
-                                    <span>Custom AI</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Custom AI
                             </div>
                         </div>
-                        <div class="feature-description">
-                            <h3>AI Personas at Your Fingertips</h3>
-                            <p>Create custom AI roles with unique personalities, expertise, and preferred models.
-                                Seamlessly switch between different AI specialists for coding, writing, research, or
-                                coaching with just a tap.</p>
+                        <div class="feature-body">
+                            <h3>AI Roles &amp; Personas</h3>
+                            <p>Create custom AI roles with unique personalities, expertise, and preferred models. Switch between specialists for coding, writing, research, or coaching.</p>
+                            <a href="docs/roles-personas.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
-                    <div class="feature-item" data-anime-delay="500">
+                    <div class="feature-card glass-card">
                         <div class="feature-media">
-                            <img src="screenshots/knowledge_base.png" alt="Knowledge Libraries Screenshot">
+                            <img src="screenshots/knowledge_base.png" alt="Knowledge Libraries">
                             <div class="feature-overlay">
-                                <div class="tech-indicator">
-                                    <i class="fas fa-book"></i>
-                                    <span>AI Memory</span>
-                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                AI Memory
                             </div>
                         </div>
-                        <div class="feature-description">
+                        <div class="feature-body">
                             <h3>Knowledge Libraries</h3>
-                            <p>Create dedicated AI memory spaces for each project. Group PDFs, notes, web captures, and
-                                images together. Your AI assistant answers questions sourced directly from your active
-                                Library, providing focused and accurate responses with complete privacy.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="features-cta">
-                    <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="app-store-button">
-                        <img src="images/app-store-badge.svg" alt="Download on the App Store">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="technology" class="technology-section">
-            <div class="container">
-                <h2>How Does <span class="highlight">On-Device AI</span> Keep Your Data Private?</h2>
-                <p class="section-intro">All AI processing happens directly on your device, ensuring complete privacy
-                    and instant responses - no cloud servers involved.</p>
-
-                <div class="tech-comparison">
-                    <div class="comparison-item cloud-ai">
-                        <div class="comparison-header">
-                            <i class="fas fa-cloud"></i>
-                            <h3>Traditional Cloud AI</h3>
-                        </div>
-                        <div class="workflow">
-                            <div class="workflow-step">
-                                <span class="step-icon">📱</span>
-                                <span class="step-text">Your Data</span>
-                            </div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step">
-                                <span class="step-icon">☁️</span>
-                                <span class="step-text">Cloud Server</span>
-                            </div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step">
-                                <span class="step-icon">🤖</span>
-                                <span class="step-text">AI Response</span>
-                            </div>
-                        </div>
-                        <div class="concerns">
-                            <div class="concern">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                <span>Privacy Risk</span>
-                            </div>
-                            <div class="concern">
-                                <i class="fas fa-sliders-h"></i>
-                                <span>Limited Control</span>
-                            </div>
-                            <div class="concern">
-                                <i class="fas fa-wifi"></i>
-                                <span>Internet Required</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comparison-item on-device-ai">
-                        <div class="comparison-header">
-                            <i class="fas fa-microchip"></i>
-                            <h3>On-Device AI</h3>
-                        </div>
-                        <div class="workflow">
-                            <div class="workflow-step">
-                                <span class="step-icon">📱</span>
-                                <span class="step-text">Your Data</span>
-                            </div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step">
-                                <span class="step-icon">🧠</span>
-                                <span class="step-text">Local AI</span>
-                            </div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step">
-                                <span class="step-icon">⚡</span>
-                                <span class="step-text">Instant Response</span>
-                            </div>
-                        </div>
-                        <div class="benefits">
-                            <div class="benefit">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>100% Private</span>
-                            </div>
-                            <div class="benefit">
-                                <i class="fas fa-sliders-h"></i>
-                                <span>Fully Customizable</span>
-                            </div>
-                            <div class="benefit">
-                                <i class="fas fa-download"></i>
-                                <span>Works Offline</span>
-                            </div>
+                            <p>Create dedicated AI memory spaces for each project. Group PDFs, notes, web captures, and images together. Get focused, accurate answers from your Library.</p>
+                            <a href="docs/knowledge-libraries.html" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="privacy" class="privacy-section">
+        <!-- ============ TECHNOLOGY ============ -->
+        <section id="technology" class="technology section">
             <div class="container">
-                <h2>Why Is On Device AI <span class="highlight">More Private</span> Than Cloud AI?</h2>
-                <p class="section-intro">Complete privacy by design. Your conversations, voice recordings, and personal
-                    data never leave your device - no servers, no data collection.</p>
+                <div class="section-header reveal">
+                    <h2>How Does <span class="highlight">On-Device AI</span> Keep Your Data Private?</h2>
+                    <p>All AI processing happens directly on your device — no cloud servers involved.</p>
+                </div>
+                <div class="comparison-grid">
+                    <div class="comparison-card cloud glass-card">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                        <h3>Traditional Cloud AI</h3>
+                        <div class="workflow">
+                            <div class="workflow-step"><span class="step-icon">📱</span><span class="step-text">Your Data</span></div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step"><span class="step-icon">☁️</span><span class="step-text">Cloud Server</span></div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step"><span class="step-icon">🤖</span><span class="step-text">AI Response</span></div>
+                        </div>
+                        <ul class="comparison-points">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                Privacy risk — data leaves your device
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                Limited control over your data
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                Internet connection required
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card local glass-card">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        <h3>On-Device AI</h3>
+                        <div class="workflow">
+                            <div class="workflow-step"><span class="step-icon">📱</span><span class="step-text">Your Data</span></div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step"><span class="step-icon">🧠</span><span class="step-text">Local AI</span></div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step"><span class="step-icon">✨</span><span class="step-text">Instant Response</span></div>
+                        </div>
+                        <ul class="comparison-points">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                100% private — data never leaves your device
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Fully customizable models and roles
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Works completely offline
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="privacy-showcase">
+        <!-- ============ PRIVACY ============ -->
+        <section id="privacy" class="privacy section">
+            <div class="container">
+                <div class="privacy-content">
+                    <div class="privacy-text">
+                        <h2>Why Is <span class="highlight">On Device AI</span> More Private?</h2>
+                        <p>All processing stays within your device boundary. No accounts, no tracking, no data collection.</p>
+                        <ul class="privacy-benefits">
+                            <li>
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Zero Data Leakage</h4>
+                                    <p>Your conversations, documents, and voice recordings never leave your device during AI processing.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Complete Anonymity</h4>
+                                    <p>No accounts required, no telemetry, no usage tracking. You own your data completely.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Offline First</h4>
+                                    <p>Core features work without internet. Cloud providers are optional and require your explicit consent.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="privacy-visual">
-                        <div class="device-boundary">
-                            <div class="data-flow">
-                                <div class="data-point">
-                                    <i class="fas fa-microphone"></i>
-                                    <span>Voice Input</span>
-                                </div>
-                                <svg class="flow-arrow" viewBox="0 0 40 20" width="40" height="20">
-                                    <path class="flow-line" d="M0 10 L30 10 M25 5 L30 10 L25 15" fill="none"
-                                        stroke="currentColor" stroke-width="2" />
-                                </svg>
-                                <div class="data-point">
-                                    <i class="fas fa-brain"></i>
-                                    <span>AI Processing</span>
-                                </div>
-                                <svg class="flow-arrow" viewBox="0 0 40 20" width="40" height="20">
-                                    <path class="flow-line" d="M0 10 L30 10 M25 5 L30 10 L25 15" fill="none"
-                                        stroke="currentColor" stroke-width="2" />
-                                </svg>
-                                <div class="data-point">
-                                    <i class="fas fa-comment"></i>
-                                    <span>Text Output</span>
-                                </div>
+                        <div class="data-flow-diagram">
+                            <div class="device-boundary"></div>
+                            <div class="flow-node node-input">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/></svg>
+                                Voice Input
+                            </div>
+                            <div class="flow-node node-process">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/></svg>
+                                AI Processing
+                            </div>
+                            <div class="flow-node node-output">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                Text Output
                             </div>
                             <div class="privacy-shield">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Protected</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             </div>
-                        </div>
-                        <div class="external-blocked">
-                            <i class="fas fa-ban"></i>
-                            <span>Zero Data Leakage</span>
-                        </div>
-                    </div>
-
-                    <div class="privacy-benefits">
-                        <div class="privacy-benefit">
-                            <div class="benefit-icon">
-                                <i class="fas fa-user-secret"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h3>Complete Anonymity</h3>
-                                <p>No accounts, no data collection, no tracking. Your identity and usage patterns remain
-                                    completely private.</p>
-                            </div>
-                        </div>
-                        <div class="privacy-benefit">
-                            <div class="benefit-icon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h3>Offline First</h3>
-                                <p>Core AI features work completely offline. When online features are used, only minimal
-                                    metadata is transmitted.</p>
+                            <div class="blocked-indicator">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                                External Blocked
                             </div>
                         </div>
                     </div>
@@ -542,155 +466,156 @@
             </div>
         </section>
 
-        <section id="platforms" class="platforms-section">
+        <!-- ============ PLATFORMS ============ -->
+        <section id="platforms" class="platforms-section section">
             <div class="container">
-                <h2>Which <span class="highlight">Devices</span> Support On Device AI?</h2>
-                <p class="section-intro">Available on iPhone, iPad, Mac, and Apple Vision Pro with seamless cross-device
-                    workflows.</p>
-
-                <div class="platform-showcase">
-                    <div class="platform-device ios">
-                        <div class="device-icon">
-                            <i class="fab fa-apple"></i>
-                        </div>
+                <div class="section-header reveal">
+                    <h2>Available on All Apple Platforms</h2>
+                    <p>One app, optimized for every device in your ecosystem.</p>
+                </div>
+                <div class="platform-grid">
+                    <div class="platform-card glass-card">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                         <h3>iOS</h3>
-                        <p>iPhone and iPad</p>
+                        <p class="platform-subtitle">iPhone &amp; iPad</p>
                         <ul>
-                            <li>Voice transcription on the go</li>
-                            <li>Optimized for mobile AI processing</li>
-                            <li>Siri Shortcuts integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Voice transcription on the go</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Siri Shortcuts integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Camera &amp; Vision model support</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Background recording</li>
                         </ul>
                     </div>
-                    <div class="platform-device macos">
-                        <div class="device-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
+                    <div class="platform-card glass-card">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                         <h3>macOS</h3>
-                        <p>Mac computers</p>
+                        <p class="platform-subtitle">Apple Silicon Macs</p>
                         <ul>
-                            <li>Maximum AI model performance</li>
-                            <li>Large context window support</li>
-                            <li>Remote iOS device connection</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Maximum performance &amp; large context</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Menu bar &amp; global hotkeys</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> IM integration (Discord, Slack, Telegram)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Serve as remote inference server</li>
                         </ul>
                     </div>
-                    <div class="platform-device visionos">
-                        <div class="device-icon">
-                            <i class="fas fa-vr-cardboard"></i>
-                        </div>
+                    <div class="platform-card glass-card">
+                        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         <h3>visionOS</h3>
-                        <p>Apple Vision Pro</p>
+                        <p class="platform-subtitle">Apple Vision Pro</p>
                         <ul>
-                            <li>Immersive AI interactions</li>
-                            <li>Spatial computing integration</li>
-                            <li>Hand gesture controls</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Immersive AI experience</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Spatial computing ready</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Hand gesture controls</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Private AI in mixed reality</li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="download-section">
-                    <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="app-store-button primary">
-                        <img src="images/app-store-badge.svg" alt="Download on the App Store">
+                <div class="platforms-cta">
+                    <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download Free
                     </a>
-                    <p class="download-note">Free download • No ADs • Privacy first</p>
+                    <p class="cta-note">Free download · No ads · Privacy first</p>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="faq-section">
+        <!-- ============ FAQ ============ -->
+        <section id="faq" class="faq section">
             <div class="container">
-                <h2>Frequently Asked Questions About <span class="highlight">On Device AI</span></h2>
-                <p class="section-intro">Get answers to common questions about privacy, features, and compatibility.</p>
-
+                <div class="section-header reveal">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
                 <div class="faq-list">
-                    <details class="faq-item">
-                        <summary>What is On Device AI and how does it work?</summary>
-                        <p>On Device AI is a privacy-first AI application that runs powerful language models like Llama,
-                            Gemma, Qwen, and DeepSeek directly on your iPhone, iPad, Mac, or Vision Pro. All AI
-                            processing happens locally on your device - your data never leaves your device and no
-                            internet connection is required for core features.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Can On Device AI work completely offline?</summary>
-                        <p>Yes! On Device AI is designed for 100% offline operation. Once you download an AI model, you
-                            can use voice transcription, document analysis, AI chat, and all core features without any
-                            internet connection. Your conversations and data stay completely private on your device.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>What AI models are supported by On Device AI?</summary>
-                        <p>On Device AI supports leading open-source models including Llama 3, Gemma 3, Qwen 3,
-                            DeepSeek, Phi-4, Mistral, and more. You can also import custom GGUF models from Hugging
-                            Face. The app uses both llama.cpp and MLX inference engines for optimal performance on Apple
-                            Silicon.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>How do Collaborative AI Teams work?</summary>
-                        <p>Collaborative AI Teams let you create multi-agent workflows where specialized AI agents work
-                            together on complex tasks. For example, you can deploy a Market Analyst, Strategic Planner,
-                            and Risk Assessor team for comprehensive business planning, or use an Idea Generator, Story
-                            Developer, and Editor team for creative writing projects.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>What devices are compatible with On Device AI?</summary>
-                        <p>On Device AI works on iPhone 14 and newer, iPad mini (7th gen) and newer, iPad Air (5th gen)
-                            and newer, iPad Pro (3rd gen) and newer, iPad (11th gen) and newer, all Apple Silicon Macs,
-                            and Apple Vision Pro. Devices with 6GB+ RAM provide optimal performance.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Can I connect cloud AI providers to On Device AI?</summary>
-                        <p>Yes! While the app is 100% offline by default, you can optionally connect to cloud providers
-                            like OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, LM Studio, or Ollama when
-                            you need extra processing power. You can switch between local and cloud models within the
-                            same conversation.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>What are Knowledge Libraries in On Device AI?</summary>
-                        <p>Knowledge Libraries are dedicated AI memory spaces for each project. You can create a Library
-                            for each project or client, group related PDFs, notes, web captures, and images together.
-                            The AI assistant then answers questions sourced directly from your active Library, providing
-                            focused and accurate responses.</p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>Does On Device AI support vision models for image analysis?</summary>
-                        <p>Yes! On Device AI supports both local vision models (MLX and GGUF-based) and cloud vision
-                            APIs. You can analyze photos, screenshots, diagrams, and documents directly on your device
-                            with complete privacy, or use powerful cloud vision models for more detailed analysis.</p>
-                    </details>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is On Device AI and how does it work?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">On Device AI is a privacy-first AI application that runs powerful language models like Llama, Gemma, Qwen, and DeepSeek directly on your iPhone, iPad, Mac, or Vision Pro. All AI processing happens locally on your device — your data never leaves your device and no internet connection is required for core features.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can On Device AI work completely offline?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">Yes! On Device AI is designed for 100% offline operation. Once you download an AI model, you can use voice transcription, document analysis, AI chat, and all core features without any internet connection. Your conversations and data stay completely private on your device.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What AI models are supported?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">On Device AI supports leading open-source models including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral, and more. You can also import custom GGUF models from Hugging Face. The app uses both llama.cpp and MLX inference engines for optimal performance on Apple Silicon.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do Collaborative AI Teams work?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">Collaborative AI Teams let you create multi-agent workflows where specialized AI agents work together on complex tasks. For example, you can deploy a Market Analyst, Strategic Planner, and Risk Assessor team for business planning, or use an Idea Generator, Story Developer, and Editor team for creative writing.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What devices are compatible?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">On Device AI works on iPhone 14 and newer, iPad mini (7th gen) and newer, iPad Air (5th gen) and newer, iPad Pro (3rd gen) and newer, iPad (11th gen) and newer, all Apple Silicon Macs, and Apple Vision Pro. Devices with 6GB+ RAM provide optimal performance.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I connect cloud AI providers?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">Yes! While the app is 100% offline by default, you can optionally connect to cloud providers like OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, LM Studio, or Ollama when you need extra power. You can switch between local and cloud models within the same conversation. Cloud is always opt-in.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What are Knowledge Libraries?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">Knowledge Libraries are dedicated AI memory spaces for each project. You can create a Library for each project or client, group related PDFs, notes, web captures, and images together. The AI assistant then answers questions sourced directly from your active Library, providing focused and accurate responses.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Does On Device AI support vision models?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><div class="faq-answer-inner">Yes! On Device AI supports both local vision models (MLX and GGUF-based) and cloud vision APIs. You can analyze photos, screenshots, diagrams, and documents directly on your device with complete privacy, or use cloud vision models for more detailed analysis.</div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="contact section">
             <div class="container">
-                <h2>Have Questions About <span class="highlight">On Device AI</span>?</h2>
-                <p>We'd love to hear from you! Send us your questions or feedback.</p>
-                <a href="mailto:developer@ondevice-ai.app" class="contact-button">
-                    <i class="fas fa-envelope"></i> Send me an Email
-                </a>
+                <div class="section-header reveal">
+                    <h2>Contact Us</h2>
+                    <p>Have questions or suggestions? We'd love to hear from you.</p>
+                    <a href="mailto:developer@ondevice-ai.app" class="contact-email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        developer@ondevice-ai.app
+                    </a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="/pages/terms-of-use.html" target="_blank">Terms of Use</a></li>
-                    <li><a href="/pages/privacy-policy.html" target="_blank">Privacy Policy</a></li>
-                </ul>
-            </nav>
-            <div>
-                <!-- <a href="https://fazier.com/launches/ondevice-ai.app" target="_blank"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral" width=150 alt="Fazier badge" /></a> -->
-            </div>
-            <p>&copy; 2026 OnDevice-AI App.</p>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <ul class="footer-links">
+                <li><a href="pages/terms-of-use.html">Terms of Use</a></li>
+                <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="docs/">Documentation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 OnDevice-AI App.</p>
         </div>
     </footer>
-    <script src="js/main.js"></script>
-</body>
 
+    <!-- Anime.js v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.iife.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
 </html>

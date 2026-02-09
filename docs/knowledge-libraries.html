@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Libraries - On Device AI Docs</title>
+    <meta name="description" content="Build project-specific AI memory with Knowledge Libraries in On Device AI. Add PDFs, notes, web captures, and images.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/knowledge-libraries.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html" class="active">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1>Knowledge Libraries</h1>
+            <p>Knowledge Libraries are dedicated AI memory spaces that let you give the AI focused context about specific projects, clients, or topics. Instead of pasting the same documents into every conversation, create a Library and the AI draws from it automatically.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#overview">How It Works</a></li>
+                    <li><a href="#creating">Creating a Library</a></li>
+                    <li><a href="#adding-content">Adding Content</a></li>
+                    <li><a href="#using">Using Libraries in Chat</a></li>
+                    <li><a href="#managing">Managing Libraries</a></li>
+                    <li><a href="#tips">Tips &amp; Best Practices</a></li>
+                </ul>
+            </div>
+
+            <h2 id="overview">How It Works</h2>
+            <p>Knowledge Libraries use <strong>similarity search</strong> (vector embeddings) to find the most relevant parts of your documents when you ask a question. This means:</p>
+            <ul>
+                <li>Documents are split into chunks and indexed locally on your device</li>
+                <li>When you ask a question, the most relevant chunks are retrieved and passed to the AI</li>
+                <li>The AI uses this context to provide accurate, grounded answers</li>
+                <li>All processing happens on-device — your documents never leave your device</li>
+            </ul>
+
+            <h2 id="creating">Creating a Library</h2>
+            <ol class="steps">
+                <li><strong>Open the Knowledge tab</strong><p>Navigate to the Knowledge section from the sidebar or tab bar.</p></li>
+                <li><strong>Tap "New Library"</strong><p>Give your library a descriptive name (e.g., "Project Alpha Research", "Client X Requirements").</p></li>
+                <li><strong>Add documents</strong><p>Start adding PDFs, text files, web pages, images, or typed notes to your library.</p></li>
+            </ol>
+
+            <h2 id="adding-content">Adding Content</h2>
+            <p>Knowledge Libraries support multiple content types:</p>
+            <ul>
+                <li><strong>PDF Documents:</strong> Full text extraction with page tracking</li>
+                <li><strong>Text Files:</strong> Plain text and markdown files</li>
+                <li><strong>Web Pages:</strong> Paste a URL and the content is fetched and indexed</li>
+                <li><strong>Images:</strong> OCR extracts text from photos and screenshots</li>
+                <li><strong>Notes:</strong> Type or paste text directly into the library</li>
+            </ul>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>For best results, organize related documents in the same library. Create separate libraries for different projects or topics.</p>
+            </div>
+
+            <h2 id="using">Using Libraries in Chat</h2>
+            <p>To use a Knowledge Library in conversation:</p>
+            <ol class="steps">
+                <li><strong>Activate the library</strong><p>In the AI Chat screen, tap the Knowledge icon in the toolbar and select which library to use.</p></li>
+                <li><strong>Ask questions</strong><p>Chat normally. The AI automatically searches the library for relevant context before responding.</p></li>
+                <li><strong>View sources</strong><p>The AI's response will indicate which documents it referenced, so you can verify the information.</p></li>
+            </ol>
+
+            <h2 id="managing">Managing Libraries</h2>
+            <ul>
+                <li><strong>Edit:</strong> Add or remove documents from any library at any time</li>
+                <li><strong>Rename:</strong> Change the library name to keep things organized</li>
+                <li><strong>Delete:</strong> Remove a library and all its indexed data</li>
+                <li><strong>Multiple libraries:</strong> Create as many libraries as you need — switch between them freely</li>
+            </ul>
+
+            <h2 id="tips">Tips &amp; Best Practices</h2>
+            <ul>
+                <li>Keep libraries focused on a single project or topic for the most accurate answers</li>
+                <li>Use descriptive file names — they help the AI understand document context</li>
+                <li>Regularly update libraries with new documents as projects evolve</li>
+                <li>For large documents, the chunking system handles them automatically — no need to split manually</li>
+                <li>Combine Knowledge Libraries with <a href="roles-personas.html">AI Roles</a> for specialized domain experts</li>
+            </ul>
+
+            <div class="docs-nav-footer">
+                <a href="ai-chat.html" class="docs-nav-link prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">AI Chat</span>
+                </a>
+                <a href="voice-notes.html" class="docs-nav-link next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">Voice Notes</span>
+                </a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

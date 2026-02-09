@@ -1,0 +1,5 @@
+# Legacy URL redirects from old website structure
+/privacy-policy.html    /pages/privacy-policy.html    301
+/terms-of-use.html      /pages/terms-of-use.html      301
+/pages/privacy-policy   /pages/privacy-policy.html     301
+/pages/terms-of-use     /pages/terms-of-use.html       301

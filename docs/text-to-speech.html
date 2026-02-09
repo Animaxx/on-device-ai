@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech - On Device AI Docs</title>
+    <meta name="description" content="Generate natural, professional quality speech from text using Apple voices and Kokoro TTS engine in On Device AI.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/text-to-speech.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li></ul></div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="text-to-speech.html" class="active">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li></ul></div>
+        </aside>
+        <main class="docs-content">
+            <h1>Text-to-Speech</h1>
+            <p>On Device AI includes powerful text-to-speech capabilities for converting any text into natural-sounding speech. Choose between Apple's built-in voices and the advanced Kokoro TTS engine.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#engines">TTS Engines</a></li>
+                    <li><a href="#usage">Using TTS</a></li>
+                    <li><a href="#speed">Speech Speed</a></li>
+                    <li><a href="#auto-play">Auto-Play Responses</a></li>
+                </ul>
+            </div>
+
+            <h2 id="engines">TTS Engines</h2>
+            <p>Two text-to-speech engines are available:</p>
+            <ul>
+                <li><strong>Apple Voices:</strong> Uses the system's built-in speech synthesis. Many voices available, lightweight, and fast.</li>
+                <li><strong>Kokoro TTS:</strong> Advanced neural TTS engine that produces more natural, human-like speech. Runs entirely on-device. Requires downloading the Kokoro voice model (~80MB).</li>
+            </ul>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>Kokoro TTS produces significantly more natural speech than Apple voices. Download it in Settings → Voice to hear the difference.</p>
+            </div>
+
+            <h2 id="usage">Using TTS</h2>
+            <p>There are several ways to use text-to-speech:</p>
+            <ul>
+                <li><strong>TTS Tab:</strong> Navigate to the Text to Speech tab, paste or type text, and tap the play button</li>
+                <li><strong>AI Chat responses:</strong> Tap the speaker icon on any AI response to have it read aloud</li>
+                <li><strong>Auto-play:</strong> Enable auto-play to have every AI response spoken automatically</li>
+            </ul>
+
+            <h2 id="speed">Speech Speed</h2>
+            <p>Adjust the speech speed in Settings → Voice:</p>
+            <ul>
+                <li><strong>Range:</strong> 0.5x (slow) to 2.0x (fast)</li>
+                <li><strong>Default:</strong> 1.0x (normal speed)</li>
+                <li><strong>Test button:</strong> Preview the current speed setting before applying</li>
+            </ul>
+
+            <h2 id="auto-play">Auto-Play Responses</h2>
+            <p>When enabled, AI responses in chat are automatically converted to speech and played back. This creates a hands-free conversational experience, especially useful when combined with voice input.</p>
+            <p>Toggle auto-play in Settings → Voice → "Auto-play voice responses".</p>
+
+            <div class="docs-nav-footer">
+                <a href="voice-notes.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Voice Notes</span></a>
+                <a href="web-search.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Web Search</span></a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

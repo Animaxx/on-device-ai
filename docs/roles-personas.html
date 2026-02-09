@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles &amp; Personas - On Device AI Docs</title>
+    <meta name="description" content="Create custom AI specialists with Roles & Personas in On Device AI. Define expertise, personality, and preferred models.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/roles-personas.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="./" class="active">Docs</a></li><li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li><li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li></ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li></ul></div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="text-to-speech.html">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html" class="active">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li></ul></div>
+        </aside>
+        <main class="docs-content">
+            <h1>Roles &amp; Personas</h1>
+            <p>AI Roles let you create specialized AI assistants with unique personalities, expertise, and preferred models. Switch between different specialists with a single tap.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#overview">What Are Roles?</a></li>
+                    <li><a href="#creating">Creating a Role</a></li>
+                    <li><a href="#switching">Switching Roles</a></li>
+                    <li><a href="#examples">Example Roles</a></li>
+                    <li><a href="#chat-flows">Roles in Chat Flows</a></li>
+                </ul>
+            </div>
+
+            <h2 id="overview">What Are Roles?</h2>
+            <p>A Role defines an AI persona with:</p>
+            <ul>
+                <li><strong>Display Name:</strong> A recognizable name (e.g., "Code Assistant", "Writing Coach")</li>
+                <li><strong>System Prompt:</strong> Instructions that define the AI's behavior, expertise, and communication style</li>
+                <li><strong>Preferred Model:</strong> Optionally associate a specific model that works best for this role</li>
+            </ul>
+            <p>When you activate a Role, its system prompt replaces the default one, effectively transforming the AI into a specialist.</p>
+
+            <h2 id="creating">Creating a Role</h2>
+            <ol class="steps">
+                <li><strong>Open Roles management</strong><p>Navigate to Settings → AI Roles, or use the role picker in the chat toolbar.</p></li>
+                <li><strong>Tap "Add Role"</strong><p>Create a new role with a name and system prompt.</p></li>
+                <li><strong>Write a system prompt</strong><p>Describe the AI's expertise, personality, and how it should respond. The more specific you are, the better the results.</p></li>
+                <li><strong>Assign a model (optional)</strong><p>Choose which AI model this role should use. When you switch to this role, the model will also switch automatically.</p></li>
+            </ol>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>Great system prompts include: the AI's expertise area, its communication style (formal/casual), output format preferences, and any constraints or rules it should follow.</p>
+            </div>
+
+            <h2 id="switching">Switching Roles</h2>
+            <p>You can switch roles at any time during a conversation:</p>
+            <ul>
+                <li>Tap the role picker icon in the chat toolbar</li>
+                <li>Select the desired role from the list</li>
+                <li>The AI's behavior changes immediately for subsequent messages</li>
+            </ul>
+            <p>Previous messages in the conversation remain unchanged — only new responses use the updated role.</p>
+
+            <h2 id="examples">Example Roles</h2>
+            <ul>
+                <li><strong>Code Assistant:</strong> "You are an expert programmer. Write clean, well-documented code. Explain your approach before coding. Use best practices and design patterns."</li>
+                <li><strong>Writing Coach:</strong> "You are a professional writing coach. Help improve clarity, grammar, and structure. Provide specific suggestions with examples."</li>
+                <li><strong>Research Analyst:</strong> "You are a thorough research analyst. Provide balanced analysis with multiple perspectives. Cite reasoning and note limitations."</li>
+                <li><strong>Language Tutor:</strong> "You are a patient language tutor for Spanish. Explain grammar rules clearly, provide example sentences, and correct mistakes gently."</li>
+                <li><strong>Debate Partner:</strong> "You are a critical thinker who challenges ideas constructively. Present counterarguments and ask probing questions."</li>
+            </ul>
+
+            <h2 id="chat-flows">Roles in Chat Flows</h2>
+            <p>Roles integrate seamlessly with <a href="chat-flows.html">Chat Flows</a>. When creating a multi-agent flow, you can add participants from your existing roles:</p>
+            <ul>
+                <li>The role's name, system prompt, and model are copied to the flow participant</li>
+                <li>Changes to the original role won't affect existing flow participants</li>
+                <li>You can customize the participant further after adding from a role</li>
+            </ul>
+
+            <div class="docs-nav-footer">
+                <a href="chat-flows.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Chat Flows</span></a>
+                <a href="cloud-providers.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Cloud Providers</span></a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

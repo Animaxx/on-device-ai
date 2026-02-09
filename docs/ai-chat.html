@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat - On Device AI Docs</title>
+    <meta name="description" content="Learn how to use AI Chat in On Device AI - conversation modes, model selection, context settings, and advanced chat features.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/ai-chat.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html" class="active">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1>AI Chat</h1>
+            <p>AI Chat is the core conversational interface of On Device AI. Chat with powerful language models running entirely on your device, with full privacy and no internet required.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#model-selection">Model Selection</a></li>
+                    <li><a href="#conversation-modes">Conversation Modes</a></li>
+                    <li><a href="#context-window">Context Window</a></li>
+                    <li><a href="#attachments">Attachments</a></li>
+                    <li><a href="#reasoning">Reasoning &amp; Thinking</a></li>
+                    <li><a href="#tool-calling">Tool Calling</a></li>
+                    <li><a href="#settings">Chat Settings</a></li>
+                </ul>
+            </div>
+
+            <h2 id="model-selection">Model Selection</h2>
+            <p>Tap the model selector at the top of the chat screen to choose from downloaded models. The app supports two inference engines:</p>
+            <ul>
+                <li><strong>GGUF (llama.cpp):</strong> Quantized models in GGUF format. Broad model support, efficient memory usage. Works on all devices.</li>
+                <li><strong>MLX:</strong> Apple's MLX framework optimized for Apple Silicon. Fastest performance on Macs, also available on newer iPhones and iPads.</li>
+            </ul>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>You can import custom GGUF models from Hugging Face by providing the direct download URL in Settings → Model Management.</p>
+            </div>
+
+            <h2 id="conversation-modes">Conversation Modes</h2>
+            <p>On Device AI supports two conversation modes:</p>
+            <ul>
+                <li><strong>Standard Mode:</strong> Direct conversation with one AI model. Best for general chat, Q&A, and coding tasks.</li>
+                <li><strong>Chat Flow Mode:</strong> Multi-agent conversation with multiple AI participants. See the <a href="chat-flows.html">Chat Flows</a> guide for details.</li>
+            </ul>
+
+            <h2 id="context-window">Context Window</h2>
+            <p>The context window determines how much conversation history the AI can see. Larger context windows allow for longer, more coherent conversations but use more memory.</p>
+            <p>You can adjust the context size in Settings → Chat. The default is optimized for your device's available RAM.</p>
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Warning</div>
+                <p>Setting the context window too large may cause the app to run out of memory, especially on devices with limited RAM. Stick to the recommended default if unsure.</p>
+            </div>
+
+            <h2 id="attachments">Attachments</h2>
+            <p>You can attach various content to your conversations:</p>
+            <ul>
+                <li><strong>Images:</strong> Photos from camera or library. Uses OCR for text extraction, or direct vision model analysis for VLM models.</li>
+                <li><strong>Documents:</strong> PDFs and text files. Content is extracted and indexed for AI reference.</li>
+                <li><strong>URLs:</strong> Web pages are fetched, converted to markdown, and indexed. A thumbnail screenshot is captured for reference.</li>
+            </ul>
+
+            <h2 id="reasoning">Reasoning &amp; Thinking</h2>
+            <p>Models that support reasoning (like DeepSeek, Qwen 3 with thinking) can show their chain-of-thought process in a collapsible "Thinking" section above the response.</p>
+            <p>You can control the default expansion behavior in Settings → Chat → "Show reasoning by default".</p>
+
+            <h2 id="tool-calling">Tool Calling</h2>
+            <p>Compatible models can use built-in tools during conversation:</p>
+            <ul>
+                <li><strong>Web Search:</strong> Search the web for current information</li>
+                <li><strong>Web Fetch:</strong> Fetch and read web page content</li>
+                <li><strong>Calculator:</strong> Perform mathematical calculations</li>
+            </ul>
+            <p>Tool calling is automatic when the AI determines it needs external information. You can enable/disable it in Settings.</p>
+
+            <h2 id="settings">Chat Settings</h2>
+            <p>Customize your chat experience in Settings → Chat:</p>
+            <ul>
+                <li><strong>Temperature:</strong> Controls response creativity (lower = more deterministic, higher = more creative)</li>
+                <li><strong>System Prompt:</strong> Set a default instruction for all conversations</li>
+                <li><strong>Context Size:</strong> Adjust the maximum context window</li>
+                <li><strong>Show Reasoning:</strong> Default expansion state for thinking blocks</li>
+                <li><strong>Auto-play Voice:</strong> Automatically speak AI responses</li>
+            </ul>
+
+            <div class="docs-nav-footer">
+                <a href="getting-started.html" class="docs-nav-link prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">Getting Started</span>
+                </a>
+                <a href="knowledge-libraries.html" class="docs-nav-link next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">Knowledge Libraries</span>
+                </a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>
