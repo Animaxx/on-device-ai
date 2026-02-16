@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM Integration - On Device AI Docs</title>
+    <meta name="description"
+        content="Connect On Device AI to Discord, Slack, and Telegram. Use your local LLM as an IM bot with autopilot and tool usage capabilities.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/im-integration.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device
+                    AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..."
+                    aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                    <li><a href="im-integration.html" class="active">IM Integration</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1>IM Integration</h1>
+            <p>Turn your local LLM into a powerful personal assistant on Discord, Slack, and Telegram. On Device AI can
+                automatically reply to messages, use tools, and provide remote access to your local models.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#discord">Discord Setup</a></li>
+                    <li><a href="#slack">Slack Setup</a></li>
+                    <li><a href="#telegram">Telegram Setup</a></li>
+                    <li><a href="#autopilot">Autopilot & Tools</a></li>
+                </ul>
+            </div>
+
+            <h2 id="overview">Overview</h2>
+            <p>The IM connection feature allows On Device AI to log in as a bot on supported platforms. When enabled:
+            </p>
+            <ul>
+                <li><strong>Autopilot:</strong> The app reads incoming DMs and mentions, processes them with your local
+                    model, and replies automatically.</li>
+                <li><strong>Privacy:</strong> All processing happens on your device. No data is sent to the IM
+                    platform's servers other than the reply you generate.</li>
+                <li><strong>Remote Access:</strong> Chat with your powerful Mac-hosted LLM from your phone via Telegram
+                    or Discord while on the go.</li>
+            </ul>
+
+            <h2 id="discord">Discord Setup</h2>
+            <ol class="steps">
+                <li><strong>Create Application</strong>
+                    <p>Go to the <a href="https://discord.com/developers/applications" target="_blank">Discord Developer
+                            Portal</a>, click "New Application", and give it a name.</p>
+                </li>
+                <li><strong>Enable Bot</strong>
+                    <p>Go to the <strong>Bot</strong> tab, click "Add Bot", and confirm. Click "Reset Token" to get your
+                        <strong>Bot Token</strong>.</p>
+                </li>
+                <li><strong>Set Permissions</strong>
+                    <p>In the <strong>OAuth2 > URL Generator</strong> tab, select the <code>bot</code> scope. Under Bot
+                        Permissions, select <code>Send Messages</code> and <code>Read Message History</code>.</p>
+                </li>
+                <li><strong>Invite & Connect</strong>
+                    <p>Copy the generated URL to invite the bot to your server. Paste the <strong>Bot Token</strong>
+                        into On Device AI settings.</p>
+                </li>
+            </ol>
+
+            <h2 id="slack">Slack Setup</h2>
+            <ol class="steps">
+                <li><strong>Create App</strong>
+                    <p>Go to <a href="https://api.slack.com/apps" target="_blank">Slack API</a>, create a new app "From
+                        scratch", and select your workspace.</p>
+                </li>
+                <li><strong>Enable Socket Mode</strong>
+                    <p>Go to <strong>Socket Mode</strong>, enable it, and generate an App-Level Token
+                        (<code>xapp-...</code>) with <code>connections:write</code> scope.</p>
+                </li>
+                <li><strong>Subscribe to Events</strong>
+                    <p>Go to <strong>Event Subscriptions</strong>, enable events, and add <code>message.im</code> and
+                        <code>app_mention</code> to "Subscribe to bot events".</p>
+                </li>
+                <li><strong>Add Scopes</strong>
+                    <p>Go to <strong>OAuth & Permissions</strong> and add these Bot Token Scopes:
+                        <code>chat:write</code>, <code>im:history</code>, <code>im:read</code>,
+                        <code>app_mentions:read</code>.</p>
+                </li>
+                <li><strong>Install</strong>
+                    <p>Go to <strong>Install App</strong>, install to workspace, and copy the Bot User OAuth Token
+                        (<code>xoxb-...</code>).</p>
+                </li>
+            </ol>
+
+            <h2 id="telegram">Telegram Setup</h2>
+            <ol class="steps">
+                <li><strong>Talk to BotFather</strong>
+                    <p>Open Telegram and search for <strong>@BotFather</strong>.</p>
+                </li>
+                <li><strong>Create Bot</strong>
+                    <p>Send the command <code>/newbot</code>. Follow the prompts to set a name and username (ending in
+                        'bot').</p>
+                </li>
+                <li><strong>Get Token</strong>
+                    <p>BotFather will send you an HTTP API token. Copy this token into On Device AI settings.</p>
+                </li>
+            </ol>
+
+            <h2 id="autopilot">Autopilot & Tools</h2>
+            <p>Once connected, you can configure how the AI behaves:</p>
+            <ul>
+                <li><strong>System Prompt:</strong> Define a custom persona for your bot (e.g., "You are a helpful
+                    coding assistant").</li>
+                <li><strong>Tools:</strong> Enable tools like Web Search or Calculator. The bot can use these tools to
+                    answer questions in chat (e.g., "What's the weather in Tokyo?").</li>
+                <li><strong>Commands:</strong> Use commands like <code>!reset</code> to clear context or
+                    <code>!tools</code> to manage tool access directly from the chat.</li>
+            </ul>
+
+            <div class="docs-nav-footer">
+                <a href="cloud-providers.html" class="docs-nav-link prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">Cloud Providers</span>
+                </a>
+                <a href="index.html" class="docs-nav-link next">
+                    <span class="nav-label">Back to →</span>
+                    <span class="nav-title">Documentation Home</span>
+                </a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
