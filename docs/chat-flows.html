@@ -1,37 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Flows - On Device AI Docs</title>
-    <meta name="description" content="Create multi-agent AI workflows with Chat Flows in On Device AI. Specialized AI participants collaborate on complex tasks.">
+    <meta name="description"
+        content="Create multi-agent AI workflows with Chat Flows in On Device AI. Specialized AI participants collaborate on complex tasks.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/docs/chat-flows.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/chat-flows.html">
+    <meta property="og:title" content="Chat Flows - On Device AI Docs">
+    <meta property="og:description" content="Create multi-agent AI workflows with Chat Flows in On Device AI. Specialized AI participants collaborate on complex tasks.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/chat-flows.html">
+    <meta property="twitter:title" content="Chat Flows - On Device AI Docs">
+    <meta property="twitter:description" content="Create multi-agent AI workflows with Chat Flows in On Device AI. Specialized AI participants collaborate on complex tasks.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Chat Flows",
+        "item": "https://OnDevice-ai.app/docs/chat-flows.html"
+      }]
+    }
+    </script>
 </head>
+
 <body>
     <header class="site-header scrolled">
         <div class="container header-inner">
-            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
-            <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="./" class="active">Docs</a></li><li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li><li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li></ul>
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device
+                    AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
             <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
     <div class="docs-layout">
         <aside class="docs-sidebar">
             <div class="docs-search">
-                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..."
+                    aria-label="Search documentation">
                 <div class="docs-search-results"></div>
             </div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li></ul></div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="text-to-speech.html">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html" class="active">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li>
-                    <li><a href="im-integration.html">IM Integration</a></li></ul></div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html" class="active">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                    <li><a href="im-integration.html">IM Integration</a></li>
+                </ul>
+            </div>
         </aside>
         <main class="docs-content">
             <h1>Chat Flows</h1>
-            <p>Chat Flows let you create multi-agent conversations where multiple specialized AI participants collaborate on complex tasks. Think of it as assembling a team of AI experts who each bring different skills to the table.</p>
+            <p>Chat Flows let you create multi-agent conversations where multiple specialized AI participants
+                collaborate on complex tasks. Think of it as assembling a team of AI experts who each bring different
+                skills to the table.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -39,41 +125,107 @@
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#creating">Creating a Flow</a></li>
                     <li><a href="#participants">Managing Participants</a></li>
+                    <li><a href="#context-base">Context Base Selector</a></li>
+                    <li><a href="#fan-out">Fan-out & Summarizer Patterns</a></li>
                     <li><a href="#running">Running a Flow</a></li>
                     <li><a href="#examples">Example Flows</a></li>
                 </ul>
             </div>
 
             <h2 id="overview">Overview</h2>
-            <p>In standard chat mode, you talk to one AI model at a time. Chat Flows extend this by introducing multiple AI participants, each with their own:</p>
+            <p>In standard chat mode, you talk to one AI model at a time. Chat Flows extend this by introducing multiple
+                AI participants, each with their own:</p>
             <ul>
                 <li><strong>Name:</strong> A display name for identification</li>
-                <li><strong>System prompt:</strong> Instructions that define the participant's expertise and personality</li>
+                <li><strong>System prompt:</strong> Instructions that define the participant's expertise and personality
+                </li>
                 <li><strong>Model:</strong> Each participant can use a different AI model</li>
             </ul>
             <p>Participants take turns responding to your messages, building on each other's contributions.</p>
 
             <h2 id="creating">Creating a Flow</h2>
             <ol class="steps">
-                <li><strong>Open the model picker</strong><p>Tap the model selector in the AI Chat screen.</p></li>
-                <li><strong>Switch to Chat Flow tab</strong><p>Select the "Chat Flow" tab in the model picker.</p></li>
-                <li><strong>Create a new flow</strong><p>Tap "Create Flow" and give it a descriptive name.</p></li>
-                <li><strong>Add participants</strong><p>Add AI participants. You can create custom participants or select from existing <a href="roles-personas.html">AI Roles</a>.</p></li>
+                <li><strong>Open the model picker</strong>
+                    <p>Tap the model selector in the AI Chat screen.</p>
+                </li>
+                <li><strong>Switch to Chat Flow tab</strong>
+                    <p>Select the "Chat Flow" tab in the model picker.</p>
+                </li>
+                <li><strong>Create a new flow</strong>
+                    <p>Tap "Create Flow" and give it a descriptive name.</p>
+                </li>
+                <li><strong>Add participants</strong>
+                    <p>Add AI participants. You can create custom participants or select from existing <a
+                            href="roles-personas.html">AI Roles</a>.</p>
+                </li>
             </ol>
 
             <h2 id="participants">Managing Participants</h2>
             <p>Each flow can have multiple AI participants:</p>
             <ul>
-                <li><strong>Add from Roles:</strong> Select from your predefined AI Roles to quickly add specialized participants</li>
-                <li><strong>Custom participants:</strong> Create new participants with custom names, system prompts, and model selections</li>
+                <li><strong>Add from Roles:</strong> Select from your predefined AI Roles to quickly add specialized
+                    participants</li>
+                <li><strong>Custom participants:</strong> Create new participants with custom names, system prompts, and
+                    model selections</li>
+                <li><strong>Tool Allowlist:</strong> Configure which tools each participant can use (max 5), specific to
+                    their task</li>
                 <li><strong>Reorder:</strong> Drag to reorder participants — this determines the response order</li>
                 <li><strong>Edit:</strong> Modify any participant's name, system prompt, or model at any time</li>
                 <li><strong>Remove:</strong> Remove participants you no longer need</li>
             </ul>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Conversation-Scoped Task Plans</div>
+                <p>If participants can use the PRO <code>task_planner</code> tool, they share the same task plan within
+                    the conversation. This enables hand-off workflows where one participant plans and others execute.
+                    Starting a new conversation begins with an empty plan.</p>
+            </div>
             <div class="callout callout-tip">
                 <div class="callout-title">💡 Tip</div>
-                <p>When you add a participant from a Role, the role's data is copied. Changes to the original role won't affect existing flow participants.</p>
+                <p>When you add a participant from a Role, the role's data is copied. Changes to the original role won't
+                    affect existing flow participants.</p>
             </div>
+
+            <h2 id="context-base">Context Base Selector</h2>
+            <p>Each participant can configure what message their response is based on. This controls both what the
+                participant "sees" in their context and determines message provenance in the conversation history.</p>
+            <ul>
+                <li><strong>Follow Previous Message</strong> (default): The participant responds to the most recent
+                    message in the conversation. This creates a chain where each response builds on the previous one.
+                </li>
+                <li><strong>Use Latest User Message</strong>: The participant responds directly to your latest input,
+                    ignoring any intermediate responses. This enables parallel "fan-out" patterns.</li>
+                <li><strong>Use Latest Message From Role</strong>: The participant responds to the latest message from a
+                    specific role. Useful for workflows where one role builds on another's output.</li>
+            </ul>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Note</div>
+                <p>Invalid context base references (e.g., referencing a deleted role) automatically fall back to "Use
+                    Latest User Message".</p>
+            </div>
+
+            <h2 id="fan-out">Fan-out & Summarizer Patterns</h2>
+            <p>The context base selector enables two powerful multi-agent patterns:</p>
+
+            <h3>Fan-out Pattern</h3>
+            <p>Configure multiple participants to use "Use Latest User Message". When you send a message:</p>
+            <ul>
+                <li>All participants respond to your input independently</li>
+                <li>They don't see each other's outputs from the same turn</li>
+                <li>Use case: Get multiple perspectives on the same question</li>
+            </ul>
+
+            <h3>Summarizer Pattern</h3>
+            <p>Configure an early participant with "Use Latest User Message" (fan-out), and a later participant with
+                "Follow Previous Message":</p>
+            <ul>
+                <li>The summarizer sees all responses from earlier participants</li>
+                <li>Can synthesize or build upon their outputs</li>
+                <li>Use case: Research team where specialists answer, then a coordinator synthesizes</li>
+            </ul>
+
+            <h3>Message Provenance</h3>
+            <p>In the conversation history, each participant's response shows "Based on: [message]" indicating which
+                message it's responding to. Tap the indicator to jump to that message.</p>
 
             <h2 id="running">Running a Flow</h2>
             <p>Once your flow is set up:</p>
@@ -85,7 +237,8 @@
             </ol>
             <div class="callout callout-info">
                 <div class="callout-title">ℹ️ Note</div>
-                <p>Chat Flow mode resets to default (off) when you start a new conversation, ensuring you don't accidentally use a flow when you want a simple chat.</p>
+                <p>Chat Flow mode resets to default (off) when you start a new conversation, ensuring you don't
+                    accidentally use a flow when you want a simple chat.</p>
             </div>
 
             <h2 id="examples">Example Flows</h2>
@@ -109,16 +262,24 @@
             </ul>
 
             <div class="docs-nav-footer">
-                <a href="vision-models.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Vision Models</span></a>
-                <a href="roles-personas.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Roles &amp; Personas</span></a>
+                <a href="vision-models.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span
+                        class="nav-title">Vision Models</span></a>
+                <a href="roles-personas.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
+                        class="nav-title">Roles &amp; Personas</span></a>
             </div>
         </main>
     </div>
-    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg></button>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="../js/search-index.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/docs.js"></script>
     <script src="../js/search.js"></script>
 </body>
+
 </html>

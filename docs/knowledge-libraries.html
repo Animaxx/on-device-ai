@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Libraries - On Device AI Docs</title>
-    <meta name="description" content="Build project-specific AI memory with Knowledge Libraries in On Device AI. Add PDFs, notes, web captures, and images.">
+    <meta name="description"
+        content="Build project-specific AI memory with Knowledge Libraries in On Device AI. Add PDFs, notes, web captures, and images.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/docs/knowledge-libraries.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/knowledge-libraries.html">
+    <meta property="og:title" content="Knowledge Libraries - On Device AI Docs">
+    <meta property="og:description"
+        content="Build project-specific AI memory with Knowledge Libraries in On Device AI. Add PDFs, notes, web captures, and images.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/knowledge-libraries.html">
+    <meta property="twitter:title" content="Knowledge Libraries - On Device AI Docs">
+    <meta property="twitter:description"
+        content="Build project-specific AI memory with Knowledge Libraries in On Device AI. Add PDFs, notes, web captures, and images.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Knowledge Libraries",
+        "item": "https://OnDevice-ai.app/docs/knowledge-libraries.html"
+      }]
+    }
+    </script>
 </head>
+
 <body>
     <header class="site-header scrolled">
         <div class="container header-inner">
-            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device
+                    AI</span></a>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./" class="active">Docs</a></li>
-                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg></button></li>
                 <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -26,8 +83,12 @@
     <div class="docs-layout">
         <aside class="docs-sidebar">
             <div class="docs-search">
-                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..."
+                    aria-label="Search documentation">
                 <div class="docs-search-results"></div>
             </div>
             <div class="sidebar-section">
@@ -45,6 +106,7 @@
                     <li><a href="voice-notes.html">Voice Notes</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
                     <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
@@ -55,7 +117,9 @@
         </aside>
         <main class="docs-content">
             <h1>Knowledge Libraries</h1>
-            <p>Knowledge Libraries are dedicated AI memory spaces that let you give the AI focused context about specific projects, clients, or topics. Instead of pasting the same documents into every conversation, create a Library and the AI draws from it automatically.</p>
+            <p>Your Personal AI Brain. Give the AI perfect memory for your specific projects. Group PDFs, notes, and web
+                captures into dedicated libraries so your AI assistant can provide accurate, targeted answers without
+                you having to re-paste the same documents.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -70,7 +134,8 @@
             </div>
 
             <h2 id="overview">How It Works</h2>
-            <p>Knowledge Libraries use <strong>similarity search</strong> (vector embeddings) to find the most relevant parts of your documents when you ask a question. This means:</p>
+            <p>Knowledge Libraries use <strong>similarity search</strong> (vector embeddings) to find the most relevant
+                parts of your documents when you ask a question. This means:</p>
             <ul>
                 <li>Documents are split into chunks and indexed locally on your device</li>
                 <li>When you ask a question, the most relevant chunks are retrieved and passed to the AI</li>
@@ -80,9 +145,16 @@
 
             <h2 id="creating">Creating a Library</h2>
             <ol class="steps">
-                <li><strong>Open the Knowledge tab</strong><p>Navigate to the Knowledge section from the sidebar or tab bar.</p></li>
-                <li><strong>Tap "New Library"</strong><p>Give your library a descriptive name (e.g., "Project Alpha Research", "Client X Requirements").</p></li>
-                <li><strong>Add documents</strong><p>Start adding PDFs, text files, web pages, images, or typed notes to your library.</p></li>
+                <li><strong>Open the Knowledge tab</strong>
+                    <p>Navigate to the Knowledge section from the sidebar or tab bar.</p>
+                </li>
+                <li><strong>Tap "New Library"</strong>
+                    <p>Give your library a descriptive name (e.g., "Project Alpha Research", "Client X Requirements").
+                    </p>
+                </li>
+                <li><strong>Add documents</strong>
+                    <p>Start adding PDFs, text files, web pages, images, or typed notes to your library.</p>
+                </li>
             </ol>
 
             <h2 id="adding-content">Adding Content</h2>
@@ -96,15 +168,24 @@
             </ul>
             <div class="callout callout-tip">
                 <div class="callout-title">💡 Tip</div>
-                <p>For best results, organize related documents in the same library. Create separate libraries for different projects or topics.</p>
+                <p>For best results, organize related documents in the same library. Create separate libraries for
+                    different projects or topics.</p>
             </div>
 
             <h2 id="using">Using Libraries in Chat</h2>
             <p>To use a Knowledge Library in conversation:</p>
             <ol class="steps">
-                <li><strong>Activate the library</strong><p>In the AI Chat screen, tap the Knowledge icon in the toolbar and select which library to use.</p></li>
-                <li><strong>Ask questions</strong><p>Chat normally. The AI automatically searches the library for relevant context before responding.</p></li>
-                <li><strong>View sources</strong><p>The AI's response will indicate which documents it referenced, so you can verify the information.</p></li>
+                <li><strong>Activate the library</strong>
+                    <p>In the AI Chat screen, tap the Knowledge icon in the toolbar and select which library to use.</p>
+                </li>
+                <li><strong>Ask questions</strong>
+                    <p>Chat normally. The AI automatically searches the library for relevant context before responding.
+                    </p>
+                </li>
+                <li><strong>View sources</strong>
+                    <p>The AI's response will indicate which documents it referenced, so you can verify the information.
+                    </p>
+                </li>
             </ol>
 
             <h2 id="managing">Managing Libraries</h2>
@@ -112,7 +193,8 @@
                 <li><strong>Edit:</strong> Add or remove documents from any library at any time</li>
                 <li><strong>Rename:</strong> Change the library name to keep things organized</li>
                 <li><strong>Delete:</strong> Remove a library and all its indexed data</li>
-                <li><strong>Multiple libraries:</strong> Create as many libraries as you need — switch between them freely</li>
+                <li><strong>Multiple libraries:</strong> Create as many libraries as you need — switch between them
+                    freely</li>
             </ul>
 
             <h2 id="tips">Tips &amp; Best Practices</h2>
@@ -121,7 +203,8 @@
                 <li>Use descriptive file names — they help the AI understand document context</li>
                 <li>Regularly update libraries with new documents as projects evolve</li>
                 <li>For large documents, the chunking system handles them automatically — no need to split manually</li>
-                <li>Combine Knowledge Libraries with <a href="roles-personas.html">AI Roles</a> for specialized domain experts</li>
+                <li>Combine Knowledge Libraries with <a href="roles-personas.html">AI Roles</a> for specialized domain
+                    experts</li>
             </ul>
 
             <div class="docs-nav-footer">
@@ -136,11 +219,17 @@
             </div>
         </main>
     </div>
-    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg></button>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="../js/search-index.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/docs.js"></script>
     <script src="../js/search.js"></script>
 </body>
+
 </html>

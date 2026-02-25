@@ -8,7 +8,7 @@
 
     <title>On Device AI - Private AI Assistant for iPhone, Mac & Vision Pro</title>
     <meta name="description"
-        content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run DeepSeek, Gemma & Qwen locally. Voice transcription, document analysis, collaborative AI teams, and Knowledge Libraries - all with 100% privacy.">
+        content="Private offline AI assistant for iPhone, Mac & Vision Pro. Run Llama, Gemma & DeepSeek locally. Voice transcription, AI teams & 100% privacy.">
     <meta name="keywords"
         content="On Device AI, offline AI, privacy AI, LLM, Local LLM, iOS AI, macOS AI, visionOS AI, voice transcription, knowledge library">
     <meta name="author" content="Zijie">
@@ -31,6 +31,12 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -153,7 +159,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="#home" class="logo">
-                <img src="images/icon.png" alt="On Device AI">
+                <img src="images/icon.png" alt="On Device AI" width="512" height="512">
                 <span>On Device AI</span>
             </a>
             <ul class="nav-links">
@@ -193,11 +199,12 @@
     <main>
         <!-- ============ HERO ============ -->
         <section id="home" class="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
             <div class="container">
                 <div class="hero-inner">
                     <div class="hero-text">
                         <h1>
-                            <span class="hero-title-line1">On Device AI</span>
+                            <span class="hero-title-line1">Your On Device AI Workspace</span>
                             <span class="hero-title-line2">AI that respects your privacy</span>
                         </h1>
                         <p class="hero-description">Transform voice into text, chat with powerful AI models, and build
@@ -257,20 +264,17 @@
                                     <path
                                         d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                                 </svg>
-                                Free Download
+                                Get On Device AI Free
                             </a>
-                            <a href="docs/" class="btn-secondary">Read the Docs →</a>
+                            <a href="docs/" class="btn-secondary">See How It Works →</a>
                         </div>
                         <p class="hero-platforms">Available for iOS, macOS, and visionOS</p>
                     </div>
                     <div class="hero-visual">
-                        <div class="glow-orbs">
-                            <div class="glow-orb glow-orb-1"></div>
-                            <div class="glow-orb glow-orb-2"></div>
-                            <div class="glow-orb glow-orb-3"></div>
-                        </div>
+
                         <div class="device-mockup floating-device">
-                            <img src="images/phone_screen.png" alt="On Device AI App Screenshot">
+                            <img src="images/phone_screen.png" alt="On Device AI App Screenshot" width="1023"
+                                height="2224">
                         </div>
                         <div class="floating-badge badge-ai">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -301,6 +305,30 @@
             </div>
         </section>
 
+        <!-- ============ STATS BAR ============ -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100" data-suffix="+">100+</span>
+                        <span class="stat-label">Local AI Models</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+                        <span class="stat-label">Private &amp; Safety</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3" data-suffix="">3</span>
+                        <span class="stat-label">Apple Platforms</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8" data-suffix="+">8+</span>
+                        <span class="stat-label">AI Providers Supported</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ============ FEATURES ============ -->
         <section id="features" class="features section">
             <div class="container">
@@ -311,21 +339,10 @@
                 </div>
                 <div class="feature-grid">
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/ai_settings.jpeg" alt="Collaborative AI Teams">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                                    <path d="M9 9h6M9 13h6M9 17h4" />
-                                </svg>
-                                Local Processing
-                            </div>
-                        </div>
                         <div class="feature-body">
-                            <h3>Collaborative AI Teams</h3>
-                            <p>Create sophisticated AI teams where specialized agents work together on complex tasks.
-                                Run models like Llama, Gemma, Qwen, DeepSeek entirely on your device.</p>
+                            <h3>Parallel AI Teams</h3>
+                            <p>Multiply your productivity. Deploy specialized agents (e.g., Researcher, Analyst, Writer)
+                                to tackle complex projects simultaneously across your devices.</p>
                             <a href="docs/chat-flows.html" class="feature-link">Learn more <svg width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -334,21 +351,10 @@
                         </div>
                     </div>
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/voice_memo.jpeg" alt="Voice Notes & Transcription">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
-                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                                </svg>
-                                Voice AI
-                            </div>
-                        </div>
                         <div class="feature-body">
                             <h3>Voice Notes &amp; Transcription</h3>
-                            <p>Instantly record, transcribe, summarize, and translate audio on-device. Navigate
-                                recordings with word-level precision in multiple languages.</p>
+                            <p>Never miss a detail. Quickly capture, transcribe, and summarize meetings with flawless,
+                                on-device transcription in multiple languages.</p>
                             <a href="docs/voice-notes.html" class="feature-link">Learn more <svg width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -357,17 +363,6 @@
                         </div>
                     </div>
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/speech_audio.png" alt="Text-to-Speech">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                                </svg>
-                                Professional Audio
-                            </div>
-                        </div>
                         <div class="feature-body">
                             <h3>Professional Text-to-Speech</h3>
                             <p>Generate natural, human-like speech using Apple voices or the Kokoro engine. Create audio
@@ -380,21 +375,10 @@
                         </div>
                     </div>
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/search.jpeg" alt="Built-In Web Search">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="11" cy="11" r="8" />
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                                </svg>
-                                AI Analysis
-                            </div>
-                        </div>
                         <div class="feature-body">
-                            <h3>Built-In Web Search</h3>
-                            <p>Search the web with AI-powered analysis that transforms results into coherent summaries.
-                                Ask complex questions and get structured responses.</p>
+                            <h3>Active Tools &amp; Web Search</h3>
+                            <p>Equip your AI with live knowledge. Let your agents use web search, calculators, and API
+                                tools to solve real-world problems in real time.</p>
                             <a href="docs/web-search.html" class="feature-link">Learn more <svg width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -403,21 +387,10 @@
                         </div>
                     </div>
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/personas.jpeg" alt="AI Personas">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                    <circle cx="12" cy="7" r="4" />
-                                </svg>
-                                Custom AI
-                            </div>
-                        </div>
                         <div class="feature-body">
-                            <h3>AI Roles &amp; Personas</h3>
-                            <p>Create custom AI roles with unique personalities, expertise, and preferred models. Switch
-                                between specialists for coding, writing, research, or coaching.</p>
+                            <h3>AI Roles &amp; Remote Control</h3>
+                            <p>Create custom AI roles and command them from anywhere. Connect your AI to Slack, Discord,
+                                or Telegram and trigger workflows without opening the app.</p>
                             <a href="docs/roles-personas.html" class="feature-link">Learn more <svg width="16"
                                     height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -426,21 +399,10 @@
                         </div>
                     </div>
                     <div class="feature-card glass-card">
-                        <div class="feature-media">
-                            <img src="screenshots/knowledge_base.png" alt="Knowledge Libraries">
-                            <div class="feature-overlay">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                                </svg>
-                                AI Memory
-                            </div>
-                        </div>
                         <div class="feature-body">
                             <h3>Knowledge Libraries</h3>
-                            <p>Create dedicated AI memory spaces for each project. Group PDFs, notes, web captures, and
-                                images together. Get focused, accurate answers from your Library.</p>
+                            <p>Your personal AI brain. Give the AI perfect memory for your specific projects. Group
+                                PDFs, notes, and web captures for accurate, targeted answers.</p>
                             <a href="docs/knowledge-libraries.html" class="feature-link">Learn more <svg width="16"
                                     height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -456,8 +418,9 @@
         <section id="technology" class="technology section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>How Does <span class="highlight">On-Device AI</span> Keep Your Data Private?</h2>
-                    <p>All AI processing happens directly on your device — no cloud servers involved.</p>
+                    <h2>Your Data. <span class="highlight">Your Choice.</span></h2>
+                    <p>Run leading models locally with zero data leakage, or opt-in to cloud providers when you need
+                        maximum power.</p>
                 </div>
                 <div class="comparison-grid">
                     <div class="comparison-card cloud glass-card">
@@ -466,14 +429,40 @@
                         </svg>
                         <h3>Traditional Cloud AI</h3>
                         <div class="workflow">
-                            <div class="workflow-step"><span class="step-icon">📱</span><span class="step-text">Your
-                                    Data</span></div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step"><span class="step-icon">☁️</span><span class="step-text">Cloud
-                                    Server</span></div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step"><span class="step-icon">🤖</span><span class="step-text">AI
-                                    Response</span></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                                    </svg></span>
+                                <span class="step-text">Your Data</span>
+                            </div>
+                            <div class="workflow-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                                    </svg></span>
+                                <span class="step-text">Cloud Server</span>
+                            </div>
+                            <div class="workflow-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                    </svg></span>
+                                <span class="step-text">AI Response</span>
+                            </div>
                         </div>
                         <ul class="comparison-points">
                             <li>
@@ -506,14 +495,39 @@
                         </svg>
                         <h3>On-Device AI</h3>
                         <div class="workflow">
-                            <div class="workflow-step"><span class="step-icon">📱</span><span class="step-text">Your
-                                    Data</span></div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step"><span class="step-icon">🧠</span><span class="step-text">Local
-                                    AI</span></div>
-                            <div class="workflow-arrow">→</div>
-                            <div class="workflow-step"><span class="step-icon">✨</span><span class="step-text">Instant
-                                    Response</span></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                                    </svg></span>
+                                <span class="step-text">Your Data</span>
+                            </div>
+                            <div class="workflow-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg></span>
+                                <span class="step-text">Local AI</span>
+                            </div>
+                            <div class="workflow-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></div>
+                            <div class="workflow-step">
+                                <span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg></span>
+                                <span class="step-text">Instant Response</span>
+                            </div>
                         </div>
                         <ul class="comparison-points">
                             <li>
@@ -902,6 +916,7 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.iife.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/neural-network.js"></script>
 </body>
 
 </html>

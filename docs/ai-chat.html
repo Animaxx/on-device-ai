@@ -11,6 +11,45 @@
     <link rel="canonical" href="https://OnDevice-ai.app/docs/ai-chat.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/ai-chat.html">
+    <meta property="og:title" content="AI Chat - On Device AI Docs">
+    <meta property="og:description"
+        content="Learn how to use AI Chat in On Device AI - conversation modes, model selection, context settings, and advanced chat features.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/ai-chat.html">
+    <meta property="twitter:title" content="AI Chat - On Device AI Docs">
+    <meta property="twitter:description"
+        content="Learn how to use AI Chat in On Device AI - conversation modes, model selection, context settings, and advanced chat features.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Chat",
+        "item": "https://OnDevice-ai.app/docs/ai-chat.html"
+      }]
+    }
+    </script>
 </head>
 
 <body>
@@ -67,6 +106,7 @@
                     <li><a href="voice-notes.html">Voice Notes</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
                     <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
@@ -77,8 +117,9 @@
         </aside>
         <main class="docs-content">
             <h1>AI Chat</h1>
-            <p>AI Chat is the core conversational interface of On Device AI. Chat with powerful language models running
-                entirely on your device, with full privacy and no internet required.</p>
+            <p>Brainstorm ideas, write code, and solve complex problems instantly. AI Chat connects you with powerful
+                language models running entirely on your device—giving you full privacy and 100% offline access to your
+                own personal AI assistant.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -128,8 +169,8 @@
                     with limited RAM. Stick to the recommended default if unsure.</p>
             </div>
 
-            <h2 id="attachments">Attachments</h2>
-            <p>You can attach various content to your conversations:</p>
+            <h2 id="attachments">Attachments & Sharing</h2>
+            <p>You can bring content into your conversations in several ways:</p>
             <ul>
                 <li><strong>Images:</strong> Photos from camera or library. Uses OCR for text extraction, or direct
                     vision model analysis for VLM models.</li>
@@ -137,6 +178,15 @@
                 </li>
                 <li><strong>URLs:</strong> Web pages are fetched, converted to markdown, and indexed. A thumbnail
                     screenshot is captured for reference.</li>
+            </ul>
+
+            <h3 id="sharing-from-outside">Sharing from Outside the App</h3>
+            <ul>
+                <li><strong>iOS Share Sheet:</strong> Highlight text, select URLs, or pick images in any app and share
+                    them directly to On Device AI. Shared text automatically becomes your chat prompt, and images are
+                    imported as attachments.</li>
+                <li><strong>Drag-and-Drop / Pasteboard:</strong> On macOS and visionOS, you can drag images or text
+                    directly into the chat window, or paste them from your clipboard.</li>
             </ul>
 
             <h2 id="reasoning">Reasoning &amp; Thinking</h2>
@@ -147,16 +197,20 @@
             <h2 id="tool-calling">Tool Calling</h2>
             <p>Compatible models can use built-in tools during conversation:</p>
             <ul>
-                <li><strong>Web Search:</strong> Search the web for current information</li>
-                <li><strong>Web Fetch:</strong> Fetch and read web page content</li>
+                <li><strong>Web Search:</strong> Search the web for current information and synthesize results</li>
+                <li><strong>Web Fetch:</strong> Fetch and read web page content as markdown</li>
                 <li><strong>Calculator:</strong> Perform mathematical calculations</li>
-                <li><strong>Weather:</strong> Get current weather information for any location</li>
-                <li><strong>File:</strong> Create and read files for complex tasks</li>
                 <li><strong>Global Memory:</strong> Store and recall personal preferences and key facts across
                     conversations</li>
+                <li><strong>HTTP Request:</strong> Make GET, POST, PUT, and PATCH requests to any endpoint — with custom
+                    headers, body, timeout, and optional file download mode</li>
             </ul>
-            <p>Tool calling is automatic when the AI determines it needs external information. You can enable/disable it
-                in Settings.</p>
+            <p>Tool calling is automatic when the AI determines it needs external information. You can enable/disable
+                individual tools and configure per-tool default parameters in <em>Settings → Tool Calling</em>.</p>
+            <p><strong>Customizing Tool Order:</strong> You can rearrange the order of tools in <em>Settings → Tool
+                    Calling</em> by dragging and dropping them.</p>
+            <p>See <a href="tool-calling.html">Tool Calling</a> for a full guide to each tool and its configuration
+                options.</p>
 
             <h2 id="settings">Chat Settings</h2>
             <p>Customize your chat experience in Settings → Chat:</p>
@@ -193,17 +247,20 @@
                 <li><strong>Top-P & Top-K:</strong> These filter the "vocabulary" the AI chooses from.
                     <strong>Top-K</strong> limits choices to the top X most likely words. <strong>Top-P</strong> limits
                     choices to the top words whose combined probability equals P%. <em>Tweaking these can reduce
-                        repetition or gibberish.</em></li>
+                        repetition or gibberish.</em>
+                </li>
                 <li><strong>Attention Type:</strong> <strong>Causal</strong> is standard for chat models.
                     <strong>Non-Causal</strong> is rarely used for specific architectures. <em>Generally, keep this on
-                        "Unspecified" or "Causal".</em></li>
+                        "Unspecified" or "Causal".</em>
+                </li>
             </ul>
 
             <h3 id="context-management">Context Management</h3>
             <ul>
                 <li><strong>Smart Context Truncation:</strong> When the conversation gets too long, this feature
                     intelligently removes the oldest messages while preserving your System Prompt and key instructions.
-                    <em>Ensures the AI doesn't "forget" its role even in long chats.</em></li>
+                    <em>Ensures the AI doesn't "forget" its role even in long chats.</em>
+                </li>
             </ul>
 
             <h3 id="web-content">Web Content</h3>

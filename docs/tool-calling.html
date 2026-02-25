@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Calling - On Device AI Docs</title>
+    <meta name="description"
+        content="Use built-in tools in On Device AI — web search, HTTP requests, calculator, global memory, task planner, and more. Configure per-tool defaults in Settings.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/tool-calling.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/tool-calling.html">
+    <meta property="og:title" content="Tool Calling - On Device AI Docs">
+    <meta property="og:description" content="Use built-in tools in On Device AI — web search, HTTP requests, calculator, global memory, task planner, and more. Configure per-tool defaults in Settings.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/tool-calling.html">
+    <meta property="twitter:title" content="Tool Calling - On Device AI Docs">
+    <meta property="twitter:description" content="Use built-in tools in On Device AI — web search, HTTP requests, calculator, global memory, task planner, and more. Configure per-tool defaults in Settings.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tool Calling",
+        "item": "https://OnDevice-ai.app/docs/tool-calling.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device
+                    AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-search">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..."
+                    aria-label="Search documentation">
+                <div class="docs-search-results"></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html" class="active">Tool Calling</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                    <li><a href="im-integration.html">IM Integration</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1>Tool Calling</h1>
+            <p>On Device AI lets compatible models call built-in tools during a conversation — searching the web,
+                fetching pages, making HTTP requests, running calculations, and more. The AI decides when to use a tool
+                automatically; you control which tools are available and their default parameters.</p>
+
+            <div class="toc">
+                <div class="toc-title">On this page</div>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#enabling-tools">Enabling Tools</a></li>
+                    <li><a href="#role-agent-tools">Role & Agent Tools</a></li>
+                    <li><a href="#default-params">Default Parameters</a></li>
+                    <li><a href="#tool-order">Tool Order</a></li>
+                    <li><a href="#tools-reference">Tools Reference</a></li>
+                    <li><a href="#web-search-tool">Web Search</a></li>
+                    <li><a href="#web-fetch-tool">Web Fetch</a></li>
+                    <li><a href="#calculator-tool">Calculator</a></li>
+                    <li><a href="#global-memory-tool">Global Memory</a></li>
+                    <li><a href="#task-planner-tool">Task Planner (PRO)</a></li>
+                    <li><a href="#http-request-tool">HTTP Request</a></li>
+                </ul>
+            </div>
+
+            <h2 id="how-it-works">How It Works</h2>
+            <p>When tool calling is enabled, the app injects tool definitions into the model's context. The model can
+                then respond with a tool call instead of (or before) a text answer. The app executes the tool, feeds the
+                result back to the model, and the model continues generating its final response.</p>
+            <ol>
+                <li>User sends a message</li>
+                <li>Model decides a tool is needed and emits a tool call</li>
+                <li>App executes the tool (network, calculation, memory lookup, etc.)</li>
+                <li>Tool result is injected back into the conversation</li>
+                <li>Model generates its final answer using the result</li>
+            </ol>
+            <p>Multiple tool calls can happen in a single turn, and the loop can repeat up to 8 times before the model
+                is forced to produce a final answer.</p>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Loop Reliability</div>
+                <p>The app includes several safeguards to keep the tool loop healthy: duplicate calls within the same
+                    response are suppressed; if the model gets stuck repeating identical calls, a forced final-answer
+                    pass synthesises a response from accumulated results; if all tool calls in a round fail, the model
+                    is instructed to explain the errors rather than silently stopping.</p>
+            </div>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Model Compatibility</div>
+                <p>Tool calling works best with models that have been fine-tuned for function calling (e.g. Llama 3,
+                    Qwen 2.5, Mistral, and most instruction-tuned models). GGUF models use text-based tool call
+                    detection; MLX and API models use native structured tool call APIs.</p>
+            </div>
+
+            <h2 id="enabling-tools">Enabling Tools</h2>
+            <p>Go to <strong>Settings → Tool Calling</strong> to see all available tools. Each tool card shows:</p>
+            <ul>
+                <li>The tool name and a short description</li>
+                <li>An <strong>Enable / Disable</strong> button</li>
+                <li>A <strong>Default Params</strong> section (if the tool has configurable defaults)</li>
+            </ul>
+            <p>You can also toggle tool calling on or off per-conversation from the model picker in the chat header.</p>
+
+            <h2 id="role-agent-tools">Role & Agent Tools</h2>
+            <p>You can configure a specific set of default tools for an <strong>AI Role</strong> or a <strong>Chat Flow
+                    Participant</strong>. This is useful for creating specialized agents that only have access to
+                relevant tools (e.g., a "Researcher" role that only has Web Search, or a "Math Tutor" that only has
+                Calculator).</p>
+            <ul>
+                <li><strong>Role Defaults:</strong> When you create or edit a Role, you can select up to 5 default
+                    tools. Starting a conversation with this role automatically selects these tools.</li>
+                <li><strong>Chat Flow Participants:</strong> In a Chat Flow, each participant can have a custom "Tool
+                    Allowlist" (max 5 tools).</li>
+            </ul>
+            <p><strong>Effective Tools:</strong> A tool is only available to a role/agent if it is <em>also</em> enabled
+                in Global Settings and you have the required access (e.g. Pro subscription).</p>
+
+            <h2 id="default-params">Default Parameters</h2>
+            <p>Some tools expose optional parameters that the model may omit. You can set app-wide defaults for these in
+                the <strong>Default Params</strong> section of each tool card in Settings → Tool Calling.</p>
+            <p>For tools with a <strong>Local / API</strong> split, you can set separate defaults depending on whether
+                you are using a local model or a cloud API provider — useful when you want a shorter timeout for fast
+                cloud calls and a longer one for local inference.</p>
+            <p>Defaults are persisted across app restarts. Clear a field to revert to the built-in default.</p>
+
+            <h2 id="tool-order">Tool Order</h2>
+            <p>The order of tools in the Settings list is the order they are presented to the model. Drag and drop tool
+                cards to reorder them. The same order is reflected in the per-session tool selector in the chat header.
+            </p>
+
+            <h2 id="tools-reference">Tools Reference</h2>
+
+            <h2 id="web-search-tool">Web Search</h2>
+            <p><strong>Tool name:</strong> <code>web_search</code></p>
+            <p>Searches the web for a query, fetches the top result pages, and uses a sub-agent pass to synthesize a
+                structured answer with source citations.</p>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>query</code> <em>(required)</em> — The search query string</li>
+                <li><code>max_pages</code> — Number of result pages to read (default: 2, range: 1–5)</li>
+                <li><code>max_chars</code> — Maximum characters of content to read per page (local default: 8 000, API
+                    default: 32 000)</li>
+                <li><code>max_chunks</code> — Maximum content chunks per page (default: 3, range: 1–20). <strong>Set via
+                    Settings only</strong> — the model cannot override this value.</li>
+                <li><code>accept_markdown</code> — Send <code>Accept: text/markdown</code> header when fetching pages
+                    (default: true)</li>
+            </ul>
+            <p>All parameters except <code>query</code> are configurable in Settings → Tool Calling → Web Search →
+                Default Params.</p>
+
+            <h2 id="web-fetch-tool">Web Fetch</h2>
+            <p><strong>Tool name:</strong> <code>web_fetch</code></p>
+            <p>Fetches the content of a single URL and returns it as markdown text. Useful when the model already knows
+                the URL it needs to read.</p>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>url</code> <em>(required)</em> — The URL to fetch</li>
+                <li><code>max_chars</code> — Maximum characters to return (local default: 8 000, API default: 32 000)
+                </li>
+                <li><code>accept_markdown</code> — Send <code>Accept: text/markdown</code> header (default: true)</li>
+            </ul>
+
+            <h2 id="calculator-tool">Calculator</h2>
+            <p><strong>Tool name:</strong> <code>calculator</code></p>
+            <p>Evaluates mathematical expressions and returns the numeric result. Handles arithmetic, percentages, and
+                basic algebra. No configurable defaults.</p>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>expression</code> <em>(required)</em> — The math expression to evaluate (e.g.
+                    <code>"(12 * 8) / 3 + 5%"</code>)</li>
+            </ul>
+
+            <h2 id="global-memory-tool">Global Memory</h2>
+            <p><strong>Tool name:</strong> <code>global_memory</code></p>
+            <p>Stores and retrieves personal preferences, facts, and notes that persist across all conversations. The
+                model can write new memories or read existing ones to personalize its responses over time.</p>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>action</code> <em>(required)</em> — <code>"read"</code>, <code>"write"</code>, or
+                    <code>"delete"</code></li>
+                <li><code>key</code> — Memory key for write/delete operations</li>
+                <li><code>value</code> — Memory value for write operations</li>
+            </ul>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>Tell the model to remember something — for example, "Remember that I prefer concise answers" — and it
+                    will store that preference in Global Memory for future conversations.</p>
+            </div>
+
+            <h2 id="task-planner-tool">Task Planner (PRO)</h2>
+            <p><strong>Tool name:</strong> <code>task_planner</code></p>
+            <p>Creates and updates a task plan so the model can break complex requests into ordered steps and track
+                progress. Plans are scoped to each conversation — starting a new conversation begins with an empty plan.</p>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Conversation Scope</div>
+                <p>Each conversation has its own task plan. Plans are not shared across different conversations and are
+                    not persisted across app restarts. This ensures a clean slate for each new conversation.</p>
+            </div>
+            <h3>Operations</h3>
+            <ul>
+                <li><code>add_task</code> — Add a new task with a title and optional detail (creates plan implicitly)</li>
+                <li><code>fetch_next_task</code> — Get the next pending task in order and set it as the current focus; returns <code>all_done: true</code> when no pending tasks remain</li>
+                <li><code>set_task_completed</code> — Mark the current task as done (or specify a <code>task_id</code> to complete a specific task)</li>
+                <li><code>delete_task</code> — Remove the current task (or specify a <code>task_id</code> to delete a specific task)</li>
+            </ul>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>operation</code> <em>(required)</em> — One of the operations above</li>
+                <li><code>title</code> — Task title (required for <code>add_task</code>)</li>
+                <li><code>detail</code> — Optional task detail (for <code>add_task</code>)</li>
+                <li><code>task_id</code> — Optional task UUID (for <code>set_task_completed</code>, <code>delete_task</code>; defaults to current task if omitted)</li>
+            </ul>
+            <p>When enabled, Task Planner injects a compact plan snapshot into the prompt context to keep the model
+                aligned with current progress. Task status is simple: <code>pending</code> or <code>done</code>.</p>
+
+            <h2 id="http-request-tool">HTTP Request</h2>
+            <p><strong>Tool name:</strong> <code>http_request</code></p>
+            <p>Makes arbitrary HTTP requests to any endpoint. The model can call REST APIs, send data to webhooks, fetch
+                JSON from external services, or download files — all from within the conversation.</p>
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Privacy Notice</div>
+                <p>The HTTP Request tool can transmit conversation data to external services. Only enable it when you
+                    trust the model and the endpoints it may call. Review requests in the tool call log before sensitive
+                    data leaves your device.</p>
+            </div>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>url</code> <em>(required)</em> — The full endpoint URL (<code>http://</code> or
+                    <code>https://</code>)</li>
+                <li><code>method</code> <em>(required)</em> — HTTP method: <code>GET</code>, <code>POST</code>,
+                    <code>PUT</code>, or <code>PATCH</code></li>
+                <li><code>headers</code> — Optional key/value object of request headers</li>
+                <li><code>body</code> — Optional request body — a string, JSON object, or JSON array. JSON bodies
+                    automatically receive a <code>Content-Type: application/json</code> header.</li>
+                <li><code>timeout_seconds</code> — Request timeout in seconds (default: 30). Configurable per Local /
+                    API mode in Settings.</li>
+                <li><code>download</code> — When <code>true</code>, save the response bytes to app-managed storage
+                    instead of returning text/JSON inline</li>
+                <li><code>suggested_filename</code> — Optional display name stored in download metadata when
+                    <code>download</code> is enabled</li>
+            </ul>
+            <h3>Response Format</h3>
+            <p>The tool always returns a structured JSON object:</p>
+            <ul>
+                <li><code>status</code> — <code>"success"</code> or <code>"error"</code></li>
+                <li><code>message</code> — Human-readable summary (e.g. <code>"Request complete"</code> or
+                    <code>"Downloaded report.pdf"</code>)</li>
+                <li><code>request</code> — Echo of the outgoing request parameters</li>
+                <li><code>response</code> — Status code, headers, redirect count, and either <code>json</code> or
+                    <code>text</code> body</li>
+                <li><code>download</code> — Download metadata when <code>download: true</code> (file path, UUID, stored
+                    filename, byte count)</li>
+            </ul>
+            <h3>Redirect Handling</h3>
+            <p>Redirects are followed automatically up to 5 hops. <code>301</code>/<code>302</code> responses to
+                <code>POST</code> requests and all <code>303</code> responses are converted to <code>GET</code> on
+                redirect (standard browser behaviour). If the redirect limit is exceeded, the tool returns a structured
+                error.</p>
+            <h3>Download Mode</h3>
+            <p>When <code>download: true</code>, the response bytes are saved to the app's private storage directory
+                (<code>OnDevice-AI/HTTPDownloads/</code>). Each download is assigned a UUID and indexed in a persistent
+                JSON file so the model can reference it in follow-up turns. Binary responses that cannot be decoded as
+                UTF-8 text automatically suggest retrying with <code>download: true</code>.</p>
+            <h3>Configurable Default Timeout</h3>
+            <p>Go to <strong>Settings → Tool Calling → HTTP Request → Default Params</strong> to set separate timeout
+                defaults for local models and API providers. The built-in default is 30 seconds for both.</p>
+
+            <div class="docs-nav-footer">
+                <a href="web-search.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span
+                        class="nav-title">Web Search</span></a>
+                <a href="vision-models.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
+                        class="nav-title">Vision Models</span></a>
+            </div>
+        </main>
+    </div>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg></button>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="../js/search-index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

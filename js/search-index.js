@@ -57,8 +57,8 @@ window.DOCS_SEARCH_INDEX = [
         title: "Chat Flows",
         url: "chat-flows.html",
         section: "Core Guides",
-        content: "Chat Flows create multi-agent conversations with multiple specialized AI participants. Each participant has Name, System prompt, and Model. Participants take turns responding. Creating a Flow: Open model picker, switch to Chat Flow tab, create new flow, add participants. Managing Participants: Add from Roles, create custom, reorder by drag, edit, remove. Running a Flow: Enable Use Custom Flow toggle, start new conversation, all participants respond in sequence. Example Flows: Business Planning Team, Content Creation Team, Code Review Team. Flow resets to default on new conversation.",
-        keywords: "chat flows multi-agent collaborative AI teams participants workflow automation"
+        content: "Chat Flows create multi-agent conversations with multiple specialized AI participants. Each participant has Name, System prompt, and Model. Participants take turns responding. Creating a Flow: Open model picker, switch to Chat Flow tab, create new flow, add participants. Context Base Selector: Follow Previous Message (default), Use Latest User Message (for fan-out), Use Latest Message From Role. Fan-out Pattern: Multiple participants respond to same input without seeing each other. Summarizer Pattern: Later participant sees all earlier outputs. Message Provenance: Shows 'Based on:' indicator for each response. Managing Participants: Add from Roles, create custom, reorder by drag, edit, remove. Running a Flow: Enable Use Custom Flow toggle, start new conversation, all participants respond in sequence. Example Flows: Business Planning Team, Content Creation Team, Code Review Team. Flow resets to default on new conversation.",
+        keywords: "chat flows multi-agent collaborative AI teams participants workflow automation fan-out summarizer context base message provenance based on"
     },
     {
         title: "Roles & Personas",

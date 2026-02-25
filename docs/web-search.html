@@ -1,37 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Search - On Device AI Docs</title>
-    <meta name="description" content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+    <meta name="description"
+        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/docs/web-search.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/web-search.html">
+    <meta property="og:title" content="Web Search - On Device AI Docs">
+    <meta property="og:description"
+        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/web-search.html">
+    <meta property="twitter:title" content="Web Search - On Device AI Docs">
+    <meta property="twitter:description"
+        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Web Search",
+        "item": "https://OnDevice-ai.app/docs/web-search.html"
+      }]
+    }
+    </script>
 </head>
+
 <body>
     <header class="site-header scrolled">
         <div class="container header-inner">
-            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
-            <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="./" class="active">Docs</a></li><li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></li><li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li></ul>
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device
+                    AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./" class="active">Docs</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg></button></li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
             <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
     <div class="docs-layout">
         <aside class="docs-sidebar">
             <div class="docs-search">
-                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" class="docs-search-input" placeholder="Search docs..." aria-label="Search documentation">
+                <svg class="docs-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="docs-search-input" placeholder="Search docs..."
+                    aria-label="Search documentation">
                 <div class="docs-search-results"></div>
             </div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li></ul></div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="text-to-speech.html">Text-to-Speech</a></li><li><a href="web-search.html" class="active">Web Search</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li>
-                    <li><a href="im-integration.html">IM Integration</a></li></ul></div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Getting Started</div>
+                <ul class="sidebar-nav">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="getting-started.html">Quick Start</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Core Guides</div>
+                <ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+                    <li><a href="web-search.html" class="active">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                    <li><a href="im-integration.html">IM Integration</a></li>
+                </ul>
+            </div>
         </aside>
         <main class="docs-content">
             <h1>Web Search</h1>
-            <p>On Device AI includes a built-in AI-powered web search feature that lets you search the web and get structured, AI-analyzed summaries of the results — all within the app.</p>
+            <p>Research Faster with AI Search. Ask complex questions and get structured, AI-analyzed summaries with
+                clear source citations instead of digging through pages of raw search results.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -53,14 +140,22 @@
             </ol>
             <div class="callout callout-info">
                 <div class="callout-title">ℹ️ Note</div>
-                <p>Web search requires an internet connection to fetch search results. However, the AI analysis of those results happens entirely on your device.</p>
+                <p>Web search requires an internet connection to fetch search results. However, the AI analysis of those
+                    results happens entirely on your device.</p>
             </div>
 
             <h2 id="usage">Using Web Search</h2>
             <ol class="steps">
-                <li><strong>Navigate to AI Search</strong><p>Tap the AI Search tab in the sidebar or navigation bar.</p></li>
-                <li><strong>Enter your query</strong><p>Type a question or topic. Natural language works best — ask questions as you would ask a person.</p></li>
-                <li><strong>Review the results</strong><p>The AI presents a synthesized answer with citations to the source web pages.</p></li>
+                <li><strong>Navigate to AI Search</strong>
+                    <p>Tap the AI Search tab in the sidebar or navigation bar.</p>
+                </li>
+                <li><strong>Enter your query</strong>
+                    <p>Type a question or topic. Natural language works best — ask questions as you would ask a person.
+                    </p>
+                </li>
+                <li><strong>Review the results</strong>
+                    <p>The AI presents a synthesized answer with citations to the source web pages.</p>
+                </li>
             </ol>
 
             <h2 id="sources">Source References</h2>
@@ -72,20 +167,30 @@
             </ul>
 
             <h2 id="tool-calling">Tool Calling Integration</h2>
-            <p>In regular AI Chat, models that support tool calling can automatically trigger web searches when they need current information. This means you don't have to switch to the Search tab — the AI decides when it needs to look something up.</p>
+            <p>In regular AI Chat, models that support tool calling can automatically trigger web searches when they
+                need current information. This means you don't have to switch to the Search tab — the AI decides when it
+                needs to look something up.</p>
             <p>See <a href="ai-chat.html#tool-calling">AI Chat → Tool Calling</a> for more details.</p>
 
             <div class="docs-nav-footer">
-                <a href="text-to-speech.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Text-to-Speech</span></a>
-                <a href="vision-models.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Vision Models</span></a>
+                <a href="text-to-speech.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span
+                        class="nav-title">Text-to-Speech</span></a>
+                <a href="vision-models.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
+                        class="nav-title">Vision Models</span></a>
             </div>
         </main>
     </div>
-    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <button class="docs-sidebar-toggle" aria-label="Toggle sidebar"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg></button>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="../js/search-index.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/docs.js"></script>
     <script src="../js/search.js"></script>
 </body>
+
 </html>

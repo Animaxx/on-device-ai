@@ -331,23 +331,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ======================================
-    // Glow Orb Morphing
-    // ======================================
-    function initGlowOrbs() {
-        if (motionDisabled) return;
-        if (typeof anime === 'undefined' || !anime.animate) return;
 
-        document.querySelectorAll('.glow-orb').forEach((orb, index) => {
-            anime.animate(orb, {
-                scale: [1, 1.2, 1],
-                borderRadius: ['50%', '40%', '50%'],
-                duration: 5000 + (index * 1000),
-                ease: 'inOutSine',
-                loop: true,
-                alternate: true
+
+    // ======================================
+    // Stats Counter Animation
+    // ======================================
+    function initStatsCounters() {
+        const statsGrid = document.querySelector('.stats-grid');
+        if (!statsGrid) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.dataset.target, 10);
+                        const suffix = counter.dataset.suffix || '';
+                        if (motionDisabled || isNaN(target)) return;
+
+                        if (typeof anime !== 'undefined' && anime.animate) {
+                            const obj = { val: 0 };
+                            anime.animate(obj, {
+                                val: target,
+                                duration: 1200,
+                                ease: 'easeOutQuart',
+                                onUpdate: () => {
+                                    counter.textContent = Math.round(obj.val) + suffix;
+                                }
+                            });
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
             });
-        });
+        }, { threshold: 0.4 });
+
+        observer.observe(statsGrid);
     }
 
     // ======================================
@@ -361,5 +380,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initPlatformCards();
     initParallax();
     initMockupHover();
-    initGlowOrbs();
+    initStatsCounters();
 });

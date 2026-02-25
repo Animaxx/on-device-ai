@@ -6,11 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Providers - On Device AI Docs</title>
     <meta name="description"
-        content="Optionally connect to Nvidia, OpenAI, Anthropic, Google Gemini, Groq, OpenRouter, LM Studio, or Ollama in On Device AI.">
+        content="Optionally connect to OpenAI, Anthropic, Google Gemini, Mistral, Groq, xAI, OpenRouter, Nvidia, AWS Bedrock, Z.ai, Opencode Zen, Qwen Portal, Kimi, LM Studio, or Ollama in On Device AI.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/docs/cloud-providers.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/cloud-providers.html">
+    <meta property="og:title" content="Cloud Providers - On Device AI Docs">
+    <meta property="og:description" content="Optionally connect to OpenAI, Anthropic, Google Gemini, Mistral, Groq, xAI, OpenRouter, Nvidia, AWS Bedrock, Z.ai, Opencode Zen, Qwen Portal, Kimi, LM Studio, or Ollama in On Device AI.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/cloud-providers.html">
+    <meta property="twitter:title" content="Cloud Providers - On Device AI Docs">
+    <meta property="twitter:description" content="Optionally connect to OpenAI, Anthropic, Google Gemini, Mistral, Groq, xAI, OpenRouter, Nvidia, AWS Bedrock, Z.ai, Opencode Zen, Qwen Portal, Kimi, LM Studio, or Ollama in On Device AI.">
+    <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://OnDevice-ai.app/docs/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cloud Providers",
+        "item": "https://OnDevice-ai.app/docs/cloud-providers.html"
+      }]
+    }
+    </script>
 </head>
 
 <body>
@@ -67,6 +104,7 @@
                     <li><a href="voice-notes.html">Voice Notes</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
                     <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
@@ -85,6 +123,8 @@
                 <ul>
                     <li><a href="#supported">Supported Providers</a></li>
                     <li><a href="#setup">Setting Up a Provider</a></li>
+                    <li><a href="#bedrock">AWS Bedrock</a></li>
+                    <li><a href="#qwen">Qwen Portal</a></li>
                     <li><a href="#switching">Switching Between Local &amp; Cloud</a></li>
                     <li><a href="#privacy">Privacy Considerations</a></li>
                     <li><a href="#local-servers">Local Servers (Ollama &amp; LM Studio)</a></li>
@@ -93,13 +133,20 @@
 
             <h2 id="supported">Supported Providers</h2>
             <p>On Device AI supports the following cloud and local server providers:</p>
-            <ul>
-                <li><strong>OpenAI:</strong> GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo, and more</li>
-                <li><strong>Anthropic:</strong> Claude 3 Opus, Sonnet, Haiku, and Claude 4 models</li>
-                <li><strong>Google Gemini:</strong> Gemini Pro, Gemini Flash, and other models</li>
-                <li><strong>Groq:</strong> Ultra-fast inference for Llama, Mixtral, and Gemma models</li>
-                <li><strong>OpenRouter:</strong> Access to hundreds of models through a single API</li>
-                <li><strong>Nvidia:</strong> Access Nvidia's NIM microservices and high-performance models</li>
+                <ul>
+                    <li><strong>OpenAI:</strong> GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo, and more</li>
+                    <li><strong>Anthropic:</strong> Claude 3 Opus, Sonnet, Haiku, and Claude 4 models</li>
+                    <li><strong>Google Gemini:</strong> Gemini Pro, Gemini Flash, and other models</li>
+                    <li><strong>Mistral:</strong> Access Mistral models via OpenAI-compatible chat and models endpoints</li>
+                    <li><strong>Groq:</strong> Ultra-fast inference for Llama, Mixtral, and Gemma models</li>
+                    <li><strong>xAI:</strong> Access to the powerful Grok family of models</li>
+                    <li><strong>OpenRouter:</strong> Access to hundreds of models through a single API</li>
+                    <li><strong>Nvidia:</strong> Access Nvidia's NIM microservices and high-performance models</li>
+                    <li><strong>AWS Bedrock:</strong> Access Amazon Bedrock foundation models via SigV4-authenticated requests</li>
+                <li><strong>Z.ai (Zhipu GLM):</strong> Access GLM-4, GLM-5 and other Zhipu AI models</li>
+                <li><strong>Opencode Zen:</strong> Access multiple frontier models (GPT, Claude, Gemini) through a unified API</li>
+                <li><strong>Qwen Portal:</strong> Access Alibaba's Qwen models via API key or OAuth</li>
+                <li><strong>Kimi (Moonshot AI):</strong> Access Moonshot's Kimi long-context models</li>
                 <li><strong>LM Studio:</strong> Connect to locally-hosted models running on your Mac or PC</li>
                 <li><strong>Ollama:</strong> Connect to locally-hosted Ollama server</li>
             </ul>
@@ -112,12 +159,14 @@
                 <li><strong>Select a provider</strong>
                     <p>Choose the provider you want to connect to.</p>
                 </li>
-                <li><strong>Enter your API key</strong>
-                    <p>Paste your API key from the provider's dashboard. The key is stored securely in your device's
-                        Keychain — never in plain text.</p>
+                <li><strong>Enter your credentials</strong>
+                    <p>For most providers, paste your API key from the provider's dashboard. For AWS Bedrock, enter your
+                        Access Key ID and Secret Access Key. For Qwen Portal, you can also use an OAuth refresh token.
+                        All credentials are stored securely in your device's Keychain — never in plain text.</p>
                 </li>
                 <li><strong>Select a model</strong>
-                    <p>Browse available models from the provider and select the one you want to use.</p>
+                    <p>Browse available models from the provider and select the one you want to use. For providers
+                        without automatic model listing (Bedrock, Kimi), you can enter a model ID manually.</p>
                 </li>
             </ol>
             <div class="callout callout-warning">
@@ -126,6 +175,32 @@
                     does not control how providers handle your data. Review each provider's privacy policy before use.
                 </p>
             </div>
+
+            <h2 id="bedrock">AWS Bedrock</h2>
+            <p>AWS Bedrock requires AWS credentials rather than a simple API key:</p>
+            <ol class="steps">
+                <li><strong>Set your AWS Region</strong>
+                    <p>Enter the AWS region where Bedrock is enabled (e.g. <code>us-east-1</code>, <code>us-west-2</code>). This is saved in your app configuration, not in the Keychain.</p>
+                </li>
+                <li><strong>Enter AWS Credentials</strong>
+                    <p>Tap <em>Enter Credentials</em> and provide your AWS Access Key ID and Secret Access Key. An optional session token is supported for temporary credentials (AWS STS).</p>
+                </li>
+                <li><strong>Enter a Bedrock Model ID</strong>
+                    <p>Use the manual model entry field to type the Bedrock model ID, e.g. <code>anthropic.claude-3-sonnet-20240229-v1:0</code> or <code>amazon.titan-text-premier-v1:0</code>.</p>
+                </li>
+            </ol>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ How it works</div>
+                <p>Requests to Bedrock are authenticated using AWS Signature Version 4 (SigV4) — signed directly on your device. No credentials are ever transmitted to any proxy server.</p>
+            </div>
+
+            <h2 id="qwen">Qwen Portal</h2>
+            <p>Qwen Portal supports two authentication modes:</p>
+            <ul>
+                <li><strong>API Key:</strong> Use a standard API key with <code>Authorization: Bearer</code> header.</li>
+                <li><strong>OAuth Refresh Token:</strong> Provide an OAuth refresh token. The app automatically exchanges it for a short-lived access token before each request, without requiring you to manually refresh.</li>
+            </ul>
+            <p>Select your preferred authentication mode in Settings → Cloud Providers → Qwen Portal before entering your credentials.</p>
 
             <h2 id="switching">Switching Between Local &amp; Cloud</h2>
             <p>You can switch between local and cloud models at any time, even within the same conversation:</p>
