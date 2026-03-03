@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Notes - On Device AI Docs</title>
     <meta name="description"
-        content="Record, transcribe, summarize, and translate audio with On Device AI's voice note features - all processed on-device.">
+        content="Record, transcribe, label speakers, and summarize audio with On Device AI voice notes - processed on-device with Whisper and Apple STT.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="canonical" href="https://OnDevice-ai.app/docs/voice-notes.html">
     <link rel="stylesheet" href="../css/styles.css">
@@ -16,13 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://OnDevice-ai.app/docs/voice-notes.html">
     <meta property="og:title" content="Voice Notes - On Device AI Docs">
-    <meta property="og:description" content="Record, transcribe, summarize, and translate audio with On Device AI">
+    <meta property="og:description" content="Record, transcribe, label speakers, and summarize audio with On Device AI">
     <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://OnDevice-ai.app/docs/voice-notes.html">
     <meta property="twitter:title" content="Voice Notes - On Device AI Docs">
-    <meta property="twitter:description" content="Record, transcribe, summarize, and translate audio with On Device AI">
+    <meta property="twitter:description"
+        content="Record, transcribe, label speakers, and summarize audio with On Device AI">
     <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -115,42 +116,71 @@
         </aside>
         <main class="docs-content">
             <h1>Voice Notes</h1>
-            <p>Never miss a detail again. Instantly capture, transcribe, and summarize meetings, lectures, or brilliant
-                ideas with word-level precision—all securely processed on your device.</p>
+            <p>Never miss a detail again. Instantly capture, transcribe, label speakers, and summarize meetings,
+                lectures, or brilliant ideas with word-level precision—all securely processed on your device.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
                 <ul>
                     <li><a href="#recording">Recording Audio</a></li>
                     <li><a href="#transcription">Transcription</a></li>
+                    <li><a href="#speaker-diarization">Speaker Diarization</a></li>
+                    <li><a href="#retranscription">Re-Transcription</a></li>
                     <li><a href="#ai-processing">AI Processing</a></li>
                     <li><a href="#navigation">Word-Level Navigation</a></li>
                     <li><a href="#languages">Language Support</a></li>
                 </ul>
             </div>
 
-            <h2 id="recording">Recording Audio</h2>
+            <h2 id="recording">Recording Audio & Import</h2>
             <p>Navigate to the <strong>AI Voice Note</strong> tab and tap the record button to start capturing audio.
-                The app uses WhisperKit for on-device speech recognition.</p>
+                The app uses either WhisperKit or Apple STT for on-device speech recognition.</p>
             <ul>
                 <li><strong>Real-time transcription:</strong> Text appears as you speak</li>
                 <li><strong>Background recording:</strong> On iOS, recording continues when the app is in the background
                 </li>
-                <li><strong>Import audio:</strong> You can also import existing audio files for transcription</li>
+                <li><strong>Import audio (PRO):</strong> Turn your past recordings into searchable, summarizable text
+                    with clear, step-by-step progress tracking so you're never left guessing.</li>
             </ul>
             <div class="callout callout-info">
                 <div class="callout-title">ℹ️ Privacy</div>
-                <p>All audio processing happens entirely on your device using WhisperKit. No audio data is sent to any
-                    server.</p>
+                <p>All audio processing happens entirely on your device using WhisperKit and Apple Speech frameworks.
+                    No audio data is sent to any server.</p>
             </div>
 
             <h2 id="transcription">Transcription</h2>
-            <p>Transcription is powered by the Whisper model running locally via WhisperKit. Features include:</p>
+            <p>Transcription runs locally with Whisper models or Apple STT, depending on your selected model and
+                workflow. Features include:</p>
             <ul>
                 <li><strong>Word-level timestamps:</strong> Each word is timestamped for precise navigation</li>
                 <li><strong>Multiple languages:</strong> Support for many languages including English, Chinese,
                     Japanese, Spanish, French, and more</li>
                 <li><strong>Automatic punctuation:</strong> The model adds punctuation and sentence structure</li>
+            </ul>
+
+            <h2 id="speaker-diarization">Speaker Diarization <span class="badge badge-pro">PRO</span></h2>
+            <p>Automatically label who said what in your voice notes and imported recordings.</p>
+            <ul>
+                <li><strong>Model download:</strong> Download speaker models once directly from the Voice Note UI.</li>
+                <li><strong>Label Speakers toggle:</strong> Turn on diarization to instantly split transcripts by
+                    speaker.</li>
+                <li><strong>Precision matching:</strong> Advanced tuning controls guarantee perfectly accurate speaker
+                    labels, even when people talk over each other.</li>
+                <li><strong>Display Speakers toggle:</strong> Switch cleanly between speaker labels and timestamp-only
+                    views.</li>
+                <li><strong>Persisted labels:</strong> Speaker labels are securely saved and instantly restored when you
+                    reopen a recording.</li>
+            </ul>
+
+            <h2 id="retranscription">Re-Transcription</h2>
+            <p>Use Re-Transcript to regenerate transcript text from existing audio with Whisper or Apple STT.</p>
+            <ul>
+                <li><strong>Model switching:</strong> Re-run with a different transcription model for better results
+                </li>
+                <li><strong>Optional speaker labeling:</strong> Apply diarization automatically after re-transcription
+                </li>
+                <li><strong>Safe overwrite:</strong> New transcript and speaker labels replace older results for the
+                    same audio</li>
             </ul>
 
             <h2 id="ai-processing">AI Processing</h2>
@@ -159,7 +189,9 @@
                 <li><strong>Summarization:</strong> Get concise summaries of meetings or lectures</li>
                 <li><strong>Translation:</strong> Translate the transcription to another language</li>
                 <li><strong>Key points:</strong> Extract action items and key takeaways</li>
-                <li><strong>Custom processing:</strong> Use any prompt to analyze the transcription</li>
+                <li><strong>Speaker-aware analysis:</strong> Your AI assistant knows exactly who said what. Ask it to
+                    "Summarize Sarah's points" or "List action items for John" for deeply personalized insights.</li>
+                <li><strong>Custom processing:</strong> Use any prompt to analyze your transcript however you need.</li>
             </ul>
 
             <h2 id="navigation">Word-Level Navigation</h2>
@@ -171,9 +203,16 @@
                 <li>Navigate long recordings efficiently</li>
             </ul>
 
+            <h2 id="organization">Organization &amp; Renaming</h2>
+            <p>Keep your brilliant ideas and crucial meetings perfectly organized.</p>
+            <ul>
+                <li><strong>Custom naming:</strong> Easily rename any recording so you can identify important lectures,
+                    interviews, and brainstorms at a single glance.</li>
+            </ul>
+
             <h2 id="languages">Language Support</h2>
-            <p>WhisperKit supports transcription in many languages. The model automatically detects the spoken language,
-                or you can set it manually for better accuracy with specific languages.</p>
+            <p>Whisper and Apple STT both support transcription in many languages. You can let the model detect spoken
+                language automatically or set it manually for better accuracy with specific languages.</p>
             <div class="callout callout-tip">
                 <div class="callout-title">💡 Tip</div>
                 <p>For best transcription quality, use a quiet environment and speak clearly. External microphones also
