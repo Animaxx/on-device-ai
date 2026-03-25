@@ -126,6 +126,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ======================================
+    // Interactive Image Stacks
+    // ======================================
+    document.querySelectorAll('.interactive-stack').forEach(stack => {
+        stack.addEventListener('click', function() {
+            this.classList.toggle('swapped');
+        });
+        
+        // Handle keyboard accessibility (Enter/Space to toggle)
+        stack.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.classList.toggle('swapped');
+            }
+        });
+    });
+
+    // ======================================
     // Active Nav Link Highlighting
     // ======================================
     const sections = document.querySelectorAll('section[id]');

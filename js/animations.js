@@ -110,9 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 opacity: [0, 1],
                 duration: CONFIG.duration.fast
             }, 700)
-            .add('.device-mockup', {
+            .add('.layered-ecosystem .device-mockup', {
                 opacity: [0, 1],
-                scale: [0.9, 1],
                 duration: CONFIG.duration.slow
             }, 200)
             .add('.floating-badge', {
@@ -288,47 +287,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Device Mockup Parallax
     // ======================================
     function initParallax() {
-        if (motionDisabled) return;
-
-        const mockup = document.querySelector('.device-mockup');
-        if (!mockup) return;
-
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const speed = 0.15;
-            const yOffset = scrollY * speed;
-            if (scrollY < window.innerHeight) {
-                mockup.style.transform = `translateY(${-yOffset}px)`;
-            }
-        }, { passive: true });
+        // Parallax disabled for the multi-device layered ecosystem hero.
+        // The CSS translate values on .mockup-mac/.mockup-ipad/.mockup-iphone
+        // must not be overridden by JS to preserve their individual positions.
     }
 
     // ======================================
     // Device Mockup 3D Hover
     // ======================================
     function initMockupHover() {
-        if (motionDisabled) return;
-
-        const visual = document.querySelector('.hero-visual');
-        const mockup = document.querySelector('.device-mockup');
-        if (!visual || !mockup) return;
-
-        visual.addEventListener('mousemove', (e) => {
-            const rect = visual.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -6;
-            const rotateY = ((x - centerX) / centerX) * 6;
-            mockup.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            mockup.style.animation = 'none';
-        });
-
-        visual.addEventListener('mouseleave', () => {
-            mockup.style.transform = '';
-            mockup.style.animation = '';
-        });
+        // 3D hover is disabled for the layered ecosystem hero.
+        // Each device has its own CSS transform positioning that must stay intact.
     }
 
 
