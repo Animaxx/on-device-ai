@@ -29,12 +29,13 @@
 
 /* --- Floating Device --- */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33%       { transform: translateY(-8px) translateX(2px); }
+    66%       { transform: translateY(-4px) translateX(-2px); }
 }
 
 .floating-device {
-    animation: float 4s ease-in-out infinite;
+    animation: float 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 /* --- Glow Pulse --- */
@@ -79,7 +80,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(24px);
     }
     to {
         opacity: 1;
@@ -90,7 +91,7 @@
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-16px);
     }
     to {
         opacity: 1;
@@ -101,7 +102,7 @@
 @keyframes fadeInLeft {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-24px);
     }
     to {
         opacity: 1;
@@ -112,7 +113,7 @@
 @keyframes fadeInRight {
     from {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(24px);
     }
     to {
         opacity: 1;
@@ -164,5 +165,18 @@
 
 /* --- Platform Card 3D Tilt Reset --- */
 .platform-card {
-    transition: transform var(--motion-normal) var(--ease-smooth);
+    transition: transform var(--motion-normal) var(--ease-out-quart, cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+/* --- Interactive Stack Hover Hint --- */
+.interactive-stack {
+    transition: transform var(--motion-fast) var(--ease-out-quart, cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+.interactive-stack:hover {
+    transform: scale(1.005);
+}
+
+.interactive-stack:active {
+    transform: scale(0.995);
 }

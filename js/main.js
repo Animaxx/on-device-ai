@@ -143,6 +143,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ======================================
+    // Hero Device Mockup Tap-to-Switch
+    // ======================================
+    const heroEcosystem = document.querySelector('.layered-ecosystem');
+    if (heroEcosystem) {
+        const mockups = heroEcosystem.querySelectorAll('.device-mockup');
+        mockups.forEach(mockup => {
+            mockup.addEventListener('click', function () {
+                // Remove .front from all siblings, add to clicked
+                mockups.forEach(m => m.classList.remove('front'));
+                this.classList.add('front');
+            });
+            // Keyboard accessibility
+            mockup.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    mockups.forEach(m => m.classList.remove('front'));
+                    this.classList.add('front');
+                }
+            });
+        });
+    }
+
+    // ======================================
     // Active Nav Link Highlighting
     // ======================================
     const sections = document.querySelectorAll('section[id]');

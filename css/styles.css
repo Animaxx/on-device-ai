@@ -1815,6 +1815,20 @@ h6 {
     left: 0;
 }
 
+/* Composition: Mac with iPhone */
+.mac-with-iphone .feature-img-bg {
+    width: 85%;
+    top: 5%;
+    left: 0;
+}
+.mac-with-iphone .feature-img-fg {
+    width: 26%;
+    bottom: -5%;
+    right: 5%;
+    border-radius: 12px;
+    border: 6px solid #111827;
+}
+
 /* --- Interactive Image Stack --- */
 .interactive-stack {
     cursor: pointer;
@@ -1862,6 +1876,26 @@ h6 {
     z-index: 10;
 }
 
+/* Swapped state for .mac-with-iphone */
+.interactive-stack.mac-with-iphone.swapped .feature-img-bg {
+    width: 85%;
+    top: 0;
+    left: 5%;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+    filter: drop-shadow(0 25px 50px rgba(0,0,0,0.3));
+}
+.interactive-stack.mac-with-iphone.swapped .feature-img-fg {
+    width: 24%;
+    bottom: 5%;
+    right: 15%;
+    left: auto;
+    top: auto;
+    z-index: 10;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+}
+
 @media (max-width: 992px) {
     .feature-row, .feature-row.row-reverse {
         flex-direction: column;
@@ -1874,6 +1908,12 @@ h6 {
     }
     .feature-img-bg { width: 90%; left: 5%; }
     .feature-img-fg { width: 80%; right: 5%; bottom: -10px; }
+    
+    .mac-with-iphone .feature-img-fg,
+    .interactive-stack.mac-with-iphone.swapped .feature-img-fg { 
+        width: 35%; 
+        right: 10%; 
+    }
 }
 
 /* --- VisionOS Section --- */

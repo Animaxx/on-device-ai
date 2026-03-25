@@ -270,15 +270,15 @@
                         </div>
                         <p class="hero-platforms">Available for iOS, macOS, and visionOS</p>
                     </div>
-                    <div class="hero-visual layered-ecosystem">
-                        <div class="device-mockup mockup-mac">
+                    <div class="hero-visual layered-ecosystem" role="group" aria-label="App screenshots - tap to bring to front">
+                        <div class="device-mockup mockup-mac" tabindex="0" role="button" aria-label="Mac screenshot">
                             <img src="images/screenshorts/mac_aichat_subagent_result.png" alt="On Device AI Mac Chat">
                         </div>
-                        <div class="device-mockup mockup-ipad">
-                            <img src="images/screenshorts/ipad_knowledge_library.PNG" alt="On Device AI iPad Library">
-                        </div>
-                        <div class="device-mockup mockup-iphone">
+                        <div class="device-mockup mockup-iphone" tabindex="0" role="button" aria-label="iPhone screenshot">
                             <img src="images/screenshorts/iphone_voicenote.png" alt="On Device AI iPhone Voice Note">
+                        </div>
+                        <div class="device-mockup mockup-ipad" tabindex="0" role="button" aria-label="iPad screenshot">
+                            <img src="images/screenshorts/ipad_knowledge_library.PNG" alt="On Device AI iPad Library">
                         </div>
                         <div class="floating-badge badge-ai" style="top: 15%; right: -20px; z-index: 3;">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -360,8 +360,12 @@
 
                     <!-- Feature 2: Voice Notes -->
                     <div class="feature-row row-reverse reveal">
-                        <div class="feature-visual visual-mobile">
-                            <img src="images/screenshorts/iphone_voicenote.png" class="feature-img"
+                        <div class="feature-visual interactive-stack mac-with-iphone" title="Click to swap images"
+                            tabindex="0" role="button">
+                            <img src="images/screenshorts/mac_voice_note.png"
+                                class="feature-img feature-img-bg shadow-sm" alt="Mac Voice Notes" loading="lazy">
+                            <img src="images/screenshorts/iphone_voicenote.png"
+                                class="feature-img feature-img-fg floating-device shadow-lg"
                                 alt="iPhone Voice Note Diarization" loading="lazy">
                         </div>
                         <div class="feature-content">
@@ -379,9 +383,13 @@
 
                     <!-- Feature 3: Web Search -->
                     <div class="feature-row reveal">
-                        <div class="feature-visual">
+                        <div class="feature-visual interactive-stack" title="Click to swap images" tabindex="0"
+                            role="button">
+                            <img src="images/screenshorts/mac_aichat_webswearch_result.png"
+                                class="feature-img feature-img-bg shadow-sm" alt="Mac Web Search Result" loading="lazy">
                             <img src="images/screenshorts/ipad_websearch_toolcalling.PNG"
-                                class="feature-img feature-img-shadow flat-device" alt="iPad Web Search" loading="lazy">
+                                class="feature-img feature-img-fg floating-device shadow-lg" alt="iPad Web Search"
+                                loading="lazy">
                         </div>
                         <div class="feature-content">
                             <h3>Active Tools &amp; Web Search</h3>
@@ -432,7 +440,7 @@
                         </div>
                         <div class="feature-content">
                             <h3>Personal Knowledge Libraries &amp; Files</h3>
-                            <p>Build dedicated offline memory spaces for your projects. Import PDFs, notes, and photos,
+                            <p>Build dedicated offline memory spaces for your projects. Import PDFs and notes,
                                 and let your AI securely read, search, and synthesize answers directly from your
                                 documents.</p>
                             <a href="docs/knowledge-library.html" class="feature-link">Learn more <svg width="16"
