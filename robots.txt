@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# LLM context: https://OnDevice-ai.app/llms.txt
 # GEO Optimization: Explicitly allow AI search crawlers
 User-agent: Googlebot
 Allow: /

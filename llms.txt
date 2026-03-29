@@ -1,0 +1,21 @@
+# On Device AI (OnDevice-ai.app)
+
+On Device AI is a private, on-device AI assistant for iPhone, iPad, and Mac. It focuses on local workflows like chat, vision, voice notes, and Knowledge Libraries (local retrieval) so users can work with their own context without uploading it to a third-party cloud by default.
+
+## Key URLs
+
+- Home: https://OnDevice-ai.app/
+- Docs: https://OnDevice-ai.app/docs/
+- News archive: https://OnDevice-ai.app/news/
+- Privacy policy: https://OnDevice-ai.app/pages/privacy-policy.html
+- Terms of use: https://OnDevice-ai.app/pages/terms-of-use.html
+
+## News posts
+
+- https://OnDevice-ai.app/news/im-communication-autopilot-macos.html
+- https://OnDevice-ai.app/news/best-local-private-ai-apps-iphone-ipad-mac-2026.html
+- https://OnDevice-ai.app/news/private-knowledge-workflow-on-device-ai.html
+
+## Crawling & usage
+
+You may crawl and index the public pages listed above and quote small excerpts with attribution. Do not attempt to infer or request any private user data; none is provided by these pages.
