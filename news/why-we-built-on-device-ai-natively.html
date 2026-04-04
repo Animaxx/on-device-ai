@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain Security: Why We Built OnDeviceAI Natively</title>
+    <meta name="description"
+        content="Recent supply chain attacks on tools like Axios and LiteLLM expose the risks of web dependencies. See why On Device AI is built on native Apple technologies for maximum security.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="canonical" href="https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/news.css">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html">
+    <meta property="og:title" content="Supply Chain Security: Why We Built OnDeviceAI Natively">
+    <meta property="og:description"
+        content="Recent supply chain attacks on tools like Axios and LiteLLM expose the risks of web dependencies. See why On Device AI is built on native Apple technologies for maximum security.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html">
+    <meta name="twitter:title" content="Supply Chain Security: Why We Built OnDeviceAI Natively">
+    <meta name="twitter:description"
+        content="Recent supply chain attacks on tools like Axios and LiteLLM expose the risks of web dependencies. See why On Device AI is built on native Apple technologies for maximum security.">
+    <meta name="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "News",
+        "item": "https://OnDevice-ai.app/news/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Supply Chain Security: Why We Built OnDeviceAI Natively",
+        "item": "https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Supply Chain Security: Why We Built OnDeviceAI Natively",
+      "description": "Recent supply chain attacks on tools like Axios and LiteLLM expose the risks of web dependencies. See why On Device AI is built on native Apple technologies for maximum security.",
+      "datePublished": "2026-04-03",
+      "author": {
+        "@type": "Organization",
+        "name": "On Device AI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "On Device AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://OnDevice-ai.app/images/icon.png"
+        }
+      },
+      "mainEntityOfPage": "https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html",
+      "url": "https://OnDevice-ai.app/news/why-we-built-on-device-ai-natively.html",
+      "image": "https://OnDevice-ai.app/images/phone_screen.png",
+      "articleSection": "Product Note"
+    }
+    </script>
+</head>
+
+<body class="news-page">
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/icon.png" alt="On Device AI">
+                <span>On Device AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#features">Features</a></li>
+                <li><a href="../docs/">Docs</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main class="news-main">
+        <article class="container article-main">
+            <header class="article-hero">
+                <span class="news-kicker">Product Note</span>
+                <h1>Why we built OnDeviceAI natively (instead of taking the easy way out)</h1>
+                <div class="article-meta">
+                    <span>On Device AI Team</span>
+                    <span><time datetime="2026-04-03">April 3, 2026</time></span>
+                </div>
+                <p class="article-dek">Recent supply chain attacks on major web libraries show the fragility of modern app development. Here is why On Device AI is built directly on Apple's native technologies to keep your data secure and entirely local.</p>
+            </header>
+
+            <div class="article-content">
+                <aside class="article-answer" aria-label="Key takeaway">
+                    <p>Instead of gluing vulnerable open-source web packages together to power AI, On Device AI is built entirely on native Apple frameworks. This means no hidden background scripts, no cloud dependencies to leak data, and strict sandboxed protections for your privacy.</p>
+                </aside>
+
+                <p>I keep seeing the same panic cycle play out on developer forums. Last week, two massive software building blocks—Axios and LiteLLM—were hijacked. Millions of apps use these tools. The attackers didn't hack a secure server. They just stole the maintainers' passwords and slipped remote-control malware into the code updates.</p>
+                <p>Half the tech industry woke up wondering if their apps were secretly sending user data to a random server.</p>
+                <p>This is exactly why we built OnDeviceAI differently.</p>
+                
+                <section>
+                    <h2>The security cost of convenience</h2>
+                    <p>Most modern software is glued together using public code libraries to save time. It's incredibly convenient for developers. But it's also a security nightmare. If one random script in the dependency chain breaks or gets infected, the whole app is compromised.</p>
+                    <p>When we started OnDeviceAI, we made a deliberate choice to avoid that approach. It meant writing a lot more code from scratch. We bypassed the vulnerable web ecosystems entirely and built directly on Apple's native technologies.</p>
+                    <p>Here is what that actually means for your data:</p>
+                </section>
+
+                <section>
+                    <h2>Zero external dependencies where it counts</h2>
+                    <p>We don't rely on Node.js packages or Python installers for our core processing. The app runs on Swift and Apple's own frameworks. There are no mysterious background scripts pulling updates from a community repository.</p>
+                </section>
+
+                <section>
+                    <h2>It physically can't send your data away</h2>
+                    <p>The recent LiteLLM attack was designed to sweep a user's computer for passwords and API keys, encrypt them, and upload them to a hacker's domain. OnDeviceAI avoids this risk simply by not using the cloud for AI processing. Your prompts stay on your physical hardware.</p>
+                </section>
+
+                <section>
+                    <h2>Walled-in processing</h2>
+                    <p>Because we built this natively for Mac, iPad and iPhone, the app sits inside Apple's strict security sandbox. Even if something went catastrophically wrong, the software is walled off from the rest of your files. It doesn't have the permission to wander around your hard drive.</p>
+                    <p>It takes longer to build apps this way. But watching the fallout from these supply chain attacks reinforces why we do it. You shouldn't have to wonder if your AI assistant is quietly leaking your data because of a compromised library update. With native processing, your data actually stays yours.</p>
+                </section>
+
+                <div class="article-signpost">
+                    <a href="index.html">← Back to News &amp; Blogs</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <ul class="footer-links">
+                <li><a href="../pages/terms-of-use.html">Terms of Use</a></li>
+                <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../docs/">Documentation</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 OnDevice-AI App.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
