@@ -801,6 +801,58 @@ h6 {
     font-weight: 500;
 }
 
+/* --- Why Section (Differentiators) --- */
+.why-section {
+    background: var(--bg-secondary);
+    padding-bottom: 80px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.why-card-number {
+    font-family: var(--font-display);
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+}
+
+.why-card-number svg {
+    color: var(--accent);
+    -webkit-text-fill-color: initial;
+}
+
+.why-card h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.why-card p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* --- Features Section --- */
 .features {
     background: var(--bg-secondary);
@@ -1562,6 +1614,10 @@ h6 {
 
     .privacy-visual {
         order: -1;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .platform-grid {

@@ -24,4 +24,7 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
 Sitemap: https://OnDevice-ai.app/sitemap.xml

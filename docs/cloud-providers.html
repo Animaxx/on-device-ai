@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/docs.css">
 
     <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://OnDevice-ai.app/docs/cloud-providers.html">
     <meta property="og:title" content="Cloud Providers - On Device AI Docs">
     <meta property="og:description" content="Optionally connect to OpenAI, Anthropic, Google Gemini, Mistral, Groq, xAI, OpenRouter, Nvidia, AWS Bedrock, Z.ai, Opencode Zen, Qwen Portal, Kimi, LM Studio, or Ollama in On Device AI.">
@@ -116,6 +116,7 @@
                     <li><a href="ai-chat.html">AI Chat</a></li>
                     <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
                     <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="voice-typing.html">Voice Typing</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
                     <li><a href="tool-calling.html">Tool Calling</a></li>
@@ -128,15 +129,13 @@
         </aside>
         <main class="docs-content">
             <h1>Cloud Providers</h1>
-            <p>While On Device AI is designed for 100% offline operation, you can optionally connect to cloud AI
-                providers when you need access to larger models or additional capabilities. Cloud is always
-                <strong>opt-in</strong> and off by default.</p>
+            <p>While On Device AI is designed to work completely offline, sometimes you just need a bigger brain. When you're tackling massive coding projects or need extreme reasoning, you can easily plug into cloud AI platforms. The cloud is always <strong>opt-in</strong> and turned off by default.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
                 <ul>
                     <li><a href="#supported">Supported Providers</a></li>
-                    <li><a href="#setup">Setting Up a Provider</a></li>
+                    <li><a href="#setup">Setting Up (The Folder View)</a></li>
                     <li><a href="#bedrock">AWS Bedrock</a></li>
                     <li><a href="#qwen">Qwen Portal</a></li>
                     <li><a href="#switching">Switching Between Local &amp; Cloud</a></li>
@@ -146,73 +145,60 @@
             </div>
 
             <h2 id="supported">Supported Providers</h2>
-            <p>On Device AI supports the following cloud and local server providers:</p>
-                <ul>
-                    <li><strong>OpenAI:</strong> GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo, and more</li>
-                    <li><strong>Anthropic:</strong> Claude 3 Opus, Sonnet, Haiku, and Claude 4 models</li>
-                    <li><strong>Google Gemini:</strong> Gemini Pro, Gemini Flash, and other models</li>
-                    <li><strong>Mistral:</strong> Access Mistral models via OpenAI-compatible chat and models endpoints</li>
-                    <li><strong>Groq:</strong> Ultra-fast inference for Llama, Mixtral, and Gemma models</li>
-                    <li><strong>xAI:</strong> Access to the powerful Grok family of models</li>
-                    <li><strong>OpenRouter:</strong> Access to hundreds of models through a single API</li>
-                    <li><strong>Nvidia:</strong> Access Nvidia's NIM microservices and high-performance models</li>
-                    <li><strong>AWS Bedrock:</strong> Access Amazon Bedrock foundation models via SigV4-authenticated requests</li>
-                <li><strong>Z.ai (Zhipu GLM):</strong> Access GLM-4, GLM-5 and other Zhipu AI models</li>
-                <li><strong>Opencode Zen:</strong> Access multiple frontier models (GPT, Claude, Gemini) through a unified API</li>
-                <li><strong>Qwen Portal:</strong> Access Alibaba's Qwen models via API key or OAuth</li>
-                <li><strong>Kimi (Moonshot AI):</strong> Access Moonshot's Kimi long-context models</li>
-                <li><strong>LM Studio:</strong> Connect to locally-hosted models running on your Mac or PC</li>
-                <li><strong>Ollama:</strong> Connect to locally-hosted Ollama server</li>
+            <p>On Device AI supports connecting to the following platforms:</p>
+            <ul>
+                <li><strong>OpenAI:</strong> GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo</li>
+                <li><strong>Anthropic:</strong> Claude 3.5 Sonnet, Opus, Haiku</li>
+                <li><strong>Google Gemini:</strong> Gemini 1.5 Pro, Flash</li>
+                <li><strong>Mistral:</strong> Large, NeMo, MathStrall</li>
+                <li><strong>Groq:</strong> Ultra-fast inference</li>
+                <li><strong>xAI:</strong> Grok family</li>
+                <li><strong>Nvidia, OpenRouter, AWS Bedrock, Z.ai, Opencode Zen, Qwen Portal, Kimi, Hugging Face</strong></li>
+                <li><strong>Cloudflare AI Gateway</strong></li>
+                <li><strong>Microsoft Foundry</strong></li>
+                <li><strong>GitHub Models</strong></li>
+                <li><strong>Local Servers:</strong> LM Studio, Ollama</li>
             </ul>
 
-            <h2 id="setup">Setting Up a Provider</h2>
+            <h2 id="setup">Setting Up (The Folder View)</h2>
+            <p>Configuring a dozen different API settings can become a messy nightmare quickly. That's why your providers are organized neatly into three simple folders in the settings:</p>
             <ol class="steps">
-                <li><strong>Open Settings → Cloud Providers</strong>
-                    <p>Navigate to the Cloud Providers section in app settings.</p>
+                <li><strong>Open Settings → Cloud Providers</strong></li>
+                <li><strong>Browse the Folders</strong>
+                    <p>You'll see three categories: <em>Connected</em>, <em>Local Engines</em>, and <em>Cloud Platforms</em>.</p>
                 </li>
-                <li><strong>Select a provider</strong>
-                    <p>Choose the provider you want to connect to.</p>
+                <li><strong>Pick Your Flavor</strong>
+                    <p>Open the <em>Cloud Platforms</em> folder and choose a service (like OpenAI or Anthropic). Paste your API key straight from their dashboard.</p>
                 </li>
-                <li><strong>Enter your credentials</strong>
-                    <p>For most providers, paste your API key from the provider's dashboard. For AWS Bedrock, enter your
-                        Access Key ID and Secret Access Key. For Qwen Portal, you can also use an OAuth refresh token.
-                        All credentials are stored securely in your device's Keychain — never in plain text.</p>
-                </li>
-                <li><strong>Select a model</strong>
-                    <p>Browse available models from the provider and select the one you want to use. For providers
-                        without automatic model listing (Bedrock, Kimi), you can enter a model ID manually.</p>
+                <li><strong>Select a Model</strong>
+                    <p>The app instantly talks to the provider and lists the available models right there. Choose your favorite, and the provider automatically jumps up into your <em>Connected</em> folder so it's always easy to find.</p>
                 </li>
             </ol>
+            
             <div class="callout callout-warning">
                 <div class="callout-title">⚠️ Important</div>
-                <p>When using cloud providers, your conversation data is transmitted to the provider's servers. The app
-                    does not control how providers handle your data. Review each provider's privacy policy before use.
-                </p>
+                <p>When using cloud providers, your conversation data leaves your device and goes to their servers. We don't sit in the middle or log your chats, but you should still review each provider's privacy policy before pasting your key.</p>
             </div>
 
             <h2 id="bedrock">AWS Bedrock</h2>
-            <p>AWS Bedrock requires AWS credentials rather than a simple API key:</p>
+            <p>AWS Bedrock requires AWS credentials rather than a standard API key. It's built for enterprise security.</p>
             <ol class="steps">
                 <li><strong>Set your AWS Region</strong>
-                    <p>Enter the AWS region where Bedrock is enabled (e.g. <code>us-east-1</code>, <code>us-west-2</code>). This is saved in your app configuration, not in the Keychain.</p>
+                    <p>Enter the region where Bedrock is active (e.g. <code>us-east-1</code>).</p>
                 </li>
                 <li><strong>Enter AWS Credentials</strong>
-                    <p>Tap <em>Enter Credentials</em> and provide your AWS Access Key ID and Secret Access Key. An optional session token is supported for temporary credentials (AWS STS).</p>
+                    <p>Tap <em>Enter Credentials</em>. Provide your AWS Access Key ID, Secret Access Key, and an optional session token if you're using temporary credentials.</p>
                 </li>
                 <li><strong>Enter a Bedrock Model ID</strong>
-                    <p>Use the manual model entry field to type the Bedrock model ID, e.g. <code>anthropic.claude-3-sonnet-20240229-v1:0</code> or <code>amazon.titan-text-premier-v1:0</code>.</p>
+                    <p>Since AWS doesn't auto-list models through an easy endpoint, you'll need to manually type the Bedrock model ID (like <code>anthropic.claude-3-sonnet-20240229-v1:0</code>).</p>
                 </li>
             </ol>
-            <div class="callout callout-info">
-                <div class="callout-title">ℹ️ How it works</div>
-                <p>Requests to Bedrock are authenticated using AWS Signature Version 4 (SigV4) — signed directly on your device. No credentials are ever transmitted to any proxy server.</p>
-            </div>
 
             <h2 id="qwen">Qwen Portal</h2>
-            <p>Qwen Portal supports two authentication modes:</p>
+            <p>Alibaba's Qwen Portal is flexible and supports two ways to plug in:</p>
             <ul>
-                <li><strong>API Key:</strong> Use a standard API key with <code>Authorization: Bearer</code> header.</li>
-                <li><strong>OAuth Refresh Token:</strong> Provide an OAuth refresh token. The app automatically exchanges it for a short-lived access token before each request, without requiring you to manually refresh.</li>
+                <li><strong>API Key:</strong> The standard method if you have a traditional key.</li>
+                <li><strong>OAuth Refresh Token:</strong> A much smoother option. Drop in your refresh token, and the app seamlessly handles getting fresh access tokens for you behind the scenes before every chat.</li>
             </ul>
             <p>Select your preferred authentication mode in Settings → Cloud Providers → Qwen Portal before entering your credentials.</p>
 

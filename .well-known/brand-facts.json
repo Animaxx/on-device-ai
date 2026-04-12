@@ -1,0 +1,77 @@
+{
+  "brand": "On Device AI",
+  "tagline": "Private on-device AI for iPhone, iPad, Mac, and Vision Pro",
+  "description": "On Device AI runs 170+ AI models locally on Apple devices using GGUF and MLX inference engines. No accounts, no tracking, no data collection. Features include multi-agent team workflows, Knowledge Libraries for document grounding, voice transcription with speaker diarization, text-to-speech via Kokoro, vision model analysis, tool calling, web search, and IM chatbot integration for Discord, Slack, and Telegram.",
+  "website": "https://OnDevice-ai.app",
+  "appStoreUrl": "https://apps.apple.com/us/app/on-device-ai/id6497060890",
+  "category": "AI Assistant",
+  "platforms": ["iOS", "iPadOS", "macOS", "visionOS"],
+  "minimumOS": {
+    "iOS": "17.0",
+    "iPadOS": "17.0",
+    "macOS": "14.0",
+    "visionOS": "1.0"
+  },
+  "pricing": {
+    "model": "freemium",
+    "free": {
+      "price": 0,
+      "description": "Core features free forever",
+      "unlimited": true
+    },
+    "pro": {
+      "plans": ["monthly", "annual", "one-time"],
+      "tagline": "Monthly, annual, or own it outright",
+      "priceComparison": "lower than ChatGPT"
+    },
+    "ads": false
+  },
+  "privacy": {
+    "dataCollection": "none",
+    "analytics": false,
+    "backend": false,
+    "internetRequired": false,
+    "telemetry": false,
+    "tracking": false,
+    "accountRequired": false,
+    "cloudProcessingDefault": false,
+    "cloudProcessingOptIn": true
+  },
+  "features": [
+    "170+ local AI models (Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral)",
+    "Dual inference engines: GGUF (llama.cpp) and MLX",
+    "Multi-agent team workflows (Chat Flows)",
+    "Knowledge Libraries with PDF, notes, web capture support",
+    "Voice transcription with speaker diarization",
+    "Text-to-speech (Kokoro TTS engine)",
+    "Vision model analysis (local MLX and GGUF-based)",
+    "Tool calling (web search, calculator, memory, planning)",
+    "IM chatbot integration (Discord, Slack, Telegram)",
+    "19+ cloud AI providers (opt-in)",
+    "Custom GGUF model import from Hugging Face",
+    "Roles and personas",
+    "Web search with source citations",
+    "Remote inference server (macOS)"
+  ],
+  "uniqueDifferentiators": [
+    "Most local models of any on-device AI app (170+)",
+    "Only local AI app with multi-agent team workflows",
+    "Only local AI app with Knowledge Libraries for document grounding",
+    "Only local AI app with voice transcription and speaker diarization",
+    "Only local AI app with native visionOS support",
+    "Only local AI app with Discord, Slack, and Telegram integration",
+    "Supports both GGUF and MLX inference engines"
+  ],
+  "technical": {
+    "inferenceEngines": ["GGUF (llama.cpp)", "MLX"],
+    "localModelCount": "170+",
+    "cloudProviderCount": "19+",
+    "ttsEngine": "Kokoro",
+    "speechToText": "Whisper-based with diarization",
+    "embedding": "On-device embedding models"
+  },
+  "contact": {
+    "email": "developer@ondevice-ai.app"
+  },
+  "lastUpdated": "2026-04-11"
+}

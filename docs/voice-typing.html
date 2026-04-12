@@ -4,27 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Search - On Device AI Docs</title>
+    <title>Voice Typing Dictation - On Device AI Docs</title>
     <meta name="description"
-        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+        content="Dictate flawlessly into any app. Perfect your grammar, rewrite casual speech to professional text, or translate on-the-fly with On Device AI Voice Typing.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
-    <link rel="canonical" href="https://OnDevice-ai.app/docs/web-search.html">
+    <link rel="canonical" href="https://OnDevice-ai.app/docs/voice-typing.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/docs.css">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://OnDevice-ai.app/docs/web-search.html">
-    <meta property="og:title" content="Web Search - On Device AI Docs">
-    <meta property="og:description"
-        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+    <meta property="og:url" content="https://OnDevice-ai.app/docs/voice-typing.html">
+    <meta property="og:title" content="Voice Typing Dictation - On Device AI Docs">
+    <meta property="og:description" content="Dictate flawlessly into any app. Perfect your grammar, rewrite casual speech to professional text, or translate on-the-fly with On Device AI Voice Typing.">
     <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/web-search.html">
-    <meta property="twitter:title" content="Web Search - On Device AI Docs">
-    <meta property="twitter:description"
-        content="Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.">
+    <meta property="twitter:url" content="https://OnDevice-ai.app/docs/voice-typing.html">
+    <meta property="twitter:title" content="Voice Typing Dictation - On Device AI Docs">
+    <meta property="twitter:description" content="Dictate flawlessly into any app. Perfect your grammar, rewrite casual speech to professional text, or translate on-the-fly with On Device AI Voice Typing.">
     <meta property="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.png">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -45,24 +43,26 @@
       },{
         "@type": "ListItem",
         "position": 3,
-        "name": "Web Search",
-        "item": "https://OnDevice-ai.app/docs/web-search.html"
+        "name": "Voice Typing",
+        "item": "https://OnDevice-ai.app/docs/voice-typing.html"
       }]
     }
     </script>
 
-    <!-- JSON-LD: Article -->
+    <!-- JSON-LD: Article & FAQ -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Web Search - On Device AI Docs",
-    "description": "Search the web with AI-powered analysis in On Device AI. Get structured summaries of search results.",
-    "author": {
-        "@type": "Organization",
-        "name": "On Device AI"
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is Voice Typing in On Device AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voice Typing lets you dictate perfectly formatted, logically corrected text directly into any app on your Mac or iPhone. It uses AI to fix grammar and spelling errors as you speak."
+      }
+    }]
     }
-}
     </script>
 </head>
 
@@ -118,9 +118,9 @@
                     <li><a href="ai-chat.html">AI Chat</a></li>
                     <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
                     <li><a href="voice-notes.html">Voice Notes</a></li>
-                    <li><a href="voice-typing.html">Voice Typing</a></li>
+                    <li><a href="voice-typing.html" class="active">Voice Typing</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
-                    <li><a href="web-search.html" class="active">Web Search</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
                     <li><a href="tool-calling.html">Tool Calling</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
@@ -131,67 +131,55 @@
             </div>
         </aside>
         <main class="docs-content">
-            <h1>Web Search</h1>
-            <p>Research Faster with AI Search. Ask complex questions and get structured, AI-analyzed summaries with
-                clear source citations instead of digging through pages of raw search results.</p>
+            <h1>Voice Typing: Dictate Anywhere 🎙️</h1>
+            <p>We've all been there: you try using standard dictation, and you spend more time fixing bizarre typos than you saved by not typing. <strong>Voice Typing</strong> changes that. Talk naturally, and our AI perfectly formats and corrects your speech, then types it directly into whatever app you’re using.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
                 <ul>
                     <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#usage">Using Web Search</a></li>
-                    <li><a href="#sources">Source References</a></li>
-                    <li><a href="#tool-calling">Tool Calling Integration</a></li>
+                    <li><a href="#correction-modes">Correction Modes</a></li>
+                    <li><a href="#instant-short-segments">Instant Short Phrases</a></li>
+                    <li><a href="#customization">Provider Customization</a></li>
                 </ul>
             </div>
 
             <h2 id="how-it-works">How It Works</h2>
-            <p>The AI Search feature combines web searching with AI analysis:</p>
-            <ol>
-                <li>Your query is sent to a search engine to find relevant web pages</li>
-                <li>The app fetches and extracts content from the top results</li>
-                <li>Your local AI model analyzes and synthesizes the information</li>
-                <li>You receive a structured, coherent summary with source citations</li>
-            </ol>
-            <div class="callout callout-info">
-                <div class="callout-title">ℹ️ Note</div>
-                <p>Web search requires an internet connection to fetch search results. However, the AI analysis of those
-                    results happens entirely on your device.</p>
-            </div>
-
-            <h2 id="usage">Using Web Search</h2>
+            <p>Instead of bouncing between a chat app and your workspace, On Device AI types directly onto your screen.</p>
             <ol class="steps">
-                <li><strong>Navigate to AI Search</strong>
-                    <p>Tap the AI Search tab in the sidebar or navigation bar.</p>
-                </li>
-                <li><strong>Enter your query</strong>
-                    <p>Type a question or topic. Natural language works best — ask questions as you would ask a person.
-                    </p>
-                </li>
-                <li><strong>Review the results</strong>
-                    <p>The AI presents a synthesized answer with citations to the source web pages.</p>
-                </li>
+                <li><strong>On your Mac:</strong> Press your configured Trigger Key (for example, <em>Fn + Command</em>). A floating bar appears. Speak your mind, then release the key. Instantly, polished text is typed right into your email, Slack, or code editor.</li>
+                <li><strong>On your iPhone:</strong> Open the On Device AI Custom Keyboard in any app. Tap the microphone, and dictate straight into your messages.</li>
             </ol>
 
-            <h2 id="sources">Source References</h2>
-            <p>Each web search result includes references to the original sources. You can:</p>
+            <h2 id="correction-modes">Correction Modes</h2>
+            <p>Standard dictation gives you raw, often embarrassing speech-to-text. Voice Typing uses four distinct profiles to capture exactly what you meant to say:</p>
             <ul>
-                <li>Click source links to open the original web pages</li>
-                <li>See which parts of the answer came from which sources</li>
-                <li>Verify information by checking the original content</li>
+                <li><strong>Cleanup:</strong> Fixes typos, stutters ("um", "uh"), and rogue punctuation—but keeps your exact vocabulary and tone intact. Best for quick, everyday messaging.</li>
+                <li><strong>Rewrite:</strong> Instantly professionalizes casual speech. Say <em>"yeah, I can do it tomorrow, no worries,"</em> and it types <em>"I will have this completed by tomorrow."</em> Perfect for formal emails.</li>
+                <li><strong>Translate:</strong> Speak in your native language, and watch it fluently type out in another language. Great for fast communication with international teams.</li>
+                <li><strong>Literal:</strong> Traditional, raw speech-to-text exactly as spoken, with zero AI interference.</li>
             </ul>
 
-            <h2 id="tool-calling">Tool Calling Integration</h2>
-            <p>In regular AI Chat, models that support tool calling can automatically trigger web searches when they
-                need current information. This means you don't have to switch to the Search tab — the AI decides when it
-                needs to look something up.</p>
-            <p>See <a href="ai-chat.html#tool-calling">AI Chat → Tool Calling</a> for more details.</p>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Fast Language Switching</div>
+                <p>Dictate in Spanish? You can override your default correction profile based on the language. For example, tell the app to always apply "Translate to English" whenever it hears Spanish.</p>
+            </div>
+
+            <h2 id="instant-short-segments">Instant Short Phrases</h2>
+            <p>If you're just replying with a few words (like "Sounds good" or "I'll be right there"), Voice Typing is smart enough to skip the heavy AI rewriting phase. It types the text instantly. This "Short segment threshold" ensures quick, natural replies remain incredibly fast, while saving the deep AI analysis for longer sentences.</p>
+
+            <h2 id="customization">Provider Customization</h2>
+            <p>You have total control over exactly which AI model powers your writing.</p>
+            <ul>
+                <li>Use lightning-fast <strong>Local Models</strong> (like Llama 3) to process your speech entirely offline, ensuring absolute privacy for sensitive documents.</li>
+                <li>Switch to a <strong>Cloud Provider</strong> (like Claude 3 or GPT-4o) when you need advanced Rewrites and Translations.</li>
+            </ul>
 
             <div class="docs-nav-footer">
-                <a href="text-to-speech.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span
+                <a href="voice-notes.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span
+                        class="nav-title">Voice Notes</span></a>
+                <a href="text-to-speech.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
                         class="nav-title">Text-to-Speech</span></a>
-                <a href="vision-models.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
-                        class="nav-title">Vision Models</span></a>
             </div>
         </main>
     </div>
