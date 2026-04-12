@@ -129,12 +129,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Interactive Image Stacks
     // ======================================
     document.querySelectorAll('.interactive-stack').forEach(stack => {
-        stack.addEventListener('click', function() {
+        stack.addEventListener('click', function () {
             this.classList.toggle('swapped');
         });
-        
+
         // Handle keyboard accessibility (Enter/Space to toggle)
-        stack.addEventListener('keydown', function(e) {
+        stack.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.classList.toggle('swapped');
@@ -190,4 +190,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
+
+    // ======================================
+    // Mac App Store Direct Link with Fallback
+    // ======================================
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isMac = /Macintosh|MacIntel|MacPPC|Mac68K/.test(navigator.userAgent) && !isIOS;
+
+    if (isMac) {
+        document.querySelectorAll('a[href^="https://apps.apple.com"]').forEach(link => {
+            const originalHref = link.href;
+            const macAppStoreHref = originalHref.replace('https://', 'macappstore://');
+
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Attempt to open the Mac App Store natively
+                window.location.href = macAppStoreHref;
+
+                // Fallback to Apple's website if the App Store doesn't open
+                setTimeout(() => {
+                    // If the document is still active, the store probably didn't launch
+                    if (!document.hidden) {
+                        window.location.href = originalHref;
+                    }
+                }, 2000);
+            });
+        });
+    }
 });
