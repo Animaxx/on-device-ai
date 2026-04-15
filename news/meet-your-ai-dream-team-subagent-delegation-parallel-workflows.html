@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent AI on Your Device: Subagent Delegation and Parallel Workflows in On Device AI</title>
+    <meta name="description"
+        content="On Device AI adds two multi-agent modes: subagent delegation for expert task routing, and Chat Flow for parallel agent responses. Both run entirely on iPhone, iPad, and Mac.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="canonical"
+        href="https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/news.css">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="On Device AI">
+    <meta property="og:url"
+        content="https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html">
+    <meta property="og:title"
+        content="Multi-Agent AI on Your Device: Subagent Delegation and Parallel Workflows in On Device AI">
+    <meta property="og:description"
+        content="On Device AI adds two multi-agent modes: subagent delegation for expert task routing, and Chat Flow for parallel agent responses. Both run entirely on iPhone, iPad, and Mac.">
+    <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
+    <meta property="og:image:width" content="1023">
+    <meta property="og:image:height" content="2224">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url"
+        content="https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html">
+    <meta name="twitter:title"
+        content="Multi-Agent AI on Your Device: Subagent Delegation and Parallel Workflows in On Device AI">
+    <meta name="twitter:description"
+        content="On Device AI adds two multi-agent modes: subagent delegation for expert task routing, and Chat Flow for parallel agent responses. Both run entirely on iPhone, iPad, and Mac.">
+    <meta name="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://OnDevice-ai.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "News",
+        "item": "https://OnDevice-ai.app/news/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Multi-Agent AI on Your Device",
+        "item": "https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Multi-Agent AI on Your Device: Subagent Delegation and Parallel Workflows in On Device AI",
+      "description": "On Device AI adds two multi-agent modes: subagent delegation for expert task routing, and Chat Flow for parallel agent responses. Both run entirely on iPhone, iPad, and Mac.",
+      "datePublished": "2026-04-14",
+      "dateModified": "2026-04-14",
+      "author": {
+        "@type": "Organization",
+        "name": "On Device AI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "On Device AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://OnDevice-ai.app/images/icon.png"
+        }
+      },
+      "mainEntityOfPage": "https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html",
+      "url": "https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html",
+      "image": "https://OnDevice-ai.app/images/phone_screen.webp",
+      "articleSection": "Feature Deep-Dive",
+      "keywords": "multi-agent AI, subagent delegation, on-device AI, private AI, Apple Silicon, Chat Flow, parallel AI agents, iOS AI, macOS AI"
+    }
+    </script>
+</head>
+
+<body class="news-page">
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/icon.png" alt="On Device AI">
+                <span>On Device AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#features">Features</a></li>
+                <li><a href="../docs/">Docs</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </li>
+                <li><a href="https://apps.apple.com/us/app/on-device-ai/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main class="news-main">
+        <article class="container article-main">
+            <header class="article-hero">
+                <span class="news-kicker">Feature deep-dive</span>
+                <h1>How On Device AI coordinates a team of specialized agents on your device</h1>
+                <div class="article-meta">
+                    <span>On Device AI Team</span>
+                    <span><time datetime="2026-04-14">April 14, 2026</time></span>
+                </div>
+                <p class="article-dek">On Device AI adds two multi-agent modes: subagent delegation, where a main agent
+                    routes tasks to specialized experts and synthesizes their results, and Chat Flow, where multiple
+                    agents respond in parallel to the same input. Both modes run locally on your Apple device.</p>
+            </header>
+
+            <div class="article-content">
+                <aside class="article-answer" aria-label="Key takeaway">
+                    <p>On Device AI now supports two forms of multi-agent AI. Subagent delegation lets a main agent route
+                        tasks to specialists—a Researcher, Brainstormer, or any expert you configure—then synthesize
+                        their structured output. Chat Flow mode runs multiple agents against the same user input in a
+                        fan-out/fan-in pattern. Your data stays on-device throughout.</p>
+                </aside>
+
+                <section>
+                    <h2>Why single agents hit a ceiling</h2>
+                    <p>The familiar pattern: you ask, the model answers. For a quick question, that works. But ask
+                        something like "what are the strongest arguments for and against entering the Japanese market?"
+                        and you're asking one model to do five different jobs at the same time.</p>
+                    <p>It has to research market data, assess competitive dynamics, evaluate risk, identify
+                        opportunities, and organize all of it into a useful response—while managing a context window
+                        that shrinks as the conversation gets longer. The deeper the question, the more likely something
+                        gets dropped or flattened.</p>
+                    <p>Subagent delegation solves this by giving the main agent a roster of specialists it can call. The
+                        Researcher looks up facts with a web search tool. The Brainstormer generates angles the main
+                        agent might have missed. The main agent synthesizes what comes back and responds to the user.
+                        Each expert sees only what it needs to see. You get a better answer without managing any of
+                        the handoff yourself.</p>
+                </section>
+
+                <section>
+                    <h2>How delegation works in practice</h2>
+                    <p>When the main agent decides a specialist can help, it emits a structured delegation request that
+                        On Device AI intercepts at the tool-call layer. The request carries three fields: the target
+                        <code>expert</code> name, the <code>task</code> description, and an <code>output_mode</code>
+                        (currently <code>json</code>). The app parses this, runs the designated expert, and reinjects a
+                        canonicalized result back to the main agent's context.</p>
+                    <p>The result injected back to the main agent carries the <code>expert</code> name,
+                        a <code>status</code> of <code>completed</code>, <code>failed</code>, or
+                        <code>cancelled</code>, a plain-text <code>summary</code>, and a structured
+                        <code>data</code> object with the expert's actual output—making it easy for the main
+                        agent to consume and reference specific fields in its synthesis.</p>
+                    <p>The main agent now has clean, structured output from a specialist without you touching a
+                        single prompt. You just asked a question.</p>
+                </section>
+
+                <section>
+                    <h2>Expert configuration and context strategies</h2>
+                    <p>A delegation flow has a main agent and an expert roster. Each expert is a configured AI
+                        participant with its own system prompt, an optional preferred model (local or cloud), an
+                        optional tool allowlist, and a context strategy.</p>
+                    <p>Context strategy is the decision that matters most per expert—it controls what the expert sees
+                        when it runs:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Strategy</th>
+                                <th>What the expert sees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>taskOnly</code></td>
+                                <td>Only the delegated task. Isolated, no conversation history.</td>
+                            </tr>
+                            <tr>
+                                <td><code>ownHistory</code></td>
+                                <td>The delegated task plus this expert's own prior turns in the session.</td>
+                            </tr>
+                            <tr>
+                                <td><code>fullConversation</code></td>
+                                <td>The complete conversation context up to the delegation point.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><code>taskOnly</code> is the default, and it's the right choice for most experts. Each
+                        delegation is fully isolated, with no risk of prior unrelated messages contaminating the
+                        expert's output. The <code>ownHistory</code> strategy is useful for experts that need
+                        continuity across multiple delegations in the same session—for example, a planning agent
+                        building an iterative analysis across several rounds.</p>
+                    <p>Expert session memory under <code>ownHistory</code> is in-memory and session-scoped. Starting a
+                        new conversation clears it entirely.</p>
+                </section>
+
+                <section>
+                    <h2>Depth, model switching, and loop prevention</h2>
+                    <p>Delegation depth defaults to 1, meaning experts answer the main agent but cannot themselves
+                        delegate further. This is intentional—one level of delegation covers the vast majority of real
+                        workflows without the complexity cost of nested agent trees. Pro users can increase delegation
+                        depth for flows that genuinely need multi-level routing.</p>
+                    <p>The system prevents self-delegation, where an expert would call itself at the same depth. At
+                        maximum depth, delegation instructions are stripped from the expert's prompt automatically,
+                        so agents cannot attempt to go deeper even if their prompt would otherwise allow it.</p>
+                    <p>Each expert can have a preferred model—local GGUF, MLX, or any configured cloud provider. If the
+                        expert's preferred model differs from the current one, On Device AI switches models automatically
+                        before running the expert turn. You'll see the model name in a loading indicator. If a model
+                        fails to load, the delegation fails cleanly and the main agent gets a failure result rather than
+                        silently continuing without it.</p>
+                </section>
+
+                <section>
+                    <h2>Chat Flow mode: when you want agents running in parallel</h2>
+                    <p>Subagent delegation is sequential—one expert runs, returns, and the main agent continues. Chat
+                        Flow mode is a different pattern. Multiple AI participants respond to the conversation in
+                        sequence, but each one's input can be configured independently, which enables fan-out and
+                        fan-in workflows.</p>
+                    <p>A typical configuration might route the user's input to a Researcher and a Creative agent
+                        simultaneously (fan-out), then pass their outputs to a Synthesizer that sees everything (fan-in).
+                        The Researcher and Creative agents each see the user's original message but not each other's
+                        work. The Synthesizer sees the full thread.</p>
+                    <p>Each Chat Flow participant has a context base selector—the rule that determines what message
+                        their response is based on:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Context base</th>
+                                <th>What the participant responds to</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>previousMessage</code> (default)</td>
+                                <td>The most recent message in the flow chain.</td>
+                            </tr>
+                            <tr>
+                                <td><code>latestUserMessage</code></td>
+                                <td>The triggering user input directly—enables the fan-out pattern.</td>
+                            </tr>
+                            <tr>
+                                <td><code>latestMessageFromRole</code></td>
+                                <td>A specific prior role's output—useful for targeted synthesis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The conversation view labels each role message with its base message so you can trace exactly
+                        what each agent was responding to. Invalid context base references—for example, a role that
+                        was deleted—automatically fall back to <code>latestUserMessage</code>.</p>
+                </section>
+
+                <section>
+                    <h2>What you see while delegation runs</h2>
+                    <p>On Device AI doesn't hide delegation progress behind a spinner. When an expert is running, the
+                        interface shows the active stage (starting, loading the model, streaming output, or completed),
+                        the expert's name, the depth level, and live streaming text as the expert generates its
+                        response. If the model supports chain-of-thought reasoning, both the reasoning stream and the
+                        answer stream are visible in real time.</p>
+                    <p>You can expand any delegation run to see the full task sent to the expert, the streaming output
+                        as it's generated, and a terminal summary once the run completes. Or keep it collapsed for
+                        a clean conversation view. Failed delegations surface the failure back to the main agent so
+                        it can acknowledge the issue in its final response rather than silently producing an incomplete
+                        answer.</p>
+                </section>
+
+                <section>
+                    <h2>Default expert templates</h2>
+                    <p>Every new delegation flow starts with two pre-configured experts you can use immediately or
+                        customize:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Expert</th>
+                                <th>Default role</th>
+                                <th>Tools</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Researcher</td>
+                                <td>Accurate, structured information gathering using web search</td>
+                                <td>Web search</td>
+                            </tr>
+                            <tr>
+                                <td>Brainstormer</td>
+                                <td>Creative lateral thinking—generates 5–10 diverse angles or ideas</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Both experts use <code>taskOnly</code> context strategy by default, keeping each delegation
+                        isolated. You can edit, delete, or add new experts. Common additions include an Analyst for
+                        structured data evaluation, a Writer for drafting and editing, or a Strategist that reads full
+                        conversation context to synthesize recommendations from prior expert outputs.</p>
+                </section>
+
+                <section>
+                    <h2>Use cases worth building</h2>
+                    <p><strong>Business analysis.</strong> Configure a Strategic Coordinator as the main agent with a
+                        Researcher and Risk Assessor in the expert roster. Ask "Should we expand into this market?" The
+                        Researcher pulls relevant data using web search. The Risk Assessor evaluates the inputs. The
+                        main agent synthesizes a recommendation. The entire analysis happens on your device, not on
+                        someone else's server.</p>
+                    <p><strong>Research synthesis.</strong> Enable the Researcher expert with web search. The main
+                        agent delegates literature lookups and returns a clean synthesis. Each search delegation is
+                        isolated via <code>taskOnly</code>, which prevents prior search sessions from bleeding into
+                        new ones. The main agent holds the thread and builds on each result.</p>
+                    <p><strong>Content development.</strong> Use Chat Flow mode with a Researcher, a Writer, and a
+                        Fact-Checker. The Researcher responds to the user's input directly, the Writer receives the
+                        Researcher's output, and the Fact-Checker verifies the draft. Each agent does one job.
+                        The flow handles the handoffs.</p>
+                    <p><strong>Parallel code review.</strong> Fan out to an Architecture Reviewer, Security Auditor,
+                        and Performance Analyst—all reading the same code input simultaneously—then route their
+                        outputs to a Synthesizer who delivers consolidated feedback. Three specialist perspectives,
+                        one coherent response.</p>
+                </section>
+
+                <section>
+                    <h2>Task Planner tool</h2>
+                    <p>For workflows that require step-by-step execution, On Device AI includes a Task Planner tool
+                        for Pro subscribers. The planner creates a structured, in-memory task plan from your request,
+                        tracks progress across tool calls, and injects a compact plan summary into the system prompt
+                        so the model always knows where it is in the sequence.</p>
+                    <p>Available operations include creating and clearing a plan, getting the current plan state,
+                        setting the current task, updating task status, and appending, editing, or deleting individual
+                        tasks. The planner runs within the bounded tool loop—no infinite execution, and no
+                        step-by-step confirmation required from you.</p>
+                </section>
+
+                <section>
+                    <h2>Privacy: why running on-device changes the calculation</h2>
+                    <p>Most multi-agent platforms send data to cloud infrastructure. Every delegation, every expert
+                        invocation—each one is a round-trip to a remote server. That means whatever your agents are
+                        working on (strategy documents, customer data, source code, private messages) leaves your
+                        device on every single step.</p>
+                    <p>On Device AI runs everything locally on your Apple hardware. No round-trips for AI inference
+                        unless you explicitly add a cloud provider using your own API keys. Apple Silicon's unified
+                        memory architecture means the full context is available without the latency of a remote
+                        call, and nothing is transmitted during the delegation process.</p>
+                    <p>Expert session memory under <code>ownHistory</code> is runtime-only and cleared when you start
+                        a new conversation. There is no persistent expert surveillance between sessions.</p>
+                </section>
+
+                <section>
+                    <h2>The single-active-model constraint</h2>
+                    <p>On-device hardware has limits that cloud platforms don't. On Device AI enforces a hard
+                        constraint: only one LLM instance is active at any time. In both subagent delegation and
+                        Chat Flow modes, agents run sequentially, not simultaneously—which avoids memory contention
+                        on consumer Apple hardware.</p>
+                    <p>For Chat Flow, this means three parallel agents actually run one at a time, in order. The
+                        fan-out is logical (each agent sees the same input independently) but the execution is
+                        sequential. The result looks the same to you—three independent outputs. You just can't run
+                        them at the exact same millisecond.</p>
+                    <p>If experts in your delegation flow use different models, On Device AI handles the model
+                        switching between expert turns automatically. You'll see a loading indicator with the model
+                        name as it transitions.</p>
+                </section>
+
+                <section>
+                    <h2>Subscription tiers</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Free</th>
+                                <th>Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Delegation flows</td>
+                                <td>1 flow</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td>Experts per delegation flow</td>
+                                <td>Up to 2</td>
+                                <td>More experts</td>
+                            </tr>
+                            <tr>
+                                <td>Delegation depth</td>
+                                <td>Fixed at 1</td>
+                                <td>Configurable</td>
+                            </tr>
+                            <tr>
+                                <td>Chat Flow (multi-participant)</td>
+                                <td>1 flow, up to 4 participants</td>
+                                <td>Unlimited flows</td>
+                            </tr>
+                            <tr>
+                                <td>Task Planner tool</td>
+                                <td>—</td>
+                                <td>Included</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Pro-only flows are preserved if you downgrade—no data is lost. They become read-only until
+                        Pro access is restored.</p>
+                </section>
+
+                <section>
+                    <h2>Getting started</h2>
+                    <p>To try subagent delegation in On Device AI, open the app on iPhone, iPad, or Mac and start a
+                        new conversation. Tap the role or agent button at the top of the conversation view and switch
+                        to <strong>Subagents</strong> mode. The default flow includes a Researcher with web search and
+                        a Brainstormer. You can start chatting immediately, or tap to edit either expert's system
+                        prompt, preferred model, and tool allowlist before you begin.</p>
+                    <p>For Chat Flow mode (parallel agents), use the same mode selector and switch to
+                        <strong>Flow Agent</strong> mode. Configure participants and set each one's context base
+                        selector to control the fan-out and fan-in pattern. Both modes are available on all supported
+                        Apple devices running On Device AI.</p>
+                    <p>The delegation flow editor and Chat Flow editor are the same interface. Add as many experts or
+                        participants as your plan allows, reorder them by dragging, and set per-participant models
+                        and tools independently. The app handles everything from model loading to result injection
+                        once you send your first message.</p>
+                </section>
+
+                <div class="article-signpost">
+                    <a href="index.html">← Back to News &amp; Blogs</a>
+                    <a href="im-communication-autopilot-macos.html">IM Autopilot for macOS →</a>
+                    <a href="https://apps.apple.com/us/app/on-device-ai/id6497060890">Download On Device AI →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <ul class="footer-links">
+                <li><a href="../pages/terms-of-use.html">Terms of Use</a></li>
+                <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../docs/">Documentation</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 OnDevice-AI App.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

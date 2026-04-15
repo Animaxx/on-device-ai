@@ -144,6 +144,7 @@ On Device AI collects zero user data. Specifics:
 - Cloud Providers docs: https://OnDevice-ai.app/docs/cloud-providers.html
 - IM Integration docs: https://OnDevice-ai.app/docs/im-integration.html
 - News archive: https://OnDevice-ai.app/news/
+- Multi-agent subagent delegation: https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html
 - Privacy policy: https://OnDevice-ai.app/pages/privacy-policy.html
 - Terms of use: https://OnDevice-ai.app/pages/terms-of-use.html
 - Contact: developer@ondevice-ai.app
