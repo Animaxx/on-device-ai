@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text-to-Speech - On Device AI Docs</title>
-    <meta name="description" content="Generate natural, professional quality speech from text using Apple voices and Kokoro TTS engine in On Device AI.">
+    <meta name="description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="On Device AI">
     <meta property="og:url" content="https://OnDevice-ai.app/docs/text-to-speech.html">
     <meta property="og:title" content="Text-to-Speech - On Device AI Docs">
-    <meta property="og:description" content="Generate natural, professional quality speech from text using Apple voices and Kokoro TTS engine in On Device AI.">
+    <meta property="og:description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
     <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="2224">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://OnDevice-ai.app/docs/text-to-speech.html">
     <meta name="twitter:title" content="Text-to-Speech - On Device AI Docs">
-    <meta name="twitter:description" content="Generate natural, professional quality speech from text using Apple voices and Kokoro TTS engine in On Device AI.">
+    <meta name="twitter:description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
     <meta name="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -58,12 +58,35 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "Text-to-Speech - On Device AI Docs",
-    "description": "Generate natural, professional quality speech from text using Apple voices and Kokoro TTS engine in On Device AI.",
+    "description": "Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.",
     "author": {
         "@type": "Organization",
         "name": "On Device AI"
     }
 }
+    </script>
+
+    <!-- JSON-LD: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What text-to-speech engines are available in On Device AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On Device AI offers three on-device TTS engines: Apple Voices (lightweight, many languages), Kokoro TTS (highly natural neural speech, ~80 MB download), and PocketTTS (streaming neural speech for English with ~80ms latency, Pro required)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I adjust the speed and tone of the speech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can adjust the speech speed from 0.5x to 2.0x for all engines. If using PocketTTS, you can also adjust the Temperature (0.0-1.0) to control expressiveness and toggle De-essing to reduce harsh sounds."
+        }
+      }]
+    }
     </script>
 </head>
 <body>
@@ -92,28 +115,39 @@
         </aside>
         <main class="docs-content">
             <h1>Text-to-Speech</h1>
-            <p>On Device AI includes powerful text-to-speech capabilities for converting any text into natural-sounding speech. Choose between Apple's built-in voices and the advanced Kokoro TTS engine.</p>
+            <p>On Device AI can read text aloud using three on-device engines: Apple's built-in voices, Kokoro neural TTS, and PocketTTS for low-latency streaming speech. Pick the one that fits your needs in Settings → Voice.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
                 <ul>
                     <li><a href="#engines">TTS Engines</a></li>
+                    <li><a href="#pockettts">PocketTTS settings</a></li>
                     <li><a href="#usage">Using TTS</a></li>
+                    <li><a href="#export">Generate &amp; Save</a></li>
                     <li><a href="#speed">Speech Speed</a></li>
                     <li><a href="#auto-play">Auto-Play Responses</a></li>
                 </ul>
             </div>
 
             <h2 id="engines">TTS Engines</h2>
-            <p>Two text-to-speech engines are available:</p>
+            <p>Three text-to-speech engines are available:</p>
             <ul>
-                <li><strong>Apple Voices:</strong> Uses the system's built-in speech synthesis. Many voices available, lightweight, and fast.</li>
-                <li><strong>Kokoro TTS:</strong> Advanced neural TTS engine that produces more natural, human-like speech. Runs entirely on-device. Requires downloading the Kokoro voice model (~80MB).</li>
+                <li><strong>Apple Voices:</strong> The system's built-in speech synthesis. Dozens of voices, many languages, minimal resource use. No download needed.</li>
+                <li><strong>Kokoro TTS:</strong> Neural TTS that produces natural, human-like speech in multiple languages. Runs on-device. Requires a one-time model download (~80 MB).</li>
+                <li><strong>PocketTTS:</strong> Streaming neural TTS, English only. Audio begins playing within roughly 80 ms, before the full sentence finishes generating. Requires a Pro subscription and a one-time model download. <span class="badge badge-pro">PRO</span></li>
             </ul>
-            <div class="callout callout-tip">
-                <div class="callout-title">💡 Tip</div>
-                <p>Kokoro TTS produces significantly more natural speech than Apple voices. Download it in Settings → Voice to hear the difference.</p>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Which engine to pick</div>
+                <p>Apple voices are lightweight and cover the most languages. Kokoro sounds more natural and still supports multiple languages. PocketTTS has the lowest playback latency but only works with English text.</p>
             </div>
+
+            <h2 id="pockettts">PocketTTS settings</h2>
+            <p>When PocketTTS is the active engine, two extra controls appear in Settings → Voice:</p>
+            <ul>
+                <li><strong>Temperature</strong> (0.0–1.0, default 0.7): Lower values produce more consistent speech. Higher values add more expressiveness and variation.</li>
+                <li><strong>De-essing</strong> (on by default): Reduces harsh sibilant ("s" and "sh") sounds in the output.</li>
+            </ul>
+            <p>PocketTTS supports English only. Non-English text will still synthesize on a best-effort basis, but the results are unpredictable. For other languages, switch to Kokoro or Apple.</p>
 
             <h2 id="usage">Using TTS</h2>
             <p>There are several ways to use text-to-speech:</p>
@@ -123,6 +157,9 @@
                 <li><strong>Message Actions:</strong> Select "Send to TTS" from a message's context menu (iOS) or the "More Actions" button (macOS) to send it directly to the TTS tab</li>
                 <li><strong>Auto-play:</strong> Enable auto-play to have every AI response spoken automatically</li>
             </ul>
+
+            <h2 id="export">Generate &amp; Save</h2>
+            <p>From the Text to Speech tab, you can export speech to a WAV file. Tap "Generate &amp; Save" to write the audio to your device's recordings folder with a metadata sidecar (text, engine, voice, speed). Cancelling mid-export removes any partial files automatically.</p>
 
             <h2 id="speed">Speech Speed</h2>
             <p>Adjust the speech speed in Settings → Voice:</p>

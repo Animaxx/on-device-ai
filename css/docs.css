@@ -232,6 +232,45 @@
     box-shadow: var(--shadow-sm);
 }
 
+/* --- Tables --- */
+.docs-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0 32px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.docs-content th,
+.docs-content td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.docs-content th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.docs-content td {
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+}
+
+.docs-content tr:last-child td {
+    border-bottom: none;
+}
+
+.docs-content tr:hover td {
+    background: var(--bg-secondary);
+}
+
 /* --- Code Blocks --- */
 .docs-content code {
     font-family: var(--font-mono);

@@ -29,15 +29,15 @@ window.DOCS_SEARCH_INDEX = [
         title: "Voice Notes",
         url: "voice-notes.html",
         section: "Core Guides",
-        content: "Voice Notes lets you record audio, transcribe in real-time, and process with AI. Recording Audio: Real-time transcription with WhisperKit, background recording on iOS, import existing audio files. Transcription powered by Whisper model locally via WhisperKit: word-level timestamps, multiple languages, automatic punctuation. AI Processing: Summarization, Translation, Key points extraction, Custom processing. Word-Level Navigation: Tap any word to jump to that moment in the recording. Language Support: Many languages including English, Chinese, Japanese, Spanish, French.",
-        keywords: "voice notes recording transcription WhisperKit audio speech-to-text summarization translation languages"
+        content: "Voice Notes lets you record audio, transcribe in real-time, and process with AI. Recording Audio: Real-time transcription with WhisperKit or Parakeet EOU, background recording on iOS, import existing audio files. Transcription engines: Whisper, Apple STT, Parakeet, Nemotron, Qwen3-ASR. Batch transcription models: Parakeet TDT v2 English high accuracy, Parakeet TDT v3 25 European languages, Parakeet TDT-CTC 110M English with custom vocabulary support, Parakeet CTC Japanese, Parakeet CTC Chinese Mandarin, Qwen3-ASR 30 languages with 30-second clip limit. Streaming models: Parakeet EOU 120M free 35+ languages, Nemotron Streaming English low error rate. AI Processing: Summarization, Translation, Key points extraction, Custom processing. Speaker Diarization labels who said what. Word-Level Navigation: Tap any word to jump to that moment.",
+        keywords: "voice notes recording transcription WhisperKit Parakeet Nemotron Qwen3 ASR speech-to-text summarization translation languages diarization batch streaming custom vocabulary Japanese Chinese"
     },
     {
         title: "Text-to-Speech",
         url: "text-to-speech.html",
         section: "Core Guides",
-        content: "Text-to-Speech capabilities for converting text into natural-sounding speech. TTS Engines: Apple Voices built-in speech synthesis, Kokoro TTS advanced neural TTS engine running on-device. Usage: TTS Tab for direct text input, speaker icon on AI chat responses, auto-play mode. Speech Speed: Range 0.5x to 2.0x, default 1.0x, test button for preview. Auto-Play Responses: Automatically speak AI responses for hands-free experience.",
-        keywords: "text-to-speech TTS Kokoro Apple voices speech speed auto-play voice synthesis"
+        content: "Text-to-Speech capabilities for converting text into natural-sounding speech. Three TTS Engines: Apple Voices built-in speech synthesis with many languages, Kokoro TTS neural engine with natural human-like speech and multilingual support, PocketTTS streaming neural TTS English only with ~80ms playback latency and Pro subscription required. PocketTTS settings: Temperature slider 0.0-1.0 for expressiveness, De-essing toggle for reducing sibilant sounds. Usage: TTS Tab for direct text input, speaker icon on AI chat responses, auto-play mode. Generate and Save: Export speech to WAV file with metadata sidecar. Speech Speed: Range 0.5x to 2.0x, default 1.0x, test button for preview. Auto-Play Responses: Automatically speak AI responses for hands-free experience.",
+        keywords: "text-to-speech TTS Kokoro PocketTTS Apple voices speech speed auto-play voice synthesis streaming temperature de-essing export WAV generate save"
     },
     {
         title: "Web Search",

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Notes - On Device AI Docs</title>
     <meta name="description"
-        content="Record, transcribe, label speakers, and summarize audio with On Device AI voice notes - processed on-device with Whisper and Apple STT.">
+        content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models, all on-device.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="On Device AI">
     <meta property="og:url" content="https://OnDevice-ai.app/docs/voice-notes.html">
     <meta property="og:title" content="Voice Notes - On Device AI Docs">
-    <meta property="og:description" content="Record, transcribe, label speakers, and summarize audio with On Device AI">
+    <meta property="og:description" content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models.">
     <meta property="og:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="2224">
@@ -28,7 +28,7 @@
     <meta name="twitter:url" content="https://OnDevice-ai.app/docs/voice-notes.html">
     <meta name="twitter:title" content="Voice Notes - On Device AI Docs">
     <meta name="twitter:description"
-        content="Record, transcribe, label speakers, and summarize audio with On Device AI">
+        content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models.">
     <meta name="twitter:image" content="https://OnDevice-ai.app/images/phone_screen.webp">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -61,12 +61,35 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "Voice Notes - On Device AI Docs",
-    "description": "Record, transcribe, label speakers, and summarize audio with On Device AI voice notes - processed on-device with Whisper and Apple STT.",
+    "description": "Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models, all on-device.",
     "author": {
         "@type": "Organization",
         "name": "On Device AI"
     }
 }
+    </script>
+
+    <!-- JSON-LD: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What transcription models are available for Voice Notes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On Device AI offers several local transcription engines including Whisper, Apple STT, Parakeet, Nemotron, and Qwen3-ASR. Batch models like Parakeet TDT v3 (~700 MB) and Qwen3-ASR handle full files with high accuracy, while streaming models like Parakeet EOU 120M (free, ~150 MB) transcribe in real time."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use a custom vocabulary for transcription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can use the custom vocabulary feature with the Parakeet TDT-CTC 110M model. This allows the app to recognize domain-specific terms like product names, acronyms, or jargon with high precision."
+        }
+      }]
+    }
     </script>
 </head>
 
@@ -144,6 +167,7 @@
                 <ul>
                     <li><a href="#recording">Recording Audio</a></li>
                     <li><a href="#transcription">Transcription</a></li>
+                    <li><a href="#transcription-models">Transcription models</a></li>
                     <li><a href="#speaker-diarization">Speaker Diarization</a></li>
                     <li><a href="#retranscription">Re-Transcription</a></li>
                     <li><a href="#ai-processing">AI Processing</a></li>
@@ -169,14 +193,53 @@
             </div>
 
             <h2 id="transcription">Transcription</h2>
-            <p>Transcription runs locally with Whisper models or Apple STT, depending on your selected model and
-                workflow. Features include:</p>
+            <p>Transcription runs locally using one of several engines: Whisper models, Apple STT, Parakeet, Nemotron, or Qwen3-ASR. Pick a model in Settings → Voice based on your language needs and device. Features include:</p>
             <ul>
                 <li><strong>Word-level timestamps:</strong> Each word is timestamped for precise navigation</li>
                 <li><strong>Multiple languages:</strong> Support for many languages including English, Chinese,
                     Japanese, Spanish, French, and more</li>
                 <li><strong>Automatic punctuation:</strong> The model adds punctuation and sentence structure</li>
             </ul>
+
+            <h2 id="transcription-models">Transcription models</h2>
+            <p>In addition to Whisper and Apple STT, several newer models are available. They run entirely on-device and are downloaded once before first use.</p>
+
+            <h3>Batch transcription</h3>
+            <p>These models process a recorded or imported audio file after recording finishes. They tend to be more accurate than streaming models because they can look at the full audio context.</p>
+            <table>
+                <thead>
+                    <tr><th>Model</th><th>Languages</th><th>Runs on</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Parakeet TDT v2</td><td>English</td><td>Mac (8 GB+)</td><td>Highest English accuracy in this group. ~700 MB download.</td></tr>
+                    <tr><td>Parakeet TDT v3</td><td>25 European languages</td><td>iPad / Mac</td><td>Same architecture as v2 with multilingual support. ~700 MB download.</td></tr>
+                    <tr><td>Parakeet TDT-CTC 110M</td><td>English</td><td>iPhone / iPad / Mac</td><td>Smaller model (~407 MB). The only Parakeet model that supports custom vocabulary.</td></tr>
+                    <tr><td>Parakeet CTC Japanese</td><td>Japanese</td><td>iPad / Mac</td><td>~700 MB download. CER around 6.85%.</td></tr>
+                    <tr><td>Parakeet CTC Chinese</td><td>Mandarin Chinese</td><td>iPad / Mac</td><td>Available in Int8 (~550 MB) and full-precision (~1.1 GB) variants.</td></tr>
+                    <tr><td>Qwen3-ASR</td><td>30 languages</td><td>iPad / Mac</td><td>Covers CJK, Southeast Asian, and European languages. 30-second clip limit per segment. Available in Int8 (~800 MB) and F32 (~1.5 GB).</td></tr>
+                </tbody>
+            </table>
+            <div class="callout callout-info">
+                <div class="callout-title">ℹ️ Custom vocabulary</div>
+                <p>Parakeet TDT-CTC 110M is the only model in this group that works with the custom vocabulary feature. If you need the app to recognize domain-specific terms (product names, acronyms, jargon), use this model.</p>
+            </div>
+
+            <h3>Streaming recognition</h3>
+            <p>These models transcribe in real time while you record, so text appears on screen as you speak.</p>
+            <table>
+                <thead>
+                    <tr><th>Model</th><th>Languages</th><th>Runs on</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Parakeet EOU 120M</td><td>35+ languages</td><td>iPhone / iPad / Mac</td><td>Free for all users. ~150 MB download. End-of-utterance detection for natural segmentation.</td></tr>
+                    <tr><td>Nemotron Streaming</td><td>English</td><td>iPad / Mac</td><td>Lower error rate than Parakeet EOU for English (~2% WER). Available in 560 ms and 1120 ms chunk variants. ~600 MB download.</td></tr>
+                </tbody>
+            </table>
+            <div class="callout callout-tip">
+                <div class="callout-title">💡 Tip</div>
+                <p>Parakeet EOU 120M is free and covers 35+ languages. It's a good default for real-time transcription on any device, including iPhone.</p>
+            </div>
+            <p>All Parakeet, Nemotron, and Qwen3 models require a Pro subscription except Parakeet EOU 120M, which is free.</p>
 
             <h2 id="speaker-diarization">Speaker Diarization <span class="badge badge-pro">PRO</span></h2>
             <p>Automatically label who said what in your voice notes and imported recordings.</p>
@@ -231,8 +294,7 @@
             </ul>
 
             <h2 id="languages">Language Support</h2>
-            <p>Whisper and Apple STT both support transcription in many languages. You can let the model detect spoken
-                language automatically or set it manually for better accuracy with specific languages.</p>
+            <p>Whisper and Apple STT support transcription in many languages. The newer Parakeet and Qwen3 models expand coverage to include Japanese, Mandarin Chinese, Korean, Thai, Vietnamese, and dozens of other languages not previously available. You can let the model detect spoken language automatically or set it manually for better accuracy.</p>
             <div class="callout callout-tip">
                 <div class="callout-title">💡 Tip</div>
                 <p>For best transcription quality, use a quiet environment and speak clearly. External microphones also
