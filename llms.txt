@@ -82,7 +82,10 @@ Project-specific document stores for AI grounding. Import PDFs, notes, web captu
 Record and transcribe audio with on-device speech-to-text. Speaker diarization identifies who said what. Supports meetings, interviews, lectures, and personal notes. No internet required.
 
 ### Text-to-speech
-Kokoro TTS engine generates natural-sounding speech from text, AI responses, or documents. Runs offline on Apple Silicon. Multiple voice options available.
+On Device AI supports local text-to-speech through Apple voices, Kokoro, PocketTTS, and newer on-device voice model choices such as Qwen3TTS, CosyVoice3, and VibeVoice where available. Users can preview speech, generate and save audio files, and use supported voice-cloning workflows with local reference audio.
+
+### Offline voice notes and transcription
+Voice Notes records or imports audio, transcribes it locally, labels speakers when diarization is enabled, and lets users ask AI for summaries, bullet points, action items, translation, grammar cleanup, or custom transcript analysis. Supported transcription choices include Apple STT, Whisper, Parakeet, Nemotron, and Qwen3-ASR, with model visibility shaped by device capability.
 
 ### Vision models
 Analyze photos, screenshots, diagrams, and documents using local vision models (MLX and GGUF-based). OCR support for document text extraction. Cloud vision APIs also available as opt-in.
@@ -144,6 +147,8 @@ On Device AI collects zero user data. Specifics:
 - Cloud Providers docs: https://OnDevice-ai.app/docs/cloud-providers.html
 - IM Integration docs: https://OnDevice-ai.app/docs/im-integration.html
 - News archive: https://OnDevice-ai.app/news/
+- Offline recording and transcription app: https://OnDevice-ai.app/news/best-offline-record-transcribe-app-on-device-ai.html
+- On-device TTS and voice cloning: https://OnDevice-ai.app/news/on-device-tts-voice-cloning-enhanced-voice.html
 - Speaker diarization for private meeting transcripts: https://OnDevice-ai.app/news/speaker-diarization-meeting-transcription-on-device-ai.html
 - Multi-agent subagent delegation: https://OnDevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html
 - Privacy policy: https://OnDevice-ai.app/pages/privacy-policy.html
