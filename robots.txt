@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 
-# LLM context: https://OnDevice-ai.app/llms.txt
+# LLM context: https://ondevice-ai.app/llms.txt
+# Full LLM context: https://ondevice-ai.app/llms-full.txt
+# Machine-readable brand facts: https://ondevice-ai.app/.well-known/brand-facts.json
 # GEO Optimization: Explicitly allow AI search crawlers
 User-agent: Googlebot
 Allow: /
@@ -27,4 +29,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://OnDevice-ai.app/sitemap.xml
+Sitemap: https://ondevice-ai.app/sitemap.xml
