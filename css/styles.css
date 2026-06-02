@@ -1369,6 +1369,7 @@ h6 {
     color: var(--text-tertiary);
 }
 
+
 /* --- FAQ Section --- */
 .faq {
     background: var(--bg-secondary);
@@ -1475,6 +1476,103 @@ h6 {
 .footer-copy {
     font-size: var(--font-size-sm);
     color: var(--text-tertiary);
+}
+
+.footer-download-section {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-download-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 40px;
+}
+
+.footer-download-text {
+    text-align: left;
+}
+
+.footer-download-text h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.footer-download-text p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.footer-download-badge-qr {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.store-badge-footer img {
+    height: 40px;
+    display: block;
+    transition: transform var(--motion-fast) var(--ease-smooth);
+}
+
+.store-badge-footer:hover img {
+    transform: translateY(-2px);
+}
+
+.footer-qr-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
+    width: 160px;
+    height: 160px;
+    transition: transform var(--motion-fast) var(--ease-smooth), box-shadow var(--motion-fast) var(--ease-smooth);
+}
+
+.footer-qr-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.2);
+}
+
+.footer-qr-code {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    background: transparent;
+    padding: 0;
+}
+
+/* Responsive styles for bottom footer download CTA */
+@media (max-width: 768px) {
+    .footer-download-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-download-text {
+        text-align: center;
+    }
+    .footer-qr-box {
+        display: none;
+    }
+    .footer-download-badge-qr {
+        justify-content: center;
+    }
 }
 
 /* --- Scroll Reveal (initial hidden state) --- */
@@ -2087,6 +2185,63 @@ h6 {
     background: var(--bg-secondary);
     position: relative;
     overflow: hidden;
+}
+
+/* Waterfall Container Settings */
+.reviews-waterfall-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 48px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.waterfall-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .waterfall-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .waterfall-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.waterfall-col {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    animation: scroll-up linear infinite;
+    /* Increase height to fit the duplicate set of comments */
+    will-change: transform;
+}
+
+.waterfall-col:hover {
+    animation-play-state: paused;
+}
+
+/* Stagger animation durations for columns so they feel organic */
+.waterfall-grid > .waterfall-col:nth-child(1) { animation-duration: 60s; }
+.waterfall-grid > .waterfall-col:nth-child(2) { animation-duration: 75s; }
+.waterfall-grid > .waterfall-col:nth-child(3) { animation-duration: 50s; }
+
+@keyframes scroll-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
 }
 
 .reviews-grid {

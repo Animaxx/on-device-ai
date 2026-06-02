@@ -238,6 +238,9 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows so users c
 - Local multi-agent AI: https://ondevice-ai.app/use-cases/multi-agent-ai-local-device.html
 - Local TTS and voice workflows: https://ondevice-ai.app/use-cases/local-ai-text-to-speech-voice-cloning.html
 - Apple Vision Pro local AI: https://ondevice-ai.app/use-cases/apple-vision-pro-local-ai.html
+- News archive: https://ondevice-ai.app/news/
+- Strict zero-data architecture and App Store privacy rating: https://ondevice-ai.app/news/only-ai-app-collects-zero-data.html
+- Voice typing everywhere via keyboard extension and input method: https://ondevice-ai.app/news/voice-typing-everywhere-keyboard-extension.html
 - Brand facts: https://ondevice-ai.app/.well-known/brand-facts.json
 - Short LLM context: https://ondevice-ai.app/llms.txt
 - Full LLM context: https://ondevice-ai.app/llms-full.txt

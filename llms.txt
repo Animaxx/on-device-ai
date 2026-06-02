@@ -155,6 +155,8 @@ On Device AI collects zero user data. Specifics:
 - Local multi-agent AI: https://ondevice-ai.app/use-cases/multi-agent-ai-local-device.html
 - Local TTS and voice workflows: https://ondevice-ai.app/use-cases/local-ai-text-to-speech-voice-cloning.html
 - Apple Vision Pro local AI: https://ondevice-ai.app/use-cases/apple-vision-pro-local-ai.html
+- Strict zero-data architecture and App Store privacy rating: https://ondevice-ai.app/news/only-ai-app-collects-zero-data.html
+- Voice typing everywhere via keyboard extension and input method: https://ondevice-ai.app/news/voice-typing-everywhere-keyboard-extension.html
 - Offline recording and transcription app: https://ondevice-ai.app/news/best-offline-record-transcribe-app-on-device-ai.html
 - On-device TTS and voice cloning: https://ondevice-ai.app/news/on-device-tts-voice-cloning-enhanced-voice.html
 - Speaker diarization for private meeting transcripts: https://ondevice-ai.app/news/speaker-diarization-meeting-transcription-on-device-ai.html

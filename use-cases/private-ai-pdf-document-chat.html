@@ -44,7 +44,7 @@
 
             <div class="article-content">
                 <aside class="article-answer">
-                    <p><strong>Core Workflow:</strong> On Device AI utilizes on-device Retrieval-Augmented Generation (RAG). By chunking your documents, running local embeddings models to compile a vector search index locally, and fetching contextual sections into local LLMs, you can analyze private documents completely offline.</p>
+                    <p><strong>Core Workflow:</strong> On Device AI runs on-device Retrieval-Augmented Generation (RAG). Think of it like giving your local model an open book: the app indexes your files, instantly finds the most relevant paragraphs when you ask a question, and feeds those snippets to the model to draft an accurate answer offline. Your files never leave your device.</p>
                 </aside>
 
                 <div class="article-screenshot-container" style="display: flex; flex-direction: column; gap: 24px; margin: 32px 0;">
@@ -68,12 +68,12 @@
 
                 <section>
                     <h2>2. On-Device Chunking and Vectorization</h2>
-                    <p>Once imported, the app parses and chunks the text locally on your device. It then executes an on-device semantic embeddings model (e.g. <em>nomic-embed-text</em> or custom local configurations) to generate high-dimensional vectors. These vectors represent the semantic meaning of each text block and are stored safely in your local SQLite/GRDB database—zero server uploads required.</p>
+                    <p>Once imported, the app splits your documents into short paragraphs. It then runs a local embeddings model to map the meaning of each section and saves these in your device's secure SQLite database. No servers, no accounts, and no data leaks.</p>
                 </section>
 
                 <section>
                     <h2>3. Local Semantic Context Retrieval (RAG)</h2>
-                    <p>When you submit a query, On Device AI calculates the semantic vector of your question offline. It executes a fast vector similarity search locally across the selected Knowledge Library to retrieve the specific blocks of text that directly answer your question. This ensures high context accuracy even with massive document folders.</p>
+                    <p>When you ask a question, the app does a fast, offline semantic search across your library to find the exact pages that match. This lets you query thousands of pages in seconds, on device, without needing a high-bandwidth connection.</p>
                 </section>
 
                 <section>
