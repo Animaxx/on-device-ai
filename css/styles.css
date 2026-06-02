@@ -542,23 +542,80 @@ h6 {
 .hero-title-line1 {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(3.75rem, 6vw, var(--font-size-5xl));
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 1.0;
+    line-height: 1.1;
 }
 
 .hero-title-line2 {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(2rem, 3vw, var(--font-size-3xl));
-    font-weight: 600;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 60%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 800;
     margin-top: 8px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    min-height: 2.3em; /* Reserves space for up to 2 wrapped lines to prevent layout jumping */
+}
+
+.hero-title-line1,
+.hero-title-prefix,
+.hero-title-phrase {
+    background: var(--hero-title-gradient, linear-gradient(110deg, #0284c7 0%, #0ea5e9 45%, #38bdf8 72%, #6d7ff2 100%));
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: var(--accent);
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-title-line1 {
+    --hero-title-gradient: linear-gradient(110deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 78%, #6478e8 100%);
+    display: inline-block;
+}
+
+.hero-title-prefix,
+.hero-title-phrase {
+    display: inline;
+}
+
+.hero-title-phrase {
+    transition: background var(--motion-slow) var(--ease-smooth);
+}
+
+.hero-title-phrase.gradient-private {
+    --hero-title-gradient: linear-gradient(110deg, #0284c7 0%, #0ea5e9 48%, #38bdf8 76%, #6478e8 100%);
+}
+
+.hero-title-phrase.gradient-workforce {
+    --hero-title-gradient: linear-gradient(110deg, #0f86b7 0%, #0ea5e9 44%, #2dd4bf 78%, #5b8def 100%);
+}
+
+.hero-title-phrase.gradient-meeting {
+    --hero-title-gradient: linear-gradient(110deg, #2563eb 0%, #0ea5e9 42%, #38bdf8 74%, #6574e8 100%);
+}
+
+.hero-title-phrase.gradient-research {
+    --hero-title-gradient: linear-gradient(110deg, #2563eb 0%, #0ea5e9 48%, #38bdf8 78%, #7c6ee6 100%);
+}
+
+.hero-title-phrase.gradient-companion {
+    --hero-title-gradient: linear-gradient(110deg, #0f86b7 0%, #0ea5e9 46%, #2dd4bf 78%, #5b8def 100%);
+}
+
+.type-cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+    margin-left: 4px;
+    color: var(--accent-light);
+    -webkit-text-fill-color: var(--accent-light);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-description {
@@ -1665,11 +1722,11 @@ h6 {
     }
 
     .hero-title-line1 {
-        font-size: clamp(3rem, 7.2vw, 4.8rem);
+        font-size: clamp(1.85rem, 4vw, 2.5rem);
     }
 
     .hero-title-line2 {
-        font-size: clamp(1.75rem, 4.2vw, 2.6rem);
+        font-size: clamp(1.85rem, 4vw, 2.5rem);
     }
 
     .hero-description {
@@ -1722,12 +1779,12 @@ h6 {
     }
 
     .hero-title-line1 {
-        font-size: clamp(2.35rem, 10vw, 3rem);
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
         line-height: 1.02;
     }
 
     .hero-title-line2 {
-        font-size: clamp(1.45rem, 6.2vw, 1.9rem);
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
     }
 
     .hero-description {
@@ -2313,5 +2370,3 @@ h6 {
 .review-platform-link:hover {
     text-decoration: underline;
 }
-
-

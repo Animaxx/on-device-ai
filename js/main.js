@@ -231,4 +231,87 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // ======================================
+    // Hero Auto-Rotating Title
+    // ======================================
+    const rotatingTextEl = document.getElementById('rotating-text');
+    if (rotatingTextEl) {
+        const phrases = [
+            // Privacy & Security
+            { text: "Secure Data Vault.", gradient: "gradient-private" },
+            { text: "Customizable Knowledge Assistant.", gradient: "gradient-private" },
+            { text: "100% Private Co-Pilot.", gradient: "gradient-private" },
+            // Knowledge Management
+            { text: "Interactive Second Brain.", gradient: "gradient-research" },
+            { text: "Private Document Analyst.", gradient: "gradient-research" },
+            { text: "Personal Knowledge Engine.", gradient: "gradient-research" },
+            // Voice & Audio (STT + TTS)
+            { text: "Secure Meeting Scribe.", gradient: "gradient-meeting" },
+            { text: "Offline Audio Narrator.", gradient: "gradient-meeting" },
+            { text: "Private Voice Transcriber.", gradient: "gradient-meeting" },
+            { text: "Local Dictation Engine.", gradient: "gradient-meeting" },
+            // Productivity & Automation
+            { text: "Personal AI Task Force.", gradient: "gradient-workforce" },
+            { text: "Automated Workflow Engine.", gradient: "gradient-workforce" },
+            { text: "Always-On Knowledge Worker.", gradient: "gradient-workforce" },
+            // Technical / Power User
+            { text: "Personal LLM Command Center.", gradient: "gradient-workforce" },
+            { text: "Uncensored AI Laboratory.", gradient: "gradient-research" },
+            { text: "Local Model Playground.", gradient: "gradient-companion" },
+            // Hardware / Apple Ecosystem
+            { text: "Native Apple Intelligence.", gradient: "gradient-companion" },
+            // Financial / Independence
+            { text: "Unlimited Local Intelligence.", gradient: "gradient-companion" },
+            { text: "Self-Hosted AI Platform.", gradient: "gradient-private" }
+        ];
+        const gradientClasses = phrases.map(phrase => phrase.gradient);
+        let currentPhraseIndex = 0;
+        let isDeleting = true;
+        let charIndex = phrases[currentPhraseIndex].text.length; // start fully typed out
+
+        function setRotatingGradient(index) {
+            rotatingTextEl.classList.remove(...gradientClasses);
+            rotatingTextEl.classList.add(phrases[index].gradient);
+        }
+        
+        setRotatingGradient(currentPhraseIndex);
+
+        // Wait 2 seconds before starting the rotation
+        setTimeout(() => {
+            typeEffect();
+        }, 2000);
+
+        function typeEffect() {
+            const currentPhrase = phrases[currentPhraseIndex].text;
+            
+            if (isDeleting) {
+                // Remove char
+                rotatingTextEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                // Add char
+                rotatingTextEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 30 : 60; // Faster deleting, normal typing
+
+            // If word is complete
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Pause at end
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                // Move to next word
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                setRotatingGradient(currentPhraseIndex);
+                // Pause before typing next word
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+    }
 });
