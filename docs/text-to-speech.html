@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text-to-Speech - On Device AI Docs</title>
-    <meta name="description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
+    <meta name="description" content="Convert text to speech on-device, export audio, and save useful generated text to Knowledge Libraries.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="On Device AI">
     <meta property="og:url" content="https://ondevice-ai.app/docs/text-to-speech.html">
     <meta property="og:title" content="Text-to-Speech - On Device AI Docs">
-    <meta property="og:description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
+    <meta property="og:description" content="Convert text to speech on-device, export audio, and save useful generated text to Knowledge Libraries.">
     <meta property="og:image" content="https://ondevice-ai.app/images/phone_screen.webp">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="2224">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://ondevice-ai.app/docs/text-to-speech.html">
     <meta name="twitter:title" content="Text-to-Speech - On Device AI Docs">
-    <meta name="twitter:description" content="Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.">
+    <meta name="twitter:description" content="Convert text to speech on-device, export audio, and save useful generated text to Knowledge Libraries.">
     <meta name="twitter:image" content="https://ondevice-ai.app/images/phone_screen.webp">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -58,12 +58,12 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "Text-to-Speech - On Device AI Docs",
-    "description": "Convert text to speech on-device with three TTS engines: Apple voices, Kokoro, and PocketTTS streaming synthesis.",
+    "description": "Convert text to speech on-device, export audio, and save useful generated text to Knowledge Libraries.",
     "author": {
         "@type": "Organization",
         "name": "On Device AI"
     },
-    "dateModified": "2026-06-01",
+    "dateModified": "2026-07-09",
     "datePublished": "2026-04-11"
 }
     </script>
@@ -113,7 +113,9 @@
             </div>
             <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li>
                     <li><a href="../use-cases/">Use Cases</a></li></ul></div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="voice-typing.html">Voice Typing</a></li><li><a href="text-to-speech.html" class="active">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="tool-calling.html">Tool Calling</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li>
+            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="text-notes.html">Text Notes</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="voice-typing.html">Voice Typing</a></li><li><a href="text-to-speech.html" class="active">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="shortcuts-automation.html">Shortcuts &amp; Automation</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li>
                     <li><a href="im-integration.html">IM Integration</a></li></ul></div>
         </aside>
         <main class="docs-content">
@@ -127,6 +129,7 @@
                     <li><a href="#pockettts">PocketTTS settings</a></li>
                     <li><a href="#usage">Using TTS</a></li>
                     <li><a href="#export">Generate &amp; Save</a></li>
+                    <li><a href="#save-to-library">Save Text to a Library</a></li>
                     <li><a href="#speed">Speech Speed</a></li>
                     <li><a href="#auto-play">Auto-Play Responses</a></li>
                 </ul>
@@ -140,7 +143,7 @@
                 <li><strong>PocketTTS:</strong> Streaming neural TTS, English only. Audio begins playing within roughly 80 ms, before the full sentence finishes generating. Requires a Pro subscription and a one-time model download. <span class="badge badge-pro">PRO</span></li>
             </ul>
             <div class="callout callout-info">
-                <div class="callout-title">ℹ️ Which engine to pick</div>
+                <div class="callout-title">Which engine to pick</div>
                 <p>Apple voices are lightweight and cover the most languages. Kokoro sounds more natural and still supports multiple languages. PocketTTS has the lowest playback latency but only works with English text.</p>
             </div>
 
@@ -164,6 +167,12 @@
             <h2 id="export">Generate &amp; Save</h2>
             <p>From the Text to Speech tab, you can export speech to a WAV file. Tap "Generate &amp; Save" to write the audio to your device's recordings folder with a metadata sidecar (text, engine, voice, speed). Cancelling mid-export removes any partial files automatically.</p>
 
+            <h2 id="save-to-library">Save Text to a Knowledge Library</h2>
+            <p>If generated or pasted text should become reusable project context, import it into a Knowledge Library
+                from TTS history or from the library's <strong>Add History</strong> flow. The text becomes an editable
+                document in the destination library. Exported audio stays in Text-to-Speech history; only the text is
+                copied into the library.</p>
+
             <h2 id="speed">Speech Speed</h2>
             <p>Adjust the speech speed in Settings → Voice:</p>
             <ul>
@@ -177,7 +186,7 @@
             <p>Toggle auto-play in Settings → Voice → "Auto-play voice responses".</p>
 
             <div class="docs-nav-footer">
-                <a href="voice-notes.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Voice Notes</span></a>
+                <a href="voice-typing.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Voice Typing</span></a>
                 <a href="web-search.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Web Search</span></a>
             </div>
         </main>

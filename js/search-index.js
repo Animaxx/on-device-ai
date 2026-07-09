@@ -15,36 +15,43 @@ window.DOCS_SEARCH_INDEX = [
         title: "AI Chat",
         url: "ai-chat.html",
         section: "Core Guides",
-        content: "AI Chat is the core conversational interface. Chat with powerful language models running entirely on your device. Model Selection: Choose from GGUF llama.cpp quantized models or MLX Apple framework models. Import custom GGUF models from Hugging Face. Conversation Modes: Standard Mode for direct conversation, Chat Flow Mode for multi-agent conversations. Context Window: Determines how much conversation history the AI can see. Adjustable in Settings. Attachments: Images with OCR or VLM analysis, Documents PDFs and text files, URLs fetched and converted to markdown. Reasoning and Thinking: Models like DeepSeek and Qwen 3 show chain-of-thought in collapsible Thinking section. Tool Calling: Web Search, Web Fetch, Calculator built-in tools. Chat Settings: Temperature, System Prompt, Context Size, Show Reasoning, Auto-play Voice.",
-        keywords: "chat conversation model GGUF MLX context window attachments reasoning thinking tool calling temperature system prompt"
+        content: "AI Chat is the core conversational interface. Choose downloaded local models, review saved conversation history, and continue a previous chat after loading a model. Model Selection: Choose from GGUF llama.cpp quantized models or MLX Apple framework models. Conversation Modes: Standard Mode for direct conversation, Chat Flow Mode for multi-agent conversations. Attachments: Images, documents, and URLs. Tool Calling: Web Search, Web Fetch, Calculator, memory, HTTP requests, and other enabled tools.",
+        keywords: "chat conversation model GGUF MLX history no model loaded attachments reasoning thinking tool calling temperature system prompt"
     },
     {
         title: "Knowledge Libraries",
         url: "knowledge-libraries.html",
         section: "Core Guides",
-        content: "Knowledge Libraries are dedicated AI memory spaces for specific projects. Uses similarity search vector embeddings to find relevant document chunks. Documents split into chunks and indexed locally. All processing on-device. Creating a Library: Open Knowledge tab, tap New Library, add documents. Adding Content: PDF Documents, Text Files, Web Pages, Images with OCR, Notes. Using Libraries in Chat: Activate library in AI Chat toolbar, ask questions, view sources. Managing Libraries: Edit, Rename, Delete, create multiple libraries. Tips: Keep libraries focused, use descriptive file names, regularly update, combine with AI Roles.",
-        keywords: "knowledge library RAG documents PDF text web pages images notes vector embeddings similarity search project memory"
+        content: "Knowledge Libraries are private project spaces for PDFs, notes, saved AI Search results, voice transcripts, TTS text, images, and web captures. Create and edit text documents, add files by picker or drag and drop, import chat or speech history, search and filter files, tune retrieval settings, and activate a library in AI Chat to ask questions from your material.",
+        keywords: "knowledge library documents PDF text notes saved search voice transcript TTS history drag drop project memory"
+    },
+    {
+        title: "Text Notes",
+        url: "text-notes.html",
+        section: "Core Guides",
+        content: "Text Notes are quick private notes that belong to a Knowledge Library. Create a quick note, choose a default notes library, open notes from the side menu, edit Markdown or plain text, save changes, move notes between libraries, and create notes from Shortcuts or a home-screen quick action.",
+        keywords: "text notes quick note markdown default library side menu shortcuts home screen create note"
     },
     {
         title: "Voice Notes",
         url: "voice-notes.html",
         section: "Core Guides",
-        content: "Voice Notes lets you record audio, transcribe in real-time, and process with AI. Recording Audio: Real-time transcription with WhisperKit or Parakeet EOU, background recording on iOS, import existing audio files. Transcription engines: Whisper, Apple STT, Parakeet, Nemotron, Qwen3-ASR. Batch transcription models: Parakeet TDT v2 English high accuracy, Parakeet TDT v3 25 European languages, Parakeet TDT-CTC 110M English with custom vocabulary support, Parakeet CTC Japanese, Parakeet CTC Chinese Mandarin, Qwen3-ASR 30 languages with 30-second clip limit. Streaming models: Parakeet EOU 120M free 35+ languages, Nemotron Streaming English low error rate. AI Processing: Summarization, Translation, Key points extraction, Custom processing. Speaker Diarization labels who said what. Word-Level Navigation: Tap any word to jump to that moment.",
-        keywords: "voice notes recording transcription WhisperKit Parakeet Nemotron Qwen3 ASR speech-to-text summarization translation languages diarization batch streaming custom vocabulary Japanese Chinese"
+        content: "Voice Notes lets you record audio, transcribe in real time, label speakers, process transcripts with AI, and save useful transcript text to a Knowledge Library. Import one transcript or several where batch actions are available. Audio stays in Voice Notes while transcript text becomes editable library context.",
+        keywords: "voice notes recording transcription speech-to-text summary translation speaker labels transcript knowledge library import"
     },
     {
         title: "Text-to-Speech",
         url: "text-to-speech.html",
         section: "Core Guides",
-        content: "Text-to-Speech capabilities for converting text into natural-sounding speech. Three TTS Engines: Apple Voices built-in speech synthesis with many languages, Kokoro TTS neural engine with natural human-like speech and multilingual support, PocketTTS streaming neural TTS English only with ~80ms playback latency and Pro subscription required. PocketTTS settings: Temperature slider 0.0-1.0 for expressiveness, De-essing toggle for reducing sibilant sounds. Usage: TTS Tab for direct text input, speaker icon on AI chat responses, auto-play mode. Generate and Save: Export speech to WAV file with metadata sidecar. Speech Speed: Range 0.5x to 2.0x, default 1.0x, test button for preview. Auto-Play Responses: Automatically speak AI responses for hands-free experience.",
-        keywords: "text-to-speech TTS Kokoro PocketTTS Apple voices speech speed auto-play voice synthesis streaming temperature de-essing export WAV generate save"
+        content: "Text-to-Speech converts text into spoken audio with Apple voices, Kokoro, or PocketTTS where available. Use the TTS tab, send AI responses to TTS, export generated audio, adjust speech speed, enable auto-play, and save useful generated text to a Knowledge Library from TTS history.",
+        keywords: "text-to-speech TTS Kokoro PocketTTS Apple voices speech speed auto-play export audio knowledge library history"
     },
     {
-        title: "Web Search",
+        title: "AI Search and Web Search",
         url: "web-search.html",
         section: "Core Guides",
-        content: "Built-in AI-powered web search. How it works: Query sent to search engine, app fetches content from top results, local AI analyzes and synthesizes information, structured summary with source citations. Usage: Navigate to AI Search tab, enter query in natural language, review synthesized results. Source References: Click source links, see which parts came from which sources, verify information. Tool Calling Integration: Models can automatically trigger web searches in regular chat when they need current information.",
-        keywords: "web search online browse AI analysis source citations tool calling internet"
+        content: "AI Search reads useful web pages, skips obvious clutter, and returns a source-backed answer. If no model is ready, the screen helps you load or select one. On compact devices you can dismiss the keyboard without clearing the query. Save useful completed searches to a Knowledge Library for later project context.",
+        keywords: "web search AI search save search knowledge library source citations model unavailable keyboard internet"
     },
     {
         title: "Vision Models",
@@ -52,6 +59,13 @@ window.DOCS_SEARCH_INDEX = [
         section: "Core Guides",
         content: "Vision Language Models VLM let you analyze images, screenshots, diagrams, and documents. Supported Models: GGUF llama.cpp vision models, MLX vision models like Qwen3 VL, Cloud API vision models. Identified by VLM tag in model picker. Usage: Select VLM model, attach image via camera or library, ask about the image. VLM vs OCR Processing: VLM models process raw pixels directly, non-VLM models use OCR text extraction. Camera Integration on iOS: Scan documents, analyze whiteboards, read signs, identify objects.",
         keywords: "vision models VLM images screenshots diagrams OCR camera analysis visual"
+    },
+    {
+        title: "Shortcuts & Automation",
+        url: "shortcuts-automation.html",
+        section: "Core Guides",
+        content: "Use Siri and Shortcuts to create Text Notes, open conversations or Knowledge Libraries, transcribe audio files, and generate speech from text. Calendar and Reminders tools require permission and review before changes run. Cloud or external contexts may send returned personal data to the selected provider or chat context.",
+        keywords: "shortcuts siri automation calendar reminders app intents transcribe audio speak text create note permissions approval"
     },
     {
         title: "Chat Flows",

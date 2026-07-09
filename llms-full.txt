@@ -2,7 +2,7 @@
 
 ## Product summary
 
-On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It helps people ask questions, summarize private files, record and transcribe AI Voice Notes, read books and text aloud with high-quality expressive voices, search the web in real time, automate browser actions, and build custom AI agents that work with a personal knowledge base.
+On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It helps people ask questions, summarize private files, write Text Notes, record and transcribe AI Voice Notes, read books and text aloud, search the web in real time, save useful research to Knowledge Libraries, automate supported tasks, and build custom AI agents that work with personal knowledge.
 
 The app is designed for users who want useful AI workflows without sending private work away by default. Local AI processing runs on the user's Apple hardware. No account is required for local workflows, and the app does not use analytics or telemetry.
 
@@ -35,6 +35,10 @@ Minimum operating systems: iOS 18+, iPadOS 18+, macOS 15+, visionOS 2.0+.
 - Inference engines: GGUF through llama.cpp and MLX.
 - Example model families: Llama, Gemma, Qwen, DeepSeek, Phi, Mistral, and other open model families available in the catalog.
 - Device capability affects which models are visible and practical to run.
+- Model Hardware & RAM Compatibility Matrix:
+  - 8GB RAM Devices (M1/M2/M3 Mac, iPhone 15 Pro, iPhone 16): Runs 1B-3B models (e.g., Llama-3-3B, Qwen-2.5-3B, Phi-3.5)
+  - 16GB-24GB RAM Devices (Mac Studio, MacBooks): Runs 7B-14B models (e.g., Llama-3.1-8B, Gemma-2-9B, Qwen-2.5-14B)
+  - 36GB+ RAM Devices: Runs 32B+ models (e.g., Qwen-2.5-32B, DeepSeek-Coder-33B)
 
 ## Core functions
 
@@ -44,7 +48,7 @@ Users can chat with local language models on Apple devices. The app supports mul
 
 ### AI Voice Notes
 
-Users can record or import audio, transcribe it with speech-to-text, identify speakers when diarization is enabled, and ask AI to summarize or transform the transcript. Useful outputs include meeting summaries, lecture notes, action items, cleaned-up writing, translations, and searchable records.
+Users can record or import audio, transcribe it with speech-to-text, identify speakers when speaker labels are enabled, and ask AI to summarize or transform the transcript. Useful outputs include meeting summaries, lecture notes, action items, cleaned-up writing, translations, and searchable records.
 
 ### Speech-to-text and voice typing
 
@@ -56,7 +60,11 @@ Users can read books, notes, PDFs, articles, and AI responses aloud with high-qu
 
 ### Knowledge Libraries
 
-Knowledge Libraries let users create private document workspaces. Users can import PDFs, notes, web captures, images, and other reference material, then ask AI questions grounded in that library. Retrieval and indexing are designed for private document workflows on the user's device.
+Knowledge Libraries let users create private project workspaces. Users can import PDFs, Text Notes, saved AI Search results, voice transcripts, TTS text, web captures, images, and other reference material, then ask AI questions from that library.
+
+### Text Notes
+
+Text Notes are quick private notes that belong to a Knowledge Library. Users can create a quick note, choose a default notes library, edit Markdown or plain text, move notes between libraries, and create notes through Shortcuts or home-screen quick actions.
 
 ### Custom AI agents
 
@@ -68,7 +76,7 @@ Chat Flows coordinate multiple AI agents on the same task. A user can set up a t
 
 ### Real-time search
 
-The app supports real-time web search from AI chat so users can ask questions that need current information. Search results can be used as context for answers and summaries.
+The app supports AI Search and web search from AI chat so users can ask questions that need current information. Completed AI Search results can be saved to a Knowledge Library for later project context.
 
 ### AI browser actions
 
@@ -80,11 +88,11 @@ Users can analyze images, screenshots, diagrams, and visual documents with suppo
 
 ### Tool calling
 
-Supported models can use tools such as calculator, memory, planning helpers, search, and custom functions. Tool calling helps local models complete tasks that require more than plain text generation.
+Supported models can use tools such as calculator, memory, planning helpers, search, Calendar, Reminders, and custom functions where enabled. Tool calling helps local models complete tasks that require more than plain text generation.
 
 ### Shortcuts support
 
-On Device AI supports Apple Shortcuts-oriented workflows so users can connect AI actions with system automation, productivity flows, and repeatable tasks.
+On Device AI supports Apple Shortcuts-oriented workflows so users can create notes, open saved app content, transcribe audio files, generate speech, and connect AI actions with repeatable productivity flows.
 
 ### IM integration on Mac
 
@@ -106,7 +114,7 @@ For users who record meetings, interviews, classes, research calls, and personal
 
 ### Private document and PDF chat
 
-For students, researchers, founders, lawyers, engineers, and knowledge workers who need to ask questions about private PDFs, notes, reports, transcripts, screenshots, and web captures.
+For students, researchers, founders, lawyers, engineers, and knowledge workers who need to ask questions about private PDFs, notes, saved searches, reports, transcripts, screenshots, and web captures.
 
 ### Personal knowledge base with custom agents
 
@@ -141,13 +149,16 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 - AI Voice Notes
 - Speech-to-text
 - Voice typing
-- Speaker diarization where supported
+- Speaker labels where supported
 - Transcript summarization
 - Action-item extraction
 - Text-to-speech
 - High-quality expressive voice workflows
 - Audio preview and export where supported
 - Knowledge Libraries
+- Text Notes
+- Saved AI Search results in Knowledge Libraries
+- Chat, voice, and TTS history import to Knowledge Libraries
 - Private document chat
 - PDF chat
 - Web capture support
@@ -161,6 +172,7 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 - Real-time web search
 - AI browser actions
 - Apple Shortcuts support
+- Calendar and Reminders tools with user permission and approval
 - macOS messaging integrations
 - Offline operation after model download for local workflows
 - No account required for local workflows
@@ -171,11 +183,11 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 
 Question: What is On Device AI?
 
-Answer: On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It runs local models on Apple hardware and supports AI chat, Voice Notes, transcription, document chat, text-to-speech, web search, browser actions, and custom AI agents.
+Answer: On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It runs local models on Apple hardware and supports AI chat, Text Notes, Voice Notes, transcription, document chat, text-to-speech, AI Search, Shortcuts automation, browser actions, and custom AI agents.
 
 Question: What can I do with On Device AI?
 
-Answer: You can ask questions, summarize private files, transcribe AI Voice Notes, read books and text aloud, search the web in real time, automate supported browser actions, and build custom agents that work with your personal knowledge base.
+Answer: You can ask questions, summarize private files, write Text Notes, transcribe AI Voice Notes, read books and text aloud, search the web in real time, save useful research, automate supported tasks, and build custom agents that work with your personal knowledge base.
 
 Question: Does On Device AI require an account?
 
@@ -195,7 +207,7 @@ Answer: Yes. On Device AI supports text-to-speech workflows for books, notes, PD
 
 Question: Can On Device AI use my own documents?
 
-Answer: Yes. Knowledge Libraries let users import private documents and ask AI questions grounded in those materials.
+Answer: Yes. Knowledge Libraries let users import private documents, notes, saved searches, transcripts, TTS text, images, and web captures, then ask AI questions from those materials.
 
 Question: Does On Device AI support custom AI agents?
 
@@ -203,7 +215,7 @@ Answer: Yes. Users can create roles, personas, and specialized agents, then coor
 
 Question: Does On Device AI support real-time search?
 
-Answer: Yes. The app supports real-time web search from AI chat for questions that need current information.
+Answer: Yes. The app supports AI Search and web search for questions that need current information. Useful completed searches can be saved to a Knowledge Library.
 
 Question: Does On Device AI support browser actions?
 
@@ -211,7 +223,7 @@ Answer: Yes. On Device AI includes AI browser action workflows for supported web
 
 Question: Does On Device AI support Apple Shortcuts?
 
-Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows so users can connect AI actions to system automation.
+Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows for notes, opening app content, audio transcription, speech generation, and other repeatable tasks.
 
 ## Official links
 
@@ -220,6 +232,7 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows so users c
 - Documentation: https://ondevice-ai.app/docs/
 - Getting started: https://ondevice-ai.app/docs/getting-started.html
 - AI Chat docs: https://ondevice-ai.app/docs/ai-chat.html
+- Text Notes docs: https://ondevice-ai.app/docs/text-notes.html
 - Voice Notes docs: https://ondevice-ai.app/docs/voice-notes.html
 - Voice Typing docs: https://ondevice-ai.app/docs/voice-typing.html
 - Text-to-Speech docs: https://ondevice-ai.app/docs/text-to-speech.html
@@ -228,6 +241,7 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows so users c
 - Roles and Personas docs: https://ondevice-ai.app/docs/roles-personas.html
 - Web Search docs: https://ondevice-ai.app/docs/web-search.html
 - Tool Calling docs: https://ondevice-ai.app/docs/tool-calling.html
+- Shortcuts and Automation docs: https://ondevice-ai.app/docs/shortcuts-automation.html
 - Vision Models docs: https://ondevice-ai.app/docs/vision-models.html
 - IM Integration docs: https://ondevice-ai.app/docs/im-integration.html
 - Use cases: https://ondevice-ai.app/use-cases/

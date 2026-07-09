@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Chat Guide for Private Local LLMs | On Device AI</title>
     <meta name="description"
-        content="Learn how to use AI Chat in On Device AI with local LLMs, model selection, context settings, conversation modes, and private offline workflows.">
+        content="Learn AI Chat basics in On Device AI, including model selection, saved history, attachments, tool calling, and private local workflows.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://ondevice-ai.app/docs/ai-chat.html">
     <meta property="og:title" content="AI Chat Guide for Private Local LLMs | On Device AI">
     <meta property="og:description"
-        content="Learn how to use AI Chat in On Device AI with local LLMs, model selection, context settings, conversation modes, and private offline workflows.">
+        content="Learn AI Chat basics in On Device AI, including model selection, saved history, attachments, tool calling, and private local workflows.">
     <meta property="og:image" content="https://ondevice-ai.app/images/phone_screen.webp">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="2224">
@@ -29,7 +29,7 @@
     <meta name="twitter:url" content="https://ondevice-ai.app/docs/ai-chat.html">
     <meta name="twitter:title" content="AI Chat Guide for Private Local LLMs | On Device AI">
     <meta name="twitter:description"
-        content="Learn how to use AI Chat in On Device AI with local LLMs, model selection, context settings, conversation modes, and private offline workflows.">
+        content="Learn AI Chat basics in On Device AI, including model selection, saved history, attachments, tool calling, and private local workflows.">
     <meta name="twitter:image" content="https://ondevice-ai.app/images/phone_screen.webp">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -62,12 +62,12 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "AI Chat Guide for Private Local LLMs | On Device AI",
-    "description": "Learn how to use AI Chat in On Device AI with local LLMs, model selection, context settings, conversation modes, and private offline workflows.",
+    "description": "Learn AI Chat basics in On Device AI, including model selection, saved history, attachments, tool calling, and private local workflows.",
     "author": {
         "@type": "Organization",
         "name": "On Device AI"
     },
-    "dateModified": "2026-06-01",
+    "dateModified": "2026-07-09",
     "datePublished": "2026-04-11"
 }
     </script>
@@ -125,11 +125,13 @@
                 <ul class="sidebar-nav">
                     <li><a href="ai-chat.html" class="active">AI Chat</a></li>
                     <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="text-notes.html">Text Notes</a></li>
                     <li><a href="voice-notes.html">Voice Notes</a></li>
                     <li><a href="voice-typing.html">Voice Typing</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
                     <li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="shortcuts-automation.html">Shortcuts &amp; Automation</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
                     <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
@@ -140,14 +142,14 @@
         </aside>
         <main class="docs-content">
             <h1>AI Chat</h1>
-            <p>Brainstorm ideas, write code, and solve complex problems instantly. AI Chat connects you with powerful
-                language models running entirely on your device—giving you full privacy and 100% offline access to your
-                own personal AI assistant.</p>
+            <p>Brainstorm ideas, write code, and work through problems with language models running on your device.
+                After a model is downloaded, local chat can work offline.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
                 <ul>
                     <li><a href="#model-selection">Model Selection</a></li>
+                    <li><a href="#chat-history">Chat History Without a Loaded Model</a></li>
                     <li><a href="#conversation-modes">Conversation Modes</a></li>
                     <li><a href="#context-window">Context Window</a></li>
                     <li><a href="#attachments">Attachments</a></li>
@@ -167,10 +169,17 @@
                     Macs, also available on newer iPhones and iPads.</li>
             </ul>
             <div class="callout callout-tip">
-                <div class="callout-title">💡 Tip</div>
+                <div class="callout-title">Tip</div>
                 <p>You can import custom GGUF models from Hugging Face by providing the direct download URL in Settings
                     → Model Management.</p>
             </div>
+
+            <h2 id="chat-history">Chat History Without a Loaded Model</h2>
+            <p>You can still open and read previous conversations when no model is loaded. This is useful when you want
+                to review a past answer, copy information, or decide which model to load before continuing.</p>
+            <p>If you open an existing conversation without a ready model, the normal message composer is replaced by a
+                simple prompt to load or select a model. After a model is ready, you can continue the same conversation
+                without losing your place.</p>
 
             <h2 id="conversation-modes">Conversation Modes</h2>
             <p>On Device AI supports two conversation modes:</p>
@@ -187,7 +196,7 @@
             <p>You can adjust the context size in Settings → Chat. The default is optimized for your device's available
                 RAM.</p>
             <div class="callout callout-warning">
-                <div class="callout-title">⚠️ Warning</div>
+                <div class="callout-title">Warning</div>
                 <p>Setting the context window too large may cause the app to run out of memory, especially on devices
                     with limited RAM. Stick to the recommended default if unsure.</p>
             </div>
@@ -225,7 +234,7 @@
                 <li><strong>Calculator:</strong> Perform mathematical calculations</li>
                 <li><strong>Global Memory:</strong> Store and recall personal preferences and key facts across
                     conversations</li>
-                <li><strong>HTTP Request:</strong> Make GET, POST, PUT, and PATCH requests to any endpoint — with custom
+                <li><strong>HTTP Request:</strong> Make GET, POST, PUT, and PATCH requests to any endpoint with custom
                     headers, body, timeout, and optional file download mode</li>
             </ul>
             <p>Tool calling is automatic when the AI determines it needs external information. You can enable/disable

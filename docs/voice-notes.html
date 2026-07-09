@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Notes - On Device AI Docs</title>
     <meta name="description"
-        content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models, all on-device.">
+        content="Record, transcribe, label speakers, summarize audio, and save useful transcripts to Knowledge Libraries with On Device AI.">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="On Device AI">
     <meta property="og:url" content="https://ondevice-ai.app/docs/voice-notes.html">
     <meta property="og:title" content="Voice Notes - On Device AI Docs">
-    <meta property="og:description" content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models.">
+    <meta property="og:description" content="Record, transcribe, label speakers, summarize audio, and save useful transcripts to Knowledge Libraries with On Device AI.">
     <meta property="og:image" content="https://ondevice-ai.app/images/phone_screen.webp">
     <meta property="og:image:width" content="1023">
     <meta property="og:image:height" content="2224">
@@ -28,7 +28,7 @@
     <meta name="twitter:url" content="https://ondevice-ai.app/docs/voice-notes.html">
     <meta name="twitter:title" content="Voice Notes - On Device AI Docs">
     <meta name="twitter:description"
-        content="Record, transcribe, label speakers, and summarize audio with On Device AI — using Whisper, Apple STT, and Parakeet ASR models.">
+        content="Record, transcribe, label speakers, summarize audio, and save useful transcripts to Knowledge Libraries with On Device AI.">
     <meta name="twitter:image" content="https://ondevice-ai.app/images/phone_screen.webp">
 
     <!-- JSON-LD: Breadcrumb -->
@@ -61,12 +61,12 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "Voice Notes - On Device AI Docs",
-    "description": "Record, transcribe, label speakers, and summarize audio with On Device AI \u2014 using Whisper, Apple STT, and Parakeet ASR models, all on-device.",
+    "description": "Record, transcribe, label speakers, summarize audio, and save useful transcripts to Knowledge Libraries with On Device AI.",
     "author": {
         "@type": "Organization",
         "name": "On Device AI"
     },
-    "dateModified": "2026-06-01",
+    "dateModified": "2026-07-09",
     "datePublished": "2026-04-11"
 }
     </script>
@@ -147,11 +147,13 @@
                 <ul class="sidebar-nav">
                     <li><a href="ai-chat.html">AI Chat</a></li>
                     <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="text-notes.html">Text Notes</a></li>
                     <li><a href="voice-notes.html" class="active">Voice Notes</a></li>
                     <li><a href="voice-typing.html">Voice Typing</a></li>
                     <li><a href="text-to-speech.html">Text-to-Speech</a></li>
                     <li><a href="web-search.html">Web Search</a></li>
                     <li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="shortcuts-automation.html">Shortcuts &amp; Automation</a></li>
                     <li><a href="vision-models.html">Vision Models</a></li>
                     <li><a href="chat-flows.html">Chat Flows</a></li>
                     <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
@@ -162,8 +164,8 @@
         </aside>
         <main class="docs-content">
             <h1>Voice Notes</h1>
-            <p>Never miss a detail again. Instantly capture, transcribe, label speakers, and summarize meetings,
-                lectures, or brilliant ideas with word-level precision—all securely processed on your device.</p>
+            <p>Record meetings, lectures, interviews, or personal ideas, then transcribe, label speakers, summarize,
+                and save useful transcript text for later.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -171,10 +173,11 @@
                     <li><a href="#recording">Recording Audio</a></li>
                     <li><a href="#transcription">Transcription</a></li>
                     <li><a href="#transcription-models">Transcription models</a></li>
-                    <li><a href="#speaker-diarization">Speaker Diarization</a></li>
+                    <li><a href="#speaker-diarization">Speaker Labels</a></li>
                     <li><a href="#retranscription">Re-Transcription</a></li>
                     <li><a href="#ai-processing">AI Processing</a></li>
                     <li><a href="#navigation">Word-Level Navigation</a></li>
+                    <li><a href="#save-to-library">Save to Knowledge Library</a></li>
                     <li><a href="#languages">Language Support</a></li>
                 </ul>
             </div>
@@ -190,7 +193,7 @@
                     with clear, step-by-step progress tracking so you're never left guessing.</li>
             </ul>
             <div class="callout callout-info">
-                <div class="callout-title">ℹ️ Privacy</div>
+                <div class="callout-title">Privacy</div>
                 <p>All audio processing happens entirely on your device using WhisperKit and Apple Speech frameworks.
                     No audio data is sent to any server.</p>
             </div>
@@ -223,7 +226,7 @@
                 </tbody>
             </table>
             <div class="callout callout-info">
-                <div class="callout-title">ℹ️ Custom vocabulary</div>
+                <div class="callout-title">Custom vocabulary</div>
                 <p>Parakeet TDT-CTC 110M is the only model in this group that works with the custom vocabulary feature. If you need the app to recognize domain-specific terms (product names, acronyms, jargon), use this model.</p>
             </div>
 
@@ -235,23 +238,22 @@
                 </thead>
                 <tbody>
                     <tr><td>Parakeet EOU 120M</td><td>35+ languages</td><td>iPhone / iPad / Mac</td><td>Free for all users. ~150 MB download. End-of-utterance detection for natural segmentation.</td></tr>
-                    <tr><td>Nemotron Streaming</td><td>English</td><td>iPad / Mac</td><td>Lower error rate than Parakeet EOU for English (~2% WER). Available in 560 ms and 1120 ms chunk variants. ~600 MB download.</td></tr>
+                    <tr><td>Nemotron Streaming</td><td>English</td><td>iPad / Mac</td><td>Lower error rate than Parakeet EOU for English (~2% WER). Available in two response-speed options. ~600 MB download.</td></tr>
                 </tbody>
             </table>
             <div class="callout callout-tip">
-                <div class="callout-title">💡 Tip</div>
+                <div class="callout-title">Tip</div>
                 <p>Parakeet EOU 120M is free and covers 35+ languages. It's a good default for real-time transcription on any device, including iPhone.</p>
             </div>
             <p>All Parakeet, Nemotron, and Qwen3 models require a Pro subscription except Parakeet EOU 120M, which is free.</p>
 
-            <h2 id="speaker-diarization">Speaker Diarization <span class="badge badge-pro">PRO</span></h2>
+            <h2 id="speaker-diarization">Speaker Labels <span class="badge badge-pro">PRO</span></h2>
             <p>Automatically label who said what in your voice notes and imported recordings.</p>
             <ul>
                 <li><strong>Model download:</strong> Download speaker models once directly from the Voice Note UI.</li>
-                <li><strong>Label Speakers toggle:</strong> Turn on diarization to instantly split transcripts by
+                <li><strong>Label Speakers toggle:</strong> Turn on speaker labels to split transcripts by
                     speaker.</li>
-                <li><strong>Precision matching:</strong> Advanced tuning controls guarantee perfectly accurate speaker
-                    labels, even when people talk over each other.</li>
+                <li><strong>Tuning controls:</strong> Adjust speaker matching when labels need correction.</li>
                 <li><strong>Display Speakers toggle:</strong> Switch cleanly between speaker labels and timestamp-only
                     views.</li>
                 <li><strong>Persisted labels:</strong> Speaker labels are securely saved and instantly restored when you
@@ -263,7 +265,7 @@
             <ul>
                 <li><strong>Model switching:</strong> Re-run with a different transcription model for better results
                 </li>
-                <li><strong>Optional speaker labeling:</strong> Apply diarization automatically after re-transcription
+                <li><strong>Optional speaker labeling:</strong> Apply speaker labels automatically after re-transcription
                 </li>
                 <li><strong>Safe overwrite:</strong> New transcript and speaker labels replace older results for the
                     same audio</li>
@@ -289,8 +291,20 @@
                 <li>Navigate long recordings efficiently</li>
             </ul>
 
+            <h2 id="save-to-library">Save Transcripts to a Knowledge Library</h2>
+            <p>When a transcript contains information you want to reuse, import it into a Knowledge Library. This turns
+                meeting notes, interviews, lectures, or dictated ideas into searchable project context for AI Chat.</p>
+            <ul>
+                <li>Import one transcript or several items at once when batch actions are available</li>
+                <li>The imported item becomes an editable text document in the destination library</li>
+                <li>Only transcript text is copied into the library; the audio file stays in Voice Notes</li>
+                <li>If the same source was imported before, choose whether to replace it, keep both copies, or skip it</li>
+            </ul>
+            <p>You can also start from the Knowledge Library itself by choosing <strong>Add History</strong>, then
+                selecting Voice Note or STT history.</p>
+
             <h2 id="organization">Organization &amp; Renaming</h2>
-            <p>Keep your brilliant ideas and crucial meetings perfectly organized.</p>
+            <p>Keep important recordings easy to recognize.</p>
             <ul>
                 <li><strong>Custom naming:</strong> Easily rename any recording so you can identify important lectures,
                     interviews, and brainstorms at a single glance.</li>
@@ -299,16 +313,16 @@
             <h2 id="languages">Language Support</h2>
             <p>Whisper and Apple STT support transcription in many languages. The newer Parakeet and Qwen3 models expand coverage to include Japanese, Mandarin Chinese, Korean, Thai, Vietnamese, and dozens of other languages not previously available. You can let the model detect spoken language automatically or set it manually for better accuracy.</p>
             <div class="callout callout-tip">
-                <div class="callout-title">💡 Tip</div>
+                <div class="callout-title">Tip</div>
                 <p>For best transcription quality, use a quiet environment and speak clearly. External microphones also
                     improve accuracy significantly.</p>
             </div>
 
             <div class="docs-nav-footer">
-                <a href="knowledge-libraries.html" class="docs-nav-link prev"><span class="nav-label">←
-                        Previous</span><span class="nav-title">Knowledge Libraries</span></a>
-                <a href="text-to-speech.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
-                        class="nav-title">Text-to-Speech</span></a>
+                <a href="text-notes.html" class="docs-nav-link prev"><span class="nav-label">←
+                        Previous</span><span class="nav-title">Text Notes</span></a>
+                <a href="voice-typing.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span
+                        class="nav-title">Voice Typing</span></a>
             </div>
         </main>
     </div>
