@@ -159,6 +159,9 @@ On Device AI collects zero user data. Specifics:
 - Cloud Providers docs: https://ondevice-ai.app/docs/cloud-providers.html
 - IM Integration docs: https://ondevice-ai.app/docs/im-integration.html
 - News archive: https://ondevice-ai.app/news/
+- Project context with notes, saved research, and transcripts: https://ondevice-ai.app/news/a-better-home-for-project-context.html
+- Siri and Shortcuts workflows for notes and speech: https://ondevice-ai.app/news/on-device-ai-shortcuts.html
+- Recording, reviewed follow-up, and approval workflows: https://ondevice-ai.app/news/from-recording-to-follow-up.html
 - Use cases: https://ondevice-ai.app/use-cases/
 - Private ChatGPT alternative: https://ondevice-ai.app/use-cases/private-chatgpt-alternative-iphone-mac.html
 - Local LLM on Apple devices: https://ondevice-ai.app/use-cases/local-llm-iphone-ipad-mac.html

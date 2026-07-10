@@ -253,6 +253,9 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows for notes,
 - Local TTS and voice workflows: https://ondevice-ai.app/use-cases/local-ai-text-to-speech-voice-cloning.html
 - Apple Vision Pro local AI: https://ondevice-ai.app/use-cases/apple-vision-pro-local-ai.html
 - News archive: https://ondevice-ai.app/news/
+- Project context with notes, saved research, and transcripts: https://ondevice-ai.app/news/a-better-home-for-project-context.html
+- Siri and Shortcuts workflows for notes and speech: https://ondevice-ai.app/news/on-device-ai-shortcuts.html
+- Recording, reviewed follow-up, and approval workflows: https://ondevice-ai.app/news/from-recording-to-follow-up.html
 - Strict zero-data architecture and App Store privacy rating: https://ondevice-ai.app/news/only-ai-app-collects-zero-data.html
 - Voice typing everywhere via keyboard extension and input method: https://ondevice-ai.app/news/voice-typing-everywhere-keyboard-extension.html
 - Brand facts: https://ondevice-ai.app/.well-known/brand-facts.json
