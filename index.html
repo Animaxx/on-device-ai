@@ -8,7 +8,7 @@
 
     <title>Private ChatGPT Alternative: Local AI for Mac, iPhone, iPad | On Device AI</title>
     <meta name="description"
-        content="Ask questions, summarize files, transcribe AI voice notes, read text aloud, search in real time, and run AI agents privately on Apple devices.">
+        content="Chat, transcribe, and listen privately on Apple devices. Turn PDFs, articles, and RSS feeds into a listening queue, and reach actions from widgets.">
     <meta name="keywords"
         content="On Device AI, local AI, private AI, offline AI, LLM, GGUF, MLX, multi-agent AI, knowledge library, voice transcription, iOS AI, macOS AI, visionOS AI, local LLM Mac, private ChatGPT alternative">
     <meta name="author" content="Zijie">
@@ -22,7 +22,7 @@
     <meta property="og:title"
         content="Private ChatGPT Alternative: Local AI for Mac, iPhone, iPad | On Device AI">
     <meta property="og:description"
-        content="Ask questions, summarize files, transcribe AI voice notes, read text aloud, search in real time, and run AI agents privately on Apple devices.">
+        content="Chat, transcribe, and listen privately on Apple devices. Turn PDFs, articles, and RSS feeds into a listening queue, and reach actions from widgets.">
     <meta property="og:image" content="https://ondevice-ai.app/images/hero_ecosystem.webp">
     <meta property="og:image:width" content="640">
     <meta property="og:image:height" content="640">
@@ -32,7 +32,7 @@
     <meta name="twitter:title"
         content="Private ChatGPT Alternative: Local AI for Mac, iPhone, iPad | On Device AI">
     <meta name="twitter:description"
-        content="Ask questions, summarize files, transcribe AI voice notes, read text aloud, search in real time, and run AI agents privately on Apple devices.">
+        content="Chat, transcribe, and listen privately on Apple devices. Turn PDFs, articles, and RSS feeds into a listening queue, and reach actions from widgets.">
     <meta name="twitter:image" content="https://ondevice-ai.app/images/hero_ecosystem.webp">
 
     <link rel="icon" type="image/png" href="images/icon.png">
@@ -48,7 +48,7 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.47.0">
     <link rel="stylesheet" href="css/animations.css">
 
     <!-- JSON-LD: SoftwareApplication -->
@@ -61,7 +61,7 @@
         "operatingSystem": ["iOS 18+", "iPadOS 18+", "macOS 15+", "visionOS 2.0+"],
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Artificial Intelligence, Local LLM Tool",
-        "description": "Private AI assistant for Apple devices with local models, Knowledge Libraries, Text Notes, Voice Notes, text-to-speech, AI Search, automation, and optional cloud providers.",
+        "description": "Private AI assistant for Apple devices with local models, a Listen Library for documents and RSS feeds, Knowledge Libraries, Text Notes, Voice Notes, text-to-speech, AI Search, widgets, automation, and optional cloud providers.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "downloadUrl": "https://apps.apple.com/app/id6497060890",
         "screenshot": "https://ondevice-ai.app/images/phone_screen.webp",
@@ -78,7 +78,12 @@
             "Tool Calling & Global Memory",
             "Shortcuts and Calendar/Reminders automation",
             "Optional cloud AI providers",
-            "IM / Chat Bot Integration (Discord, Slack, Telegram)"
+            "IM / Chat Bot Integration (Discord, Slack, Telegram)",
+            "Listen Library for documents, articles, and scanned books",
+            "RSS, Atom, and JSON feed subscriptions",
+            "On-device OCR for scanned books and photographed pages",
+            "App Help guide chat",
+            "Home-screen widgets for Listen, Voice Note, Text Note, and Quick Actions"
         ]
     }
     </script>
@@ -93,7 +98,7 @@
                 "name": "What is On Device AI and how does it work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI runs 190+ language models (Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral) directly on your iPhone, iPad, Mac, or Vision Pro using GGUF and MLX inference engines. All AI processing happens locally on your device with zero data collection."
+                    "text": "On Device AI runs 200+ language models (Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral) directly on your iPhone, iPad, Mac, or Vision Pro using GGUF and MLX inference engines. All processing happens on your device with zero data collection. No internet required for core features."
                 }
             },
             {
@@ -101,7 +106,7 @@
                 "name": "Can On Device AI work completely offline?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Once you download a model, voice transcription, document analysis, AI chat, Knowledge Libraries, vision models, and text-to-speech all work without internet. Cloud providers are available as opt-in additions but are off by default."
+                    "text": "Yes. Once you download a model, voice transcription, document analysis, AI chat, Knowledge Libraries, vision models, and text-to-speech all work without internet. Cloud AI providers are available as opt-in additions but disabled by default."
                 }
             },
             {
@@ -109,7 +114,7 @@
                 "name": "What AI models are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI supports 190+ models including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral. You can also import custom GGUF models from Hugging Face. The app uses both llama.cpp (GGUF) and MLX inference engines for broad compatibility on Apple Silicon."
+                    "text": "200+ models including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral. You can also import custom GGUF models from Hugging Face. The app uses both llama.cpp (GGUF) and MLX inference engines for broad compatibility on Apple Silicon."
                 }
             },
             {
@@ -117,7 +122,7 @@
                 "name": "How do multi-agent AI teams work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Multi-agent teams let you deploy specialized AI agents that collaborate on complex tasks. For example, a Researcher gathers information, an Analyst evaluates it, and a Writer produces the output. Each agent can use a different model and role. This runs entirely on your device."
+                    "text": "You deploy specialized AI agents that collaborate on a single task. A Researcher gathers information, an Analyst evaluates it, a Writer produces the output. Each agent can use a different model and role. The whole workflow runs locally on your device."
                 }
             },
             {
@@ -125,7 +130,7 @@
                 "name": "What devices are compatible?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI supports iOS 18+, iPadOS 18+, macOS 15+, and visionOS 2.0+. It works best on iPhone 14 and newer, iPads with 6GB or more RAM, Apple Silicon Macs, and Apple Vision Pro."
+                    "text": "iPhone 14 and newer, iPad mini 7th gen and newer, iPad Air 5th gen and newer, iPad Pro 3rd gen and newer, iPad 11th gen and newer, all Apple Silicon Macs, and Apple Vision Pro. Devices with 6GB+ RAM provide optimal performance."
                 }
             },
             {
@@ -133,7 +138,7 @@
                 "name": "Can I connect cloud AI providers?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. On Device AI supports 19+ cloud providers including OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, Nvidia, LM Studio, and Ollama. Cloud is off by default and requires explicit configuration. You can mix local and cloud models in the same conversation."
+                    "text": "Yes. On Device AI supports 19+ cloud providers including OpenAI, Anthropic Claude, Google Gemini, Groq, OpenRouter, Nvidia, LM Studio, and Ollama. Cloud is off by default and requires your explicit configuration. You can mix local and cloud models in the same conversation."
                 }
             },
             {
@@ -141,7 +146,31 @@
                 "name": "What are Knowledge Libraries?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Knowledge Libraries are project-specific document stores. Import PDFs, notes, transcripts, saved AI Search results, web captures, and images into a Library. AI Chat can answer from the material you choose while local workflows keep files on your device."
+                    "text": "Project-specific document stores. Import PDFs, notes, transcripts, saved AI Search results, web captures, and images into a Library. AI Chat can answer from the material you choose while local workflows keep files on your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Listen Library in On Device AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Listen Library turns PDFs, Markdown, text files, readable web articles, and scanned books into a private reading and listening queue. RSS Feeds sits alongside it, so you can follow RSS, Atom, and JSON sources, add articles to Up Next, keep your place, and set a sleep timer at night. Knowledge Libraries remain the place to retrieve document passages into AI Chat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is App Help?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "App Help is a focused help chat backed by the app's built-in guide. Ask in English how a feature or setting works, and it answers using the model you already have active. Help sessions stay in memory and never appear in your saved chats."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which languages does On Device AI support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The interface supports English plus Dutch, French, German, Italian, Japanese, Spanish, Portuguese, and Traditional Chinese. Widgets follow the language you select in the app. App Help answers in English."
                 }
             },
             {
@@ -149,7 +178,7 @@
                 "name": "Does On Device AI support vision models?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. On Device AI supports local vision models using both MLX and GGUF engines, plus cloud vision APIs as opt-in. You can analyze photos, screenshots, diagrams, and documents with OCR text extraction, all processed locally."
+                    "text": "Yes. Local vision models using both MLX and GGUF engines, plus cloud vision APIs as opt-in. Analyze photos, screenshots, diagrams, and documents with OCR text extraction, all processed on your device."
                 }
             },
             {
@@ -157,7 +186,7 @@
                 "name": "Is On Device AI more private than ChatGPT?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. ChatGPT sends your data to OpenAI servers for processing. On Device AI runs models directly on your hardware with zero data collection, no accounts, no analytics, and no telemetry. Your conversations never leave your device during local AI processing."
+                    "text": "Yes. ChatGPT sends your data to OpenAI's servers for processing. On Device AI runs models directly on your hardware. No data collection, no accounts, no analytics, no telemetry. Your conversations never leave your device during local processing. Cloud-first assistants can offer stronger frontier reasoning, while On Device AI prioritizes local control and offline workflows."
                 }
             },
             {
@@ -165,15 +194,15 @@
                     "name": "What private AI app can I run on Mac?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI runs 190+ models locally on Apple Silicon Macs with both GGUF and MLX engines. It includes menu bar access, global hotkeys, IM integration for Discord/Slack/Telegram, multi-agent teams, Knowledge Libraries, and the ability to serve as a remote inference server for your other Apple devices."
+                    "text": "On Device AI runs 200+ models on Apple Silicon Macs with both GGUF and MLX engines. Mac-specific features include menu bar access, global hotkeys, IM integration for Discord/Slack/Telegram, and the ability to serve as a remote inference server for your iPhone and iPad."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can On Device AI transcribe audio with speaker identification?",
+                "name": "Can it transcribe audio with speaker identification?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. On Device AI includes voice transcription with speaker diarization, which identifies who said what during meetings, interviews, and conversations. All processing happens on your device using a Whisper-based speech-to-text engine."
+                    "text": "Yes. Voice transcription includes speaker diarization, which identifies who said what during meetings, interviews, and conversations. It runs on-device using a Whisper-based speech-to-text engine. No audio is sent externally."
                 }
             },
             {
@@ -181,7 +210,7 @@
                 "name": "Does On Device AI have text-to-speech?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. On Device AI includes text-to-speech powered by the Kokoro TTS engine. It generates natural-sounding speech offline on your device. You can use it to read aloud PDFs, articles, or AI responses without internet or bandwidth limits."
+                    "text": "Yes. The Kokoro TTS engine generates natural-sounding speech offline on your device. You can read aloud PDFs, articles, or AI responses without internet. Multiple voice options are available."
                 }
             },
             {
@@ -189,7 +218,7 @@
                 "name": "What is the difference between GGUF and MLX models?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "GGUF models use llama.cpp and offer broad compatibility with the open-model ecosystem. MLX models are optimized specifically for Apple Silicon and can offer better memory efficiency. On Device AI supports both, so you can choose the best engine for your hardware and workload."
+                    "text": "GGUF models use llama.cpp and work across a wide range of hardware with broad model compatibility. MLX models are optimized for Apple Silicon and can offer better memory efficiency. On Device AI supports both, so you can pick the right engine for your device and workload."
                 }
             },
             {
@@ -197,7 +226,7 @@
                 "name": "Is there a local AI that works with Discord, Slack, and Telegram?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI includes IM chatbot integration for Discord, Slack, and Telegram on macOS. Your Mac acts as the AI inference server, so all messages are processed locally on your hardware rather than a cloud server."
+                    "text": "On Device AI includes IM chatbot integration for Discord, Slack, and Telegram on macOS. Your Mac acts as the inference server, so messages are processed locally on your hardware rather than a cloud server."
                 }
             },
             {
@@ -205,7 +234,7 @@
                 "name": "How much does On Device AI cost?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On Device AI is free to download. Core local workflows are available without an account, and Pro features are optional. Cloud providers are opt-in and may require your own third-party API credentials or provider billing."
+                    "text": "On Device AI is free to download. Local workflows can run without an account, and Pro features are optional. Cloud providers are opt-in and may require your own third-party API credentials or provider billing."
                 }
             }
         ]
@@ -285,8 +314,8 @@
                             <span class="hero-title-line1">On Device AI is</span>
                             <span class="hero-title-line2">                            <span class="hero-title-prefix">your </span><span id="rotating-text" class="hero-title-phrase gradient-private">Private Local AI Workspace.</span><span class="type-cursor">|</span></span>
                         </h1>
-                        <p class="hero-subtitle">Private workflows for iPhone, iPad, Mac, and Apple Vision Pro.</p>
-                        <p class="hero-description">Stop sending your private files, transcripts, and daily work to remote servers by default. Ask questions, organize PDFs, record speaker-labeled meetings, and trigger multi-agent actions on device. Fast, offline-ready, and private by design.</p>
+                        <p class="hero-subtitle">Chat, voice, listening, and research for iPhone, iPad, Mac, and Apple Vision Pro.</p>
+                        <p class="hero-description">Stop sending your private files, transcripts, and daily work to remote servers by default. Ask questions, organize PDFs, record speaker-labeled meetings, and turn documents and feeds into a listening queue you can take with you. Fast, offline-ready, and private by design.</p>
                         <div class="hero-badges">
                             <span class="hero-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -294,7 +323,7 @@
                                     <path
                                         d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                                 </svg>
-                                190+ Local Models
+                                200+ Local Models
                             </span>
                             <span class="hero-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -313,12 +342,11 @@
                             </span>
                             <span class="hero-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
-                                    <path d="M2 12h20" />
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
                                     <path
-                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                        d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
                                 </svg>
-                                Knowledge Agents
+                                Listen Library &amp; RSS
                             </span>
                         </div>
                         <div class="hero-cta">
@@ -327,7 +355,7 @@
                             </a>
                             <a href="docs/getting-started.html" class="btn-secondary">Start with local AI →</a>
                         </div>
-                        <p class="hero-platforms">190+ local models · No account · No analytics · Works offline after model download</p>
+                        <p class="hero-platforms">200+ local models · No account · No analytics · Works offline after model download</p>
                     </div>
                     <div class="hero-visual layered-ecosystem" role="group"
                         aria-label="App screenshots - tap to bring to front">
@@ -383,6 +411,12 @@
                             <p>Use Knowledge Libraries to ask questions across PDFs, notes, transcripts, saved searches, images, and web captures.</p>
                         </div>
                     </a>
+                    <a class="why-card glass-card" href="docs/listen-library.html">
+                        <div class="why-card-content">
+                            <h3>Listen To Documents And Feeds</h3>
+                            <p>Turn PDFs, articles, scanned books, and RSS feeds into a private reading and listening queue with Up Next and a sleep timer.</p>
+                        </div>
+                    </a>
                     <a class="why-card glass-card" href="docs/text-notes.html">
                         <div class="why-card-content">
                             <h3>Capture Private Notes</h3>
@@ -410,7 +444,13 @@
                     <a class="why-card glass-card" href="docs/shortcuts-automation.html">
                         <div class="why-card-content">
                             <h3>Automate Daily Work</h3>
-                            <p>Use Shortcuts, Siri, Calendar, and Reminders with explicit permissions and review steps.</p>
+                            <p>Use widgets, Shortcuts, Siri, Calendar, and Reminders with explicit permissions and review steps.</p>
+                        </div>
+                    </a>
+                    <a class="why-card glass-card" href="docs/widgets.html">
+                        <div class="why-card-content">
+                            <h3>Act From The Home Screen</h3>
+                            <p>Resume listening, play the next item, open RSS Feeds, or start a note from iPhone, iPad, and Mac widgets.</p>
                         </div>
                     </a>
                     <a class="why-card glass-card" href="use-cases/apple-vision-pro-local-ai.html">
@@ -427,8 +467,8 @@
         <section id="trust" class="why-section section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Clear Claims, <span class="highlight">No Credibility Theater</span></h2>
-                    <p>The site only uses proof we can point to: product docs, legal pages, screenshots, and public app surfaces.</p>
+                    <h2><span class="highlight">Claims You Can Verify</span></h2>
+                    <p>Check the product guides, privacy policy, screenshots, and public app pages behind our claims.</p>
                 </div>
                 <div class="why-grid">
                     <div class="why-card glass-card">
@@ -470,7 +510,7 @@
                             </svg>
                         </div>
                         <div class="why-card-content">
-                            <h3>190+ Local Models &amp; 19 Cloud APIs</h3>
+                            <h3>200+ Local Models &amp; 19 Cloud APIs</h3>
                             <p>Never get locked into a single ecosystem. Run Llama, DeepSeek, and Gemma directly on your device with dual GGUF and MLX engines. Need massive reasoning capabilities? Instantly switch to OpenAI, Anthropic, or 19+ other cloud APIs when connected.</p>
                         </div>
                     </div>
@@ -610,10 +650,16 @@
                         </div>
                         <div class="feature-content">
                             <h3>Professional Text-to-Speech</h3>
-                            <p>Listen to your reports, PDFs, or articles narrated offline. Kokoro TTS generates
-                                expressive, natural-sounding audio natively on your device without any external
-                                server requests or bandwidth limits.</p>
+                            <p>Turn text, documents, or a passage captured from an image into natural speech. Apple
+                                voices, Kokoro, and other on-device engines generate expressive audio locally, with
+                                no external server requests or bandwidth limits. For queued playback, the Listen
+                                Library keeps PDFs, articles, scanned books, and RSS feeds in one Up Next list.</p>
                             <a href="docs/text-to-speech.html" class="feature-link">Learn more <svg width="16"
+                                    height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></a>
+                            <a href="docs/listen-library.html" class="feature-link">Listen Library <svg width="16"
                                     height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="5" y1="12" x2="19" y2="12" />
                                     <polyline points="12 5 19 12 12 19" />
@@ -621,8 +667,39 @@
                         </div>
                     </div>
 
-                    <!-- Feature 5: Personal Knowledge Library -->
+                    <!-- Feature 5: RSS Feeds -->
                     <div class="feature-row reveal">
+                        <div class="feature-visual stacked-iphones interactive-stack" title="Click to swap images"
+                            tabindex="0" role="button">
+                            <img src="images/screenshorts/iphone_rss_feeds.webp"
+                                class="feature-img feature-img-bg shadow-sm"
+                                alt="RSS feed articles ready to read or play on iPhone" loading="lazy"
+                                width="1206" height="2622">
+                            <img src="images/screenshorts/iphone_rss_feeds_reader.webp"
+                                class="feature-img feature-img-fg shadow-lg floating-device"
+                                alt="RSS article reader with sentence highlighting and playback controls on iPhone"
+                                loading="lazy" width="1206" height="2622">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Turn Feeds Into a Listening Queue</h3>
+                            <p>Follow RSS, Atom, and JSON feeds, filter new articles, and add what matters to Up Next.
+                                Read along with sentence highlighting or keep listening through the shared player,
+                                with article processing and narration handled on your device.</p>
+                            <a href="docs/rss-feeds.html" class="feature-link">Explore RSS Feeds <svg width="16"
+                                    height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></a>
+                            <a href="docs/listen-library.html" class="feature-link">See Listen Library <svg width="16"
+                                    height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6: Personal Knowledge Library -->
+                    <div class="feature-row row-reverse reveal">
                         <div class="feature-visual stacked-macs interactive-stack" title="Click to swap images"
                             tabindex="0" role="button">
                             <img src="images/screenshorts/mac_knowledge_analyse_files.webp"
@@ -920,6 +997,9 @@
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg> Background recording</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg> Home Screen widgets for Listen, Voice Note, Text Note, and Quick Actions</li>
                         </ul>
                     </div>
                     <div class="platform-card glass-card">
@@ -944,6 +1024,9 @@
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg> Serve as remote inference server</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg> Desktop widgets for Listen, notes, and quick actions</li>
                         </ul>
                     </div>
                     <div class="platform-card glass-card">
@@ -969,6 +1052,9 @@
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg> Private AI in mixed reality</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg> Listen Library and RSS Feeds</li>
                         </ul>
                     </div>
                 </div>
@@ -998,7 +1084,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="faq-answer-inner">On Device AI runs 190+ language models (Llama 3, Gemma 3, Qwen
+                            <div class="faq-answer-inner">On Device AI runs 200+ language models (Llama 3, Gemma 3, Qwen
                                 3, DeepSeek, Phi-4, Mistral) directly on your iPhone, iPad, Mac, or Vision Pro using
                                 GGUF and MLX inference engines. All processing happens on your device with zero data
                                 collection. No internet required for core features.</div>
@@ -1030,7 +1116,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="faq-answer-inner">190+ models including Llama 3, Gemma 3, Qwen 3, DeepSeek,
+                            <div class="faq-answer-inner">200+ models including Llama 3, Gemma 3, Qwen 3, DeepSeek,
                                 Phi-4, and Mistral. You can also import custom GGUF models from Hugging Face. The app
                                 uses both llama.cpp (GGUF) and MLX inference engines for broad compatibility on Apple
                                 Silicon.</div>
@@ -1100,6 +1186,53 @@
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
+                            What is the Listen Library in On Device AI?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">The Listen Library turns PDFs, Markdown, text files, readable
+                                web articles, and scanned books into a private reading and listening queue. RSS Feeds
+                                sits alongside it, so you can follow RSS, Atom, and JSON sources, add articles to Up
+                                Next, keep your place, and set a sleep timer at night. Knowledge Libraries remain the
+                                place to retrieve document passages into AI Chat.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is App Help?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">App Help is a focused help chat backed by the app's built-in
+                                guide. Ask in English how a feature or setting works, and it answers using the model you
+                                already have active. Help sessions stay in memory and never appear in your saved chats.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Which languages does On Device AI support?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">The interface supports English plus Dutch, French, German,
+                                Italian, Japanese, Spanish, Portuguese, and Traditional Chinese. Widgets follow the
+                                language you select in the app. App Help answers in English.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
                             Does On Device AI support vision models?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -1140,7 +1273,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="faq-answer-inner">On Device AI runs 190+ models on Apple Silicon Macs with both
+                            <div class="faq-answer-inner">On Device AI runs 200+ models on Apple Silicon Macs with both
                                 GGUF and MLX engines. Mac-specific features include menu bar access, global hotkeys, IM
                                 integration for Discord/Slack/Telegram, and the ability to serve as a remote inference
                                 server for your iPhone and iPad.</div>
@@ -1234,7 +1367,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2>What <span class="highlight">Power Users</span> Are Saying</h2>
-                    <p>Real feedback from developers and privacy advocates who use On Device AI daily.</p>
+                    <p>Real feedback from power users who rely on On Device AI every day.</p>
                 </div>
                                 <div class="reviews-waterfall-container">
                     <div class="waterfall-grid">

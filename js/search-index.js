@@ -47,6 +47,34 @@ window.DOCS_SEARCH_INDEX = [
         keywords: "text-to-speech TTS Kokoro PocketTTS Apple voices speech speed auto-play export audio knowledge library history"
     },
     {
+        title: "Listen Library",
+        url: "listen-library.html",
+        section: "Core Guides",
+        content: "Listen Library is a reading and listening queue for PDFs, Markdown, plain text, HTML, RTF, readable web URLs, pasted text, saved RSS entries, and scanned books. It is separate from Knowledge Libraries, which retrieve document passages into AI Chat. The shelf shows format badges, sentence resume context, audio-ready status, and last-listened timestamps with search, filter, and sort. The reader preserves the source presentation for PDFs, Markdown, plain text, and scanned page images. Row actions include Document Info, Rename, Copy to Knowledge, Move to Knowledge, and Delete. Copy creates an independent snapshot; Move transfers the document out of Listen. Scanned books use free on-device Apple Vision OCR with page capture, organization, correction review, and a split-view reader. Up Next is a durable shared queue with Play Next and Add to Queue, app-global playback, a mini-player, and a sleep timer of 5 to 60 minutes. Word highlighting is word-exact when the engine reports word timing and falls back to sentence or page otherwise. Generated audio is cached up to 2.15 GB and managed from Listening Settings.",
+        keywords: "listen library reading listening queue PDF markdown scanned book OCR up next sleep timer resume word highlighting mini-player narration profile copy to knowledge move to knowledge generated audio cache"
+    },
+    {
+        title: "RSS Feeds",
+        url: "rss-feeds.html",
+        section: "Core Guides",
+        content: "RSS Feeds is a top-level listening workspace beside Listen Library that follows RSS 2.0, Atom, and JSON Feed subscriptions. Add Feed offers a bundled curated suggestion catalog or a direct HTTP or HTTPS feed URL; the app does not discover feeds from a website home page. Manual and foreground refresh are free, Background Refresh requires Pro. Filter entries by All, Unread, Played, or Saved. The article reader extracts full text locally with Readability.js, shows the active narration engine, and supports sentence tracking and playback speed. Add Unread, Play Next, and Add to Queue build the shared Up Next queue. Save to Shelf converts an entry into a permanent Listen Library document that stays available offline after unsubscribing.",
+        keywords: "RSS Atom JSON Feed subscriptions curated suggestions add feed background refresh unread played saved article reader readability save to shelf up next play next"
+    },
+    {
+        title: "Widgets",
+        url: "widgets.html",
+        section: "Core Guides",
+        content: "Four free widget families are available from the system widget gallery on iPhone, iPad, and Mac: Listen, Voice Note, Text Note, and Quick Actions. visionOS is not included. Listen shows playback status, progress, and an active sleep-timer countdown, and its control acts only on the first item in Up Next. Voice Note opens Apple Speech creation and waits for Record. Text Note opens a new note. Quick Actions offers Play Next, RSS Feeds, Voice Note, and New Text Note. Medium note widgets can show one to three recent notes with an optional title toggle; small, Lock Screen, StandBy, and CarPlay-safe presentations never show user titles. Widgets render read-only snapshots, use a public allowlisted URL contract, never auto-record, and follow the App Language with English fallback.",
+        keywords: "widgets home screen lock screen standby quick actions play next recent notes show titles widget privacy app language carplay macOS record voice note hotkey"
+    },
+    {
+        title: "App Help",
+        url: "app-help.html",
+        section: "Core Guides",
+        content: "App Help is a focused help chat that answers English questions about the app using the currently active model plus an immutable bundled help corpus. Find it at Menu then App Help; a one-time announcement introduces it and a New marker stays until opened, and Settings About Reset Model Suggestions and App Help replays the announcement. Sessions stay in memory, are excluded from conversation history, and New Session clears the transcript. There are no attachments, tools, roles, user Knowledge, or editable system prompt. App Help is free, unavailable while connected to a remote inference host, and answers in English only. Do not paste secrets or private document content; diagnostic reports include app version, hardware, and engine logs and omit conversation text, prompts, and attachments.",
+        keywords: "app help help assistant support feedback new session English only ephemeral session no tools remote inference host diagnostics privacy where is app help"
+    },
+    {
         title: "AI Search and Web Search",
         url: "web-search.html",
         section: "Core Guides",

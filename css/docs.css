@@ -232,6 +232,29 @@
     box-shadow: var(--shadow-sm);
 }
 
+.docs-mobile-figure {
+    margin: 32px 0 40px;
+    text-align: center;
+}
+
+.docs-mobile-figure img {
+    display: block;
+    width: min(100%, 390px);
+    height: auto;
+    margin: 0 auto 12px;
+    border: 5px solid #111827;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+}
+
+.docs-mobile-figure figcaption {
+    max-width: 52ch;
+    margin: 0 auto;
+    color: var(--text-tertiary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
 /* --- Tables --- */
 .docs-content table {
     width: 100%;

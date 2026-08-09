@@ -2,7 +2,7 @@
 
 ## Product summary
 
-On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It helps people ask questions, summarize private files, write Text Notes, record and transcribe AI Voice Notes, read books and text aloud, search the web in real time, save useful research to Knowledge Libraries, automate supported tasks, and build custom AI agents that work with personal knowledge.
+On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It helps people ask questions, summarize private files, write Text Notes, record and transcribe AI Voice Notes, turn documents and RSS feeds into a listening queue, ask App Help about features and settings, reach actions from widgets, search the web in real time, save useful research to Knowledge Libraries, automate supported tasks, and build custom AI agents that work with personal knowledge.
 
 The app is designed for users who want useful AI workflows without sending private work away by default. Local AI processing runs on the user's Apple hardware. No account is required for local workflows, and the app does not use analytics or telemetry.
 
@@ -10,13 +10,15 @@ The app is designed for users who want useful AI workflows without sending priva
 
 Headline: Get Help From AI Without Sending Your Work Away
 
-Short description: Ask questions, summarize files, transcribe AI voice notes, read text aloud, search in real time, and run AI agents privately on Apple devices.
+Short description: Chat, transcribe, and listen privately on Apple devices. Turn PDFs, articles, and RSS feeds into a listening queue, and reach actions from widgets.
 
 Category: private on-device AI assistant, local LLM app, Apple AI workspace, private AI productivity app.
 
 Platforms: iPhone, iPad, Mac, and Apple Vision Pro.
 
 Minimum operating systems: iOS 18+, iPadOS 18+, macOS 15+, visionOS 2.0+.
+
+Interface languages: English, Dutch, French, German, Italian, Japanese, Spanish, Portuguese, Traditional Chinese. App Help answers English questions only.
 
 ## Privacy facts
 
@@ -29,7 +31,7 @@ Minimum operating systems: iOS 18+, iPadOS 18+, macOS 15+, visionOS 2.0+.
 
 ## Model and inference facts
 
-- Built-in local model catalog: 190+ models.
+- Built-in local model catalog: 200+ models.
 - Custom model import: users can import compatible custom GGUF models.
 - Custom model imports are free.
 - Inference engines: GGUF through llama.cpp and MLX.
@@ -57,6 +59,14 @@ The app supports voice input and transcription workflows for notes, meetings, in
 ### Text reading and text-to-speech
 
 Users can read books, notes, PDFs, articles, and AI responses aloud with high-quality expressive voices. The app supports local text-to-speech workflows, audio preview, and audio file generation where available.
+
+### Listen Library
+
+Listen Library is a private reading and listening queue for PDFs, Markdown, plain text, readable web articles, and scanned books. Users can manage Up Next, resume from a saved position, choose Apple or supported local neural voices, and set a sleep timer. Highlighting follows exact words when the narration engine reports word timing and falls back to sentences otherwise. Listen Library is for reading and playback; Knowledge Libraries retrieve passages into AI Chat.
+
+### RSS feeds
+
+RSS Feeds is a peer workspace beside Listen Library for RSS, Atom, and JSON Feed subscriptions. Users can add feed URLs, browse curated suggestions, read articles, and send selected items to the shared Up Next queue.
 
 ### Knowledge Libraries
 
@@ -94,6 +104,14 @@ Supported models can use tools such as calculator, memory, planning helpers, sea
 
 On Device AI supports Apple Shortcuts-oriented workflows so users can create notes, open saved app content, transcribe audio files, generate speech, and connect AI actions with repeatable productivity flows.
 
+### Widgets
+
+Free Listen, Voice Note, Text Note, and Quick Actions widgets are available on iPhone, iPad, and Mac. They provide playback status and controls, note entry points, Play Next, and RSS Feeds access. Widget labels follow the selected app language.
+
+### App Help
+
+App Help is a focused help chat for English questions about features and settings. It combines bundled help knowledge with the currently active model. Sessions stay in memory and never enter saved chat history.
+
 ### IM integration on Mac
 
 On macOS, users can connect local AI workflows to messaging integrations such as Discord, Slack, and Telegram. This lets a Mac act as the local AI backend for assistant-style message workflows.
@@ -106,7 +124,7 @@ For users who want AI chat without sending sensitive prompts, files, or notes to
 
 ### Local LLM on iPhone, iPad, Mac, and Vision Pro
 
-For users who want to run Llama, Gemma, Qwen, DeepSeek, Phi, Mistral, and other local model families directly on Apple hardware. The app provides a catalog of 190+ local models and free compatible custom GGUF imports.
+For users who want to run Llama, Gemma, Qwen, DeepSeek, Phi, Mistral, and other local model families directly on Apple hardware. The app provides a catalog of 200+ local models and free compatible custom GGUF imports.
 
 ### AI Voice Notes and meeting transcription
 
@@ -120,9 +138,9 @@ For students, researchers, founders, lawyers, engineers, and knowledge workers w
 
 For users who want AI agents that understand their own materials. Knowledge Libraries provide private source material, while roles and agents define how the AI should behave.
 
-### Book and text reading
+### Private listening queue for documents and feeds
 
-For users who want articles, PDFs, notes, books, and AI responses read aloud with expressive voices. This is useful for accessibility, commuting, review, proofreading, and long-form reading.
+For users who want to read or listen to PDFs, Markdown, web articles, scanned books, and RSS feed entries while keeping a saved position and one Up Next queue. This is useful for accessibility, commuting, review, and long-form reading without turning the material into an AI summary.
 
 ### Real-time research
 
@@ -142,7 +160,7 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 
 ## Feature list
 
-- 190+ local model catalog
+- 200+ local model catalog
 - Free compatible custom GGUF model imports
 - GGUF and MLX inference support
 - Local AI chat
@@ -155,6 +173,11 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 - Text-to-speech
 - High-quality expressive voice workflows
 - Audio preview and export where supported
+- Listen Library for documents, articles, and scanned books
+- RSS, Atom, and JSON feed subscriptions
+- On-device OCR for scanned books and photographed pages
+- App Help guide chat
+- Home-screen widgets for Listen, Voice Note, Text Note, and Quick Actions
 - Knowledge Libraries
 - Text Notes
 - Saved AI Search results in Knowledge Libraries
@@ -183,11 +206,11 @@ For Apple Vision Pro users who want local AI chat and workflows adapted to spati
 
 Question: What is On Device AI?
 
-Answer: On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It runs local models on Apple hardware and supports AI chat, Text Notes, Voice Notes, transcription, document chat, text-to-speech, AI Search, Shortcuts automation, browser actions, and custom AI agents.
+Answer: On Device AI is a private AI workspace for iPhone, iPad, Mac, and Apple Vision Pro. It runs local models on Apple hardware and supports AI chat, Text Notes, Voice Notes, transcription, a Listen Library and RSS feeds, document chat, text-to-speech, App Help, widgets, AI Search, Shortcuts automation, browser actions, and custom AI agents.
 
 Question: What can I do with On Device AI?
 
-Answer: You can ask questions, summarize private files, write Text Notes, transcribe AI Voice Notes, read books and text aloud, search the web in real time, save useful research, automate supported tasks, and build custom agents that work with your personal knowledge base.
+Answer: You can ask questions, summarize private files, write Text Notes, transcribe AI Voice Notes, build a reading and listening queue from documents and feeds, ask App Help how the app works, use widgets for common actions, search the web in real time, save useful research, automate supported tasks, and build custom agents that work with your personal knowledge base.
 
 Question: Does On Device AI require an account?
 
@@ -195,7 +218,7 @@ Answer: No account is required for local AI workflows. The app also uses no anal
 
 Question: How many local models does On Device AI support?
 
-Answer: On Device AI has a built-in catalog of 190+ local models and supports compatible custom GGUF imports for free.
+Answer: On Device AI has a built-in catalog of 200+ local models and supports compatible custom GGUF imports for free.
 
 Question: Can On Device AI transcribe voice notes?
 
@@ -204,6 +227,18 @@ Answer: Yes. AI Voice Notes can record or import audio, transcribe speech, label
 Question: Can On Device AI read text aloud?
 
 Answer: Yes. On Device AI supports text-to-speech workflows for books, notes, PDFs, articles, and AI responses with high-quality expressive voices.
+
+Question: What is the Listen Library in On Device AI?
+
+Answer: The Listen Library turns PDFs, Markdown, text files, readable web articles, and scanned books into a private reading and listening queue. RSS Feeds sits alongside it, and both share Up Next, playback, narration profiles, and listening settings. Knowledge Libraries remain the place to retrieve document passages into AI Chat.
+
+Question: Can On Device AI follow RSS feeds?
+
+Answer: Yes. RSS Feeds supports RSS, Atom, and JSON Feed subscriptions, curated suggestions, article reading, and adding chosen items to the shared Up Next queue.
+
+Question: What is App Help?
+
+Answer: App Help is a focused help chat backed by the app's built-in guide and the active model. It answers English questions about features and settings, keeps sessions in memory, and never adds them to saved chat history.
 
 Question: Can On Device AI use my own documents?
 
@@ -236,14 +271,18 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows for notes,
 - Voice Notes docs: https://ondevice-ai.app/docs/voice-notes.html
 - Voice Typing docs: https://ondevice-ai.app/docs/voice-typing.html
 - Text-to-Speech docs: https://ondevice-ai.app/docs/text-to-speech.html
+- Listen Library docs: https://ondevice-ai.app/docs/listen-library.html
+- RSS Feeds docs: https://ondevice-ai.app/docs/rss-feeds.html
 - Knowledge Libraries docs: https://ondevice-ai.app/docs/knowledge-libraries.html
 - Chat Flows docs: https://ondevice-ai.app/docs/chat-flows.html
 - Roles and Personas docs: https://ondevice-ai.app/docs/roles-personas.html
 - Web Search docs: https://ondevice-ai.app/docs/web-search.html
 - Tool Calling docs: https://ondevice-ai.app/docs/tool-calling.html
 - Shortcuts and Automation docs: https://ondevice-ai.app/docs/shortcuts-automation.html
+- Widgets docs: https://ondevice-ai.app/docs/widgets.html
 - Vision Models docs: https://ondevice-ai.app/docs/vision-models.html
 - IM Integration docs: https://ondevice-ai.app/docs/im-integration.html
+- App Help docs: https://ondevice-ai.app/docs/app-help.html
 - Use cases: https://ondevice-ai.app/use-cases/
 - Private ChatGPT alternative: https://ondevice-ai.app/use-cases/private-chatgpt-alternative-iphone-mac.html
 - Local LLM on Apple devices: https://ondevice-ai.app/use-cases/local-llm-iphone-ipad-mac.html
@@ -253,6 +292,8 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows for notes,
 - Local TTS and voice workflows: https://ondevice-ai.app/use-cases/local-ai-text-to-speech-voice-cloning.html
 - Apple Vision Pro local AI: https://ondevice-ai.app/use-cases/apple-vision-pro-local-ai.html
 - News archive: https://ondevice-ai.app/news/
+- Private listening queue for documents and feeds: https://ondevice-ai.app/news/listen-library-rss-feeds.html
+- App Help and widgets: https://ondevice-ai.app/news/app-help-and-widgets.html
 - Project context with notes, saved research, and transcripts: https://ondevice-ai.app/news/a-better-home-for-project-context.html
 - Siri and Shortcuts workflows for notes and speech: https://ondevice-ai.app/news/on-device-ai-shortcuts.html
 - Recording, reviewed follow-up, and approval workflows: https://ondevice-ai.app/news/from-recording-to-follow-up.html

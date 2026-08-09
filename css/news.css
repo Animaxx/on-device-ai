@@ -237,6 +237,41 @@
     line-height: 1.55;
 }
 
+.article-screenshot-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.article-screenshot-pair .article-figure {
+    margin: 0;
+}
+
+.article-figure-mobile img {
+    border: 5px solid #111827;
+    border-radius: 26px;
+}
+
+.article-figure-centered {
+    max-width: 390px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 640px) {
+    .article-screenshot-pair {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .article-screenshot-pair .article-figure {
+        max-width: 390px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 .article-answer {
     padding: 22px 24px;
     margin: 32px 0;

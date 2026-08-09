@@ -2116,6 +2116,27 @@ h6 {
     left: 0;
 }
 
+/* Composition: paired iPhone screens */
+.stacked-iphones {
+    min-height: 500px;
+}
+.stacked-iphones .feature-img-bg,
+.stacked-iphones .feature-img-fg {
+    width: 32%;
+    border: 4px solid #111827;
+    border-radius: 28px;
+}
+.stacked-iphones .feature-img-bg {
+    top: 0;
+    left: 12%;
+    transform: rotate(-2deg);
+}
+.stacked-iphones .feature-img-fg {
+    right: 12%;
+    bottom: 0;
+    transform: rotate(2deg);
+}
+
 /* Composition: Mac with iPhone */
 .mac-with-iphone .feature-img-bg {
     width: 85%;
@@ -2177,6 +2198,26 @@ h6 {
     z-index: 10;
 }
 
+/* Swapped state for .stacked-iphones */
+.interactive-stack.stacked-iphones.swapped .feature-img-bg {
+    width: 32%;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 12%;
+    z-index: 20;
+    transform: rotate(2deg);
+}
+.interactive-stack.stacked-iphones.swapped .feature-img-fg {
+    width: 32%;
+    top: 0;
+    bottom: auto;
+    left: 12%;
+    right: auto;
+    z-index: 10;
+    transform: rotate(-2deg);
+}
+
 /* Swapped state for .mac-with-iphone */
 .interactive-stack.mac-with-iphone.swapped .feature-img-bg {
     width: 85%;
@@ -2214,6 +2255,17 @@ h6 {
     .interactive-stack.mac-with-iphone.swapped .feature-img-fg { 
         width: 35%; 
         right: 10%; 
+    }
+
+    .stacked-iphones .feature-img-bg,
+    .stacked-iphones .feature-img-fg,
+    .interactive-stack.stacked-iphones.swapped .feature-img-bg,
+    .interactive-stack.stacked-iphones.swapped .feature-img-fg {
+        width: min(32%, 210px);
+    }
+
+    .stacked-iphones {
+        min-height: 460px;
     }
 }
 

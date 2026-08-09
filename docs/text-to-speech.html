@@ -63,7 +63,7 @@
         "@type": "Organization",
         "name": "On Device AI"
     },
-    "dateModified": "2026-07-09",
+    "dateModified": "2026-08-08",
     "datePublished": "2026-04-11"
 }
     </script>
@@ -113,10 +113,26 @@
             </div>
             <div class="sidebar-section"><div class="sidebar-section-title">Getting Started</div><ul class="sidebar-nav"><li><a href="index.html">Overview</a></li><li><a href="getting-started.html">Quick Start</a></li>
                     <li><a href="../use-cases/">Use Cases</a></li></ul></div>
-            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav"><li><a href="ai-chat.html">AI Chat</a></li><li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
-                    <li><a href="text-notes.html">Text Notes</a></li><li><a href="voice-notes.html">Voice Notes</a></li><li><a href="voice-typing.html">Voice Typing</a></li><li><a href="text-to-speech.html" class="active">Text-to-Speech</a></li><li><a href="web-search.html">Web Search</a></li><li><a href="tool-calling.html">Tool Calling</a></li>
-                    <li><a href="shortcuts-automation.html">Shortcuts &amp; Automation</a></li><li><a href="vision-models.html">Vision Models</a></li><li><a href="chat-flows.html">Chat Flows</a></li><li><a href="roles-personas.html">Roles &amp; Personas</a></li><li><a href="cloud-providers.html">Cloud Providers</a></li>
-                    <li><a href="im-integration.html">IM Integration</a></li></ul></div>
+            <div class="sidebar-section"><div class="sidebar-section-title">Core Guides</div><ul class="sidebar-nav">
+                    <li><a href="ai-chat.html">AI Chat</a></li>
+                    <li><a href="knowledge-libraries.html">Knowledge Libraries</a></li>
+                    <li><a href="text-notes.html">Text Notes</a></li>
+                    <li><a href="voice-notes.html">Voice Notes</a></li>
+                    <li><a href="voice-typing.html">Voice Typing</a></li>
+                    <li><a href="text-to-speech.html" class="active">Text-to-Speech</a></li>
+                    <li><a href="listen-library.html">Listen Library</a></li>
+                    <li><a href="rss-feeds.html">RSS Feeds</a></li>
+                    <li><a href="web-search.html">Web Search</a></li>
+                    <li><a href="tool-calling.html">Tool Calling</a></li>
+                    <li><a href="shortcuts-automation.html">Shortcuts &amp; Automation</a></li>
+                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a href="vision-models.html">Vision Models</a></li>
+                    <li><a href="chat-flows.html">Chat Flows</a></li>
+                    <li><a href="roles-personas.html">Roles &amp; Personas</a></li>
+                    <li><a href="cloud-providers.html">Cloud Providers</a></li>
+                    <li><a href="im-integration.html">IM Integration</a></li>
+                    <li><a href="app-help.html">App Help</a></li>
+                </ul></div>
         </aside>
         <main class="docs-content">
             <h1>Text-to-Speech</h1>
@@ -128,6 +144,8 @@
                     <li><a href="#engines">TTS Engines</a></li>
                     <li><a href="#pockettts">PocketTTS settings</a></li>
                     <li><a href="#usage">Using TTS</a></li>
+                    <li><a href="#image-capture">Capture text from an image</a></li>
+                    <li><a href="#listen-library">Queued playback and the sleep timer</a></li>
                     <li><a href="#export">Generate &amp; Save</a></li>
                     <li><a href="#save-to-library">Save Text to a Library</a></li>
                     <li><a href="#speed">Speech Speed</a></li>
@@ -164,6 +182,16 @@
                 <li><strong>Auto-play:</strong> Enable auto-play to have every AI response spoken automatically</li>
             </ul>
 
+            <h2 id="image-capture">Capture text from an image</h2>
+            <p>Text-to-Speech can also read a passage out of a photo or an imported image. Capture pages with the camera or import images in order, and the app crops the document and then runs on-device Apple Vision OCR. Review and edit the recognized text before it replaces or is added to your draft, and select multiple separate regions when a page has more than one block worth reading. Progress is visible and the pass can be cancelled, with actionable messages when recognition fails. Source images used for OCR are transient and are not kept.</p>
+            <div class="callout callout-info">
+                <div class="callout-title">One passage or a whole book?</div>
+                <p>Use image capture here for a single passage. For a full book of photographed pages, use the scanned-book workflow in <a href="listen-library.html#scanned-books">Listen Library</a>, which keeps each page beside its spoken text.</p>
+            </div>
+
+            <h2 id="listen-library">Queued playback and the sleep timer</h2>
+            <p>This screen handles one block of text at a time. When you want a queue, <a href="listen-library.html">Listen Library</a> and <a href="rss-feeds.html">RSS Feeds</a> share a durable Up Next list, an app-global mini-player, resume-at-position tracking, word or sentence highlighting, and a sleep timer that stops playback after 5 to 60 minutes. Listen playback speed is a separate setting from the speech speed below.</p>
+
             <h2 id="export">Generate &amp; Save</h2>
             <p>From the Text to Speech tab, you can export speech to a WAV file. Tap "Generate &amp; Save" to write the audio to your device's recordings folder with a metadata sidecar (text, engine, voice, speed). Cancelling mid-export removes any partial files automatically.</p>
 
@@ -187,7 +215,7 @@
 
             <div class="docs-nav-footer">
                 <a href="voice-typing.html" class="docs-nav-link prev"><span class="nav-label">← Previous</span><span class="nav-title">Voice Typing</span></a>
-                <a href="web-search.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Web Search</span></a>
+                <a href="listen-library.html" class="docs-nav-link next"><span class="nav-label">Next →</span><span class="nav-title">Listen Library</span></a>
             </div>
         </main>
     </div>
