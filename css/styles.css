@@ -2296,63 +2296,6 @@ h6 {
     overflow: hidden;
 }
 
-/* Waterfall Container Settings */
-.reviews-waterfall-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    margin-top: 48px;
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-}
-
-.waterfall-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    height: 100%;
-}
-
-@media (min-width: 768px) {
-    .waterfall-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .waterfall-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.waterfall-col {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    animation: scroll-up linear infinite;
-    /* Increase height to fit the duplicate set of comments */
-    will-change: transform;
-}
-
-.waterfall-col:hover {
-    animation-play-state: paused;
-}
-
-/* Stagger animation durations for columns so they feel organic */
-.waterfall-grid > .waterfall-col:nth-child(1) { animation-duration: 60s; }
-.waterfall-grid > .waterfall-col:nth-child(2) { animation-duration: 75s; }
-.waterfall-grid > .waterfall-col:nth-child(3) { animation-duration: 50s; }
-
-@keyframes scroll-up {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-50%);
-    }
-}
-
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
