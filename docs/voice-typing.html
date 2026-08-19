@@ -54,6 +54,10 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"TechArticle","headline":"Voice Typing Dictation","description":"How to dictate into supported apps with On Device AI Voice Typing.","dateModified":"2026-08-08","author":{"@id":"https://ondevice-ai.app/#organization"},"publisher":{"@id":"https://ondevice-ai.app/#organization"},"mainEntityOfPage":"https://ondevice-ai.app/docs/voice-typing.html"}
+    </script>
+
     <!-- JSON-LD: Article & FAQ -->
     <script type="application/ld+json">
     {
@@ -69,6 +73,7 @@
     }]
     }
     </script>
+    <link rel="alternate" type="application/rss+xml" href="https://ondevice-ai.app/feed.xml">
 </head>
 
 <body>
@@ -79,6 +84,7 @@
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./" class="active">Docs</a></li>
+                <li><a href="../about.html">About</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
@@ -143,8 +149,8 @@
             </div>
         </aside>
         <main class="docs-content">
-            <h1>Voice Typing: Dictate Anywhere 🎙️</h1>
-            <p>We've all been there: you try using standard dictation, and you spend more time fixing bizarre typos than you saved by not typing. <strong>Voice Typing</strong> changes that. Talk naturally, and our AI perfectly formats and corrects your speech, then types it directly into whatever app you’re using.</p>
+            <h1>Voice Typing: dictate into supported apps</h1>
+            <p>Voice Typing turns speech into text and can apply a chosen cleanup, rewrite, translation, or literal profile before inserting the result into a supported app.</p>
 
             <div class="toc">
                 <div class="toc-title">On this page</div>
@@ -157,34 +163,34 @@
             </div>
 
             <h2 id="how-it-works">How It Works</h2>
-            <p>Instead of bouncing between a chat app and your workspace, On Device AI types directly onto your screen. Speech recognition can use Apple STT, Whisper, or the Parakeet EOU model (free, 35+ languages, ~150 MB download) for live dictation.</p>
+            <p>On Device AI can type the resulting text into the active supported app. Speech recognition can use Apple STT, Whisper, or supported Parakeet models for dictation.</p>
             <ol class="steps">
-                <li><strong>On your Mac:</strong> Press your configured Trigger Key (for example, <em>Fn + Command</em>). A floating bar appears. Speak your mind, then release the key. Instantly, polished text is typed right into your email, Slack, or code editor.</li>
+                <li><strong>On your Mac:</strong> Press your configured trigger key, speak, then release it. The app inserts the processed text into the active supported app.</li>
                 <li><strong>On your iPhone:</strong> Open the On Device AI Custom Keyboard in any app. Tap the microphone, and dictate straight into your messages.</li>
             </ol>
 
             <h2 id="correction-modes">Correction Modes</h2>
-            <p>Standard dictation gives you raw, often embarrassing speech-to-text. Voice Typing uses four distinct profiles to capture exactly what you meant to say:</p>
+            <p>Choose a profile based on how much you want the app to change the recognized text:</p>
             <ul>
-                <li><strong>Cleanup:</strong> Fixes typos, stutters ("um", "uh"), and rogue punctuation—but keeps your exact vocabulary and tone intact. Best for quick, everyday messaging.</li>
-                <li><strong>Rewrite:</strong> Instantly professionalizes casual speech. Say <em>"yeah, I can do it tomorrow, no worries,"</em> and it types <em>"I will have this completed by tomorrow."</em> Perfect for formal emails.</li>
-                <li><strong>Translate:</strong> Speak in your native language, and watch it fluently type out in another language. Great for fast communication with international teams.</li>
-                <li><strong>Literal:</strong> Traditional, raw speech-to-text exactly as spoken, with zero AI interference.</li>
+                <li><strong>Cleanup:</strong> Corrects common transcription and punctuation issues while preserving your wording where possible.</li>
+                <li><strong>Rewrite:</strong> Reworks casual speech into a style you choose.</li>
+                <li><strong>Translate:</strong> Produces text in a different language when the selected model supports the request.</li>
+                <li><strong>Literal:</strong> Keeps the recognized speech with minimal rewriting.</li>
             </ul>
 
             <div class="callout callout-info">
-                <div class="callout-title">ℹ️ Fast Language Switching</div>
-                <p>Dictate in Spanish? You can override your default correction profile based on the language. For example, tell the app to always apply "Translate to English" whenever it hears Spanish.</p>
+                <div class="callout-title">Language switching</div>
+                <p>You can choose a correction profile for a language, such as translating recognized Spanish into English.</p>
             </div>
 
             <h2 id="instant-short-segments">Instant Short Phrases</h2>
-            <p>If you're just replying with a few words (like "Sounds good" or "I'll be right there"), Voice Typing is smart enough to skip the heavy AI rewriting phase. It types the text instantly. This "Short segment threshold" ensures quick, natural replies remain incredibly fast, while saving the deep AI analysis for longer sentences.</p>
+            <p>For short replies, a short-segment threshold can skip the selected rewrite step. This keeps quick dictation from using a model when you do not need one.</p>
 
             <h2 id="customization">Provider Customization</h2>
-            <p>You have total control over exactly which AI model powers your writing.</p>
+            <p>Choose the local model or optional cloud provider used for a profile.</p>
             <ul>
-                <li>Use lightning-fast <strong>Local Models</strong> (like Llama 3) to process your speech entirely offline, ensuring absolute privacy for sensitive documents.</li>
-                <li>Switch to a <strong>Cloud Provider</strong> (like Claude 3 or GPT-4o) when you need advanced Rewrites and Translations.</li>
+                <li>Use a compatible <strong>local model</strong> when you want the rewrite to remain on device.</li>
+                <li>Switch to an optional <strong>cloud provider</strong> only after configuring it and reviewing its data practices.</li>
             </ul>
 
             <div class="docs-nav-footer">

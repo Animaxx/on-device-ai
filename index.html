@@ -56,6 +56,7 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
+        "@id": "https://ondevice-ai.app/#software",
         "name": "On Device AI",
         "alternateName": "On-Device AI: Private Suite",
         "url": "https://ondevice-ai.app/",
@@ -65,6 +66,7 @@
         "description": "Private AI assistant for Apple devices with local models, a Listen Library for documents and RSS feeds, Knowledge Libraries, Text Notes, Voice Notes, text-to-speech, AI Search, widgets, automation, and optional cloud providers.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "downloadUrl": "https://apps.apple.com/app/id6497060890",
+        "publisher": { "@id": "https://ondevice-ai.app/#organization" },
         "screenshot": "https://ondevice-ai.app/images/phone_screen.webp",
         "featureList": [
             "Private local AI processing",
@@ -211,7 +213,7 @@
                 "name": "Does On Device AI have text-to-speech?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. The Kokoro TTS engine generates natural-sounding speech offline on your device. You can read aloud PDFs, articles, or AI responses without internet. Multiple voice options are available."
+                    "text": "Yes. On Device AI offers three on-device text-to-speech engines: Apple Voices for built-in, multilingual speech; Kokoro TTS for neural speech after a one-time download; and PocketTTS for low-latency English speech with Pro. Use them to read PDFs, articles, or AI responses aloud without an internet connection."
                 }
             },
             {
@@ -250,7 +252,8 @@
         "url": "https://ondevice-ai.app/",
         "name": "On Device AI",
         "alternateName": "On-Device AI: Private Suite",
-        "inLanguage": "en"
+        "inLanguage": "en",
+        "publisher": { "@id": "https://ondevice-ai.app/#organization" }
     }
     </script>
     <!-- JSON-LD: Organization -->
@@ -265,6 +268,7 @@
         "contactPoint": { "@type": "ContactPoint", "email": "developer@ondevice-ai.app", "contactType": "customer support" }
     }
     </script>
+    <link rel="alternate" type="application/rss+xml" href="https://ondevice-ai.app/feed.xml">
 </head>
 
 <body>
@@ -282,8 +286,9 @@
                 <li><a href="#technology">Privacy & Tech</a></li>
                 <li><a href="#platforms">Platforms</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="docs/">Docs</a></li>
-                <li><a href="news/">News</a></li>
+                    <li><a href="docs/">Docs</a></li>
+                    <li><a href="news/">News</a></li>
+                    <li><a href="about.html">About</a></li>
                 <li>
                     <button class="theme-toggle" aria-label="Toggle theme">
                         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -512,7 +517,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Complete <span class="highlight">Model Freedom</span> &amp; Control</h2>
-                    <p>Built for developers, researchers, and professionals who need native speed, model choice, and true data privacy.</p>
+                    <p>On Device AI includes a catalog of 200+ local models through GGUF and MLX inference engines, plus 19+ optional cloud providers. Import compatible custom GGUF models when you need a model that is not in the catalog.</p>
                 </div>
                 <div class="why-grid">
                     <div class="why-card glass-card why-span-2">
@@ -524,8 +529,8 @@
                             </svg>
                         </div>
                         <div class="why-card-content">
-                            <h3>200+ Local Models &amp; 19 Cloud APIs</h3>
-                            <p>Never get locked into a single ecosystem. Run Llama, DeepSeek, and Gemma directly on your device with dual GGUF and MLX engines. Need massive reasoning capabilities? Instantly switch to OpenAI, Anthropic, or 19+ other cloud APIs when connected.</p>
+                            <h3>200+ Local Models &amp; 19+ Cloud Providers</h3>
+                            <p>Run Llama, DeepSeek, and Gemma directly on your device with GGUF and MLX engines. When a task needs an online model, configure an optional provider such as OpenAI or Anthropic.</p>
                         </div>
                     </div>
                     <div class="why-card glass-card">
@@ -576,8 +581,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2>What Can <span class="highlight">On Device AI</span> Do?</h2>
-                    <p>Powerful AI features right on your device, with no network dependency. Say goodbye to privacy
-                        concerns.</p>
+                    <p>On Device AI brings chat, document and knowledge workflows, voice transcription and notes, text-to-speech, listening, RSS feeds, research, and automation to iPhone, iPad, Mac, and Apple Vision Pro. Local workflows can run after you download a compatible model; cloud providers and web features are optional.</p>
                 </div>
                 <div class="feature-rows">
                     <!-- Feature 1: Subagents -->
@@ -744,7 +748,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Privacy-First <span class="highlight">Technology</span></h2>
-                    <p>Run leading open-source models physically on your device with complete data sovereignty, zero tracking, and absolute security.</p>
+                    <p>For local workflows, On Device AI processes chats, documents, recordings, and notes on your Apple device after you download a compatible model. Local use does not require an account, and the app does not use analytics or telemetry; cloud and web features are optional. Read the <a href="pages/privacy-policy.html">Privacy Policy</a> for how data handling changes when you enable an online service.</p>
                 </div>
                 
                 <!-- Cloud vs. Local Workflow Comparison -->
@@ -987,7 +991,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Available on All Apple Platforms</h2>
-                    <p>One app, optimized for every device in your ecosystem.</p>
+                    <p>On Device AI runs on iPhone and iPad with iOS or iPadOS 18 or later, Apple Silicon Macs with macOS 15 or later, and Apple Vision Pro with visionOS 2.0 or later. The same app adapts its workflows and controls to each device.</p>
                 </div>
                 <div class="platform-grid">
                     <div class="platform-card glass-card">
@@ -1319,9 +1323,11 @@
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="faq-answer-inner">Yes. The Kokoro TTS engine generates natural-sounding speech
-                                offline on your device. You can read aloud PDFs, articles, or AI responses without
-                                internet. Multiple voice options are available.</div>
+                            <div class="faq-answer-inner">Yes. On Device AI offers three on-device text-to-speech
+                                engines: Apple Voices for built-in, multilingual speech; Kokoro TTS for neural speech
+                                after a one-time download; and PocketTTS for low-latency English speech with Pro. Use
+                                them to read PDFs, articles, or AI responses aloud without an internet connection. See
+                                the <a href="docs/text-to-speech.html">text-to-speech guide</a> for details.</div>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -1461,6 +1467,7 @@
                     <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="docs/">Documentation</a></li>
                     <li><a href="news/">News</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <p class="footer-copy">&copy; 2026 On Device AI</p>

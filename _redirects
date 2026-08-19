@@ -1,3 +1,4 @@
-# Legacy URL redirects from old website structure
-# /privacy-policy.html    /pages/privacy-policy.html    301
-# /terms-of-use.html      /pages/terms-of-use.html      301
+# Legacy URL redirects. Deploy these as permanent redirects in the manual host.
+# Hosts that support a _redirects file can use these rules directly.
+/privacy-policy.html    /pages/privacy-policy.html    301
+/terms-of-use.html      /pages/terms-of-use.html      301

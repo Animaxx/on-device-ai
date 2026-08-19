@@ -4,7 +4,7 @@ Allow: /
 # LLM context: https://ondevice-ai.app/llms.txt
 # Full LLM context: https://ondevice-ai.app/llms-full.txt
 # Machine-readable brand facts: https://ondevice-ai.app/.well-known/brand-facts.json
-# GEO Optimization: Explicitly allow AI search crawlers
+# News feed: https://ondevice-ai.app/feed.xml
 User-agent: Googlebot
 Allow: /
 
@@ -21,6 +21,9 @@ User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: anthropic-ai

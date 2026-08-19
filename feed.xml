@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>On Device AI News</title>
+    <link>https://ondevice-ai.app/news/</link>
+    <description>Product updates and practical guides from On Device AI.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ondevice-ai.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turn Documents and Feeds Into a Private Listening Queue</title>
+      <link>https://ondevice-ai.app/news/listen-library-rss-feeds.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/listen-library-rss-feeds.html</guid>
+      <description>The new Listen Library gathers PDFs, articles, scanned books, and RSS feeds into one private place you can read or listen to, with Up Next, a sleep timer, and on-device OCR.</description>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Sun, 09 Aug 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>App Help and Faster Widgets</title>
+      <link>https://ondevice-ai.app/news/app-help-and-widgets.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/app-help-and-widgets.html</guid>
+      <description>Ask App Help how a feature works without mixing help into saved chats, and reach Listen, Voice Note, Text Note, and Quick Actions from new widgets on iPhone, iPad, and Mac.</description>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Sat, 08 Aug 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Make On Device AI Part of Your Shortcuts</title>
+      <link>https://ondevice-ai.app/news/on-device-ai-shortcuts.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/on-device-ai-shortcuts.html</guid>
+      <description>Use Siri and Shortcuts to create notes, open saved work, transcribe audio, and generate speech with On Device AI.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>From Recording to Follow-Up</title>
+      <link>https://ondevice-ai.app/news/from-recording-to-follow-up.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/from-recording-to-follow-up.html</guid>
+      <description>Turn a private recording into a transcript, reusable project context, and a reviewed next step with On Device AI.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>A Better Home for Project Context</title>
+      <link>https://ondevice-ai.app/news/a-better-home-for-project-context.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/a-better-home-for-project-context.html</guid>
+      <description>Keep notes, saved AI Search results, transcripts, and project files together in a private Knowledge Library with On Device AI.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>The Only AI App That Collects Zero Data</title>
+      <link>https://ondevice-ai.app/news/only-ai-app-collects-zero-data.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/only-ai-app-collects-zero-data.html</guid>
+      <description>While most 'private' AI apps still phone home, On Device AI has been built from the ground up on a true zero-telemetry architecture. Our App Store privacy label reads 'Data Not Collected'.</description>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>The Offline Recording and Transcription App Built for Real Notes</title>
+      <link>https://ondevice-ai.app/news/best-offline-record-transcribe-app-on-device-ai.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/best-offline-record-transcribe-app-on-device-ai.html</guid>
+      <description>On Device AI records, transcribes, labels speakers, and summarizes voice notes offline on iPhone, iPad, and Mac with Apple STT, Whisper, Parakeet, Nemotron, and Qwen3-ASR.</description>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>On-Device TTS, Voice Cloning, and Cleaner Reference Audio</title>
+      <link>https://ondevice-ai.app/news/on-device-tts-voice-cloning-enhanced-voice.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/on-device-tts-voice-cloning-enhanced-voice.html</guid>
+      <description>On Device AI adds more local text-to-speech choices, voice cloning workflows, and optional noisy-speech cleanup for reference audio on iPhone, iPad, and Mac.</description>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Speaker Diarization &amp; Meeting Transcription — On Device AI</title>
+      <link>https://ondevice-ai.app/news/speaker-diarization-meeting-transcription-on-device-ai.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/speaker-diarization-meeting-transcription-on-device-ai.html</guid>
+      <description>On Device AI turns recordings into private meeting transcripts with automatic speaker labels, tunable diarization settings, and export to text, SRT, or Markdown — all on-device.</description>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Voice Typing Everywhere: iOS Keyboard Extension &amp; macOS Input Method</title>
+      <link>https://ondevice-ai.app/news/voice-typing-everywhere-keyboard-extension.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/voice-typing-everywhere-keyboard-extension.html</guid>
+      <description>Our custom iOS keyboard extension and macOS input method bring secure, offline AI-powered voice typing with real-time Whisper transcription and smart correction modes to any application.</description>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>On Device AI Browser Agent: Private AI Web Automation for Mac &amp; iPad</title>
+      <link>https://ondevice-ai.app/news/private-browser-agent-on-device-ai-web-automation.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/private-browser-agent-on-device-ai-web-automation.html</guid>
+      <description>On Device AI Browser Agent is a private AI assistant for Mac, iPad, and iPhone that opens real websites, fills forms, and brings answers back to your chat, without sending pages to the cloud.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Multi-Agent AI on Your Device: Subagent Delegation and Parallel Workflows in On Device AI</title>
+      <link>https://ondevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/meet-your-ai-dream-team-subagent-delegation-parallel-workflows.html</guid>
+      <description>On Device AI adds two multi-agent modes: subagent delegation for expert task routing, and Chat Flow for parallel agent responses. Both run entirely on iPhone, iPad, and Mac.</description>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Supply Chain Security: Why We Built OnDeviceAI Natively</title>
+      <link>https://ondevice-ai.app/news/why-we-built-on-device-ai-natively.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/why-we-built-on-device-ai-natively.html</guid>
+      <description>Recent supply chain attacks on tools like Axios and LiteLLM expose the risks of web dependencies. See why On Device AI is built on native Apple technologies for maximum security.</description>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Private AI Autopilot for Discord, Slack &amp; Telegram | On Device AI</title>
+      <link>https://ondevice-ai.app/news/im-communication-autopilot-macos.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/im-communication-autopilot-macos.html</guid>
+      <description>Use On Device AI on macOS to run a private AI bot for Discord, Slack, and Telegram with local message processing and no cloud AI dependency.</description>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Fri, 27 Mar 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Apple's March 2026 MacBooks: Which Tier Actually Makes Sense for Local AI?</title>
+      <link>https://ondevice-ai.app/news/macbook-2026-local-ai-comparison.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/macbook-2026-local-ai-comparison.html</guid>
+      <description>Apple's March 2026 MacBook lineup—Neo, Air M5, and Pro M5 Max—covers $599 to $3,199. Here's what each tier actually delivers for on-device AI with On Device AI.</description>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Best Local Private AI Apps for iPhone, iPad &amp; Mac (2026)</title>
+      <link>https://ondevice-ai.app/news/best-local-private-ai-apps-iphone-ipad-mac-2026.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/best-local-private-ai-apps-iphone-ipad-mac-2026.html</guid>
+      <description>What makes the best local private AI apps on Apple devices in 2026? See why MLX, GGUF, offline workflows, voice, vision, and knowledge tools matter.</description>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Wed, 25 Mar 2026 00:00:00 +0000</lastBuildDate>
+    </item>
+    <item>
+      <title>Private Knowledge Workflow for PDFs, Notes &amp; Web Pages</title>
+      <link>https://ondevice-ai.app/news/private-knowledge-workflow-on-device-ai.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/private-knowledge-workflow-on-device-ai.html</guid>
+      <description>See how On Device AI turns PDFs, web pages, OCR images, and notes into a private Knowledge Library workflow with local retrieval and grounded answers.</description>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <lastBuildDate>Wed, 10 Dec 2025 00:00:00 +0000</lastBuildDate>
+    </item>
+  </channel>
+</rss>
