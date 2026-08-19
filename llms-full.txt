@@ -294,6 +294,7 @@ Answer: Yes. On Device AI supports Apple Shortcuts-oriented workflows for notes,
 - Apple Vision Pro local AI: https://ondevice-ai.app/use-cases/apple-vision-pro-local-ai.html
 - News archive: https://ondevice-ai.app/news/
 - News feed: https://ondevice-ai.app/feed.xml
+- Encrypted Knowledge Pack sharing for private knowledge bases: https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html
 - Private listening queue for documents and feeds: https://ondevice-ai.app/news/listen-library-rss-feeds.html
 - App Help and widgets: https://ondevice-ai.app/news/app-help-and-widgets.html
 - Project context with notes, saved research, and transcripts: https://ondevice-ai.app/news/a-better-home-for-project-context.html

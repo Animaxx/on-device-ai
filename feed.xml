@@ -5,8 +5,16 @@
     <link>https://ondevice-ai.app/news/</link>
     <description>Product updates and practical guides from On Device AI.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ondevice-ai.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Share a Private Knowledge Base as One Encrypted File</title>
+      <link>https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html</link>
+      <guid isPermaLink="true">https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html</guid>
+      <description>Export a Knowledge Library as an encrypted Knowledge Pack, protect it with a password, and hand it to a colleague. The recipient imports a library that is searchable immediately, with no cloud account and no re-indexing.</description>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate>
+    </item>
     <item>
       <title>Turn Documents and Feeds Into a Private Listening Queue</title>
       <link>https://ondevice-ai.app/news/listen-library-rss-feeds.html</link>

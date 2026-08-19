@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Share a Private Knowledge Base as One Encrypted File | On Device AI</title>
+    <meta name="description" content="On Device AI exports any Knowledge Library as an encrypted Knowledge Pack file you can password-protect and hand to a colleague, with no cloud account and no upload.">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css?v=1.47.0">
+    <link rel="stylesheet" href="../css/news.css?v=2">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="On Device AI">
+    <meta property="og:url" content="https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html">
+    <meta property="og:title" content="How to Share a Private Knowledge Base as One Encrypted File">
+    <meta property="og:description" content="Export a Knowledge Library as an encrypted Knowledge Pack, protect it with a password, and send it anywhere. The recipient imports a library that is searchable immediately.">
+    <meta property="og:image" content="https://ondevice-ai.app/images/hero_ecosystem.webp">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="640">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html">
+    <meta name="twitter:title" content="How to Share a Private Knowledge Base as One Encrypted File">
+    <meta name="twitter:description" content="Export a Knowledge Library as an encrypted Knowledge Pack, protect it with a password, and send it anywhere. The recipient imports a library that is searchable immediately.">
+    <meta name="twitter:image" content="https://ondevice-ai.app/images/hero_ecosystem.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Share a Private Knowledge Base as One Encrypted File",
+      "description": "On Device AI exports any Knowledge Library as an encrypted Knowledge Pack file you can password-protect and hand to a colleague, with no cloud account and no upload.",
+      "datePublished": "2026-08-19",
+      "dateModified": "2026-08-19",
+      "inLanguage": "en",
+      "keywords": ["Knowledge Pack", "knowledge base sharing", "encrypted export", "AES-256-GCM", "PBKDF2", "password protected file", "RAG index", "embeddings", "private AI", "on-device AI", "offline AI", "Apple", "iPhone", "iPad", "Mac"],
+      "author": { "@type": "Organization", "name": "On Device AI Team" },
+      "publisher": { "@type": "Organization", "name": "On Device AI", "logo": { "@type": "ImageObject", "url": "https://ondevice-ai.app/images/icon.png" } },
+      "mainEntityOfPage": "https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html",
+      "image": "https://ondevice-ai.app/images/screenshorts/library_overview.png",
+      "articleSection": "Feature announcement",
+      "isPartOf": { "@type": "Blog", "name": "On Device AI News & Blogs", "url": "https://ondevice-ai.app/news/" },
+      "about": { "@type": "SoftwareApplication", "name": "On Device AI", "applicationCategory": "Productivity", "operatingSystem": "iOS, iPadOS, macOS, visionOS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ondevice-ai.app/" },
+        { "@type": "ListItem", "position": 2, "name": "News & Blogs", "item": "https://ondevice-ai.app/news/" },
+        { "@type": "ListItem", "position": 3, "name": "How to Share a Private Knowledge Base as One Encrypted File", "item": "https://ondevice-ai.app/news/encrypted-knowledge-pack-private-sharing.html" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I share a knowledge base privately without uploading it to the cloud?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On Device AI exports a Knowledge Library as a Knowledge Pack, a single .kllib file that you deliver yourself through AirDrop, email, a messaging app, a shared drive, or a USB stick. There is no account to join and no server that holds a copy." } },
+        { "@type": "Question", "name": "Is a Knowledge Pack encrypted?", "acceptedAnswer": { "@type": "Answer", "text": "Every pack carries app-level protection, so it is not a browsable archive. When you enable the password option at export, the library contents are additionally sealed with AES-256-GCM using a key derived by PBKDF2-HMAC-SHA256 at 100,000 iterations against a fresh 16-byte random salt generated for that export." } },
+        { "@type": "Question", "name": "Does the recipient have to re-index the documents?", "acceptedAnswer": { "@type": "Answer", "text": "No. The pack carries the finished retrieval index, including the chunked text and the embedding vectors, alongside the documents. The imported library is searchable in AI Chat as soon as the import completes, with no re-processing and no network access." } },
+        { "@type": "Question", "name": "What happens if I forget the Knowledge Pack password?", "acceptedAnswer": { "@type": "Answer", "text": "The pack cannot be opened. The password is never stored in the file, on the device, or on any server, so there is no reset link and no recovery path. Keep the password somewhere durable, such as a password manager, before you send the pack." } },
+        { "@type": "Question", "name": "Which devices support Knowledge Pack export and import?", "acceptedAnswer": { "@type": "Answer", "text": "Export and import work on iPhone, iPad, and Mac. iPhone and iPad hand the file to the standard share sheet, and Mac opens a save panel so you can choose where the pack lands." } },
+        { "@type": "Question", "name": "Do I need a subscription to import a Knowledge Pack?", "acceptedAnswer": { "@type": "Answer", "text": "Free users can import one pack containing up to five documents, provided they do not already have a Knowledge Library. Importing beyond that, whether a larger pack or an additional library, requires Pro. Export itself is not gated." } }
+      ]
+    }
+    </script>
+    <link rel="alternate" type="application/rss+xml" href="https://ondevice-ai.app/feed.xml">
+</head>
+
+<body class="news-page">
+    <header class="site-header scrolled">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo"><img src="../images/icon.png" alt="On Device AI"><span>On Device AI</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#features">Features</a></li>
+                <li><a href="../docs/">Docs</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg></button></li>
+                <li><a href="https://apps.apple.com/app/id6497060890" class="nav-cta">Download</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main class="news-main">
+        <article class="container article-main">
+            <header class="article-hero">
+                <span class="news-kicker">Feature announcement</span>
+                <h1>How to Share a Private Knowledge Base as One Encrypted File</h1>
+                <div class="article-meta"><span>On Device AI Team</span><span><time datetime="2026-08-19">August 19, 2026</time></span></div>
+                <p class="article-dek">A Knowledge Library in On Device AI can leave your device as a single encrypted Knowledge Pack, protected by a password you choose, and land in a colleague's app as a library that already works.</p>
+            </header>
+
+            <div class="article-content">
+                <aside class="article-answer" aria-label="Key takeaway"><p>On Device AI exports any Knowledge Library as a Knowledge Pack: one <code>.kllib</code> file holding your documents and the finished retrieval index. Enable the password option and the contents are sealed with AES-256-GCM before the file leaves the device. Send it by AirDrop, email, or a USB drive. The recipient imports it and the library is searchable immediately, with no account, no upload, and no re-processing.</p></aside>
+
+                <section>
+                    <h2>Sharing project context usually costs you control</h2>
+                    <p>You spent a week assembling a library. Specification PDFs, a saved research page, a cleaned-up transcript, a set of notes you wrote by hand. A colleague now needs the same material. Today that leaves two options, and both are worse than they look.</p>
+                    <p>The first is a hosted workspace. Upload everything, invite the person, and accept that your project material now lives under someone else's retention policy and someone else's account system. For client work, legal review, medical notes, or unreleased product specs, that single step is often the reason the whole idea stops.</p>
+                    <p>The second is resending the raw files. Nothing leaks to a third party, but your work does not travel either. The recipient gets a folder, not a library. They have to import each file, wait for processing, and rebuild the structure you already built.</p>
+                </section>
+
+                <section>
+                    <h2>A Knowledge Pack is the library, not the folder</h2>
+                    <p>On Device AI takes a third path. Any Knowledge Library can be exported as a <strong>Knowledge Pack</strong>, a single <code>.kllib</code> file that contains the library rather than a copy of its inputs.</p>
+                    <p>Inside the pack are the documents, the library metadata, the chunked text used for retrieval, the embedding vectors for every chunk, a record of which embedding model produced them, and a manifest describing the whole thing. That last part is what makes the pack useful instead of merely portable.</p>
+                    <figure class="article-figure">
+                        <img src="../images/screenshorts/library_overview.png" alt="Knowledge Library overview in On Device AI on Mac" loading="lazy" width="2078" height="1888">
+                        <figcaption>Any library on this shelf can become a single file you hand to someone else.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>The workflow, start to finish</h2>
+                    <ol>
+                        <li><strong>Export the library</strong>
+                            <p>Open Knowledge, find the library, and choose Export. On iPhone and iPad the finished pack goes to the standard share sheet. On Mac a save panel lets you choose where it lands.</p>
+                        </li>
+                        <li><strong>Decide on a password</strong>
+                            <p>The export sheet offers <em>Require password for import</em>. It is off by default, so switch it on deliberately when the material is sensitive. Passwords need at least 8 characters and a matching confirmation, and a strength reading of Weak, Medium, or Strong updates as you type.</p>
+                        </li>
+                        <li><strong>Deliver the file</strong>
+                            <p>Because the pack is an ordinary file, the delivery channel is yours to pick: AirDrop, email, a messaging app, a shared drive, a USB stick, or a machine that never touches a network.</p>
+                        </li>
+                        <li><strong>Send the password separately</strong>
+                            <p>Use a different channel for the password than the one carrying the file. A pack in email and a password over a phone call means intercepting one gets you nothing.</p>
+                        </li>
+                        <li><strong>Import on the other side</strong>
+                            <p>The recipient chooses Import and selects the file. If the pack is password-protected the app asks for the password, and a wrong entry fails cleanly so they can try again. Import creates a new library; if the name already exists they can overwrite it or let the app pick a unique name.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>The index travels with the documents</h2>
+                    <p>This is the part that separates a Knowledge Pack from a zip file, and it is worth being precise about.</p>
+                    <p>Making documents searchable by meaning requires turning their text into embedding vectors. That work costs time, battery, and sometimes an embedding provider. A Knowledge Pack carries those vectors with it, chunk by chunk, so the receiving device performs no embedding at all. The import writes the library, its documents, and its index in one database transaction, and AI Chat can retrieve from it the moment the import finishes.</p>
+                    <p>The practical consequences: import works with no network connection, a large library opens as fast as a small one, and the recipient's retrieval results match yours rather than approximating them. Hand someone a folder of PDFs and none of that holds.</p>
+                    <p>Integrity is checked at the same time. The app computes SHA-256 hashes for the metadata, the documents, and the index before the pack is written, then verifies them after decryption. A mismatch stops the import instead of quietly loading a damaged library.</p>
+                </section>
+
+                <section>
+                    <h2>What the encryption actually does</h2>
+                    <p>Protection is layered, and only the middle layer is optional.</p>
+                    <table>
+                        <thead>
+                            <tr><th>Layer</th><th>When it applies</th><th>What it does</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>App-level protection</td><td>Always</td><td>The pack is not a browsable archive. Renaming the file will not turn it into a folder of readable JSON.</td></tr>
+                            <tr><td>Password encryption</td><td>When you enable it at export</td><td>AES-256-GCM over the library contents, with the key derived by PBKDF2-HMAC-SHA256 at 100,000 iterations against a fresh 16-byte random salt.</td></tr>
+                            <tr><td>Checksum verification</td><td>Always</td><td>SHA-256 over the metadata, documents, and index, compared on import. A mismatch refuses the import.</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Two details matter more than the algorithm names. First, the salt is generated per export, so exporting the same library twice with the same password produces two different keys and two different files. Second, the key is derived when it is needed and never written down. No copy of it sits in the pack, in the app, in the keychain, or on a server.</p>
+                    <p>The 100,000-iteration derivation is a deliberate cost. It is slow enough to make guessing a password expensive and fast enough to stay tolerable on an iPhone.</p>
+                </section>
+
+                <section>
+                    <h2>Limits worth knowing before you send one</h2>
+                    <ul>
+                        <li><strong>Password protection is opt-in.</strong> The toggle starts off. An exported pack still carries app-level protection, but if the contents are confidential, turn the password on.</li>
+                        <li><strong>There is no recovery.</strong> Forget the password and the pack is closed for good. Nothing about it exists on a server for support to reset.</li>
+                        <li><strong>You cannot un-send a pack.</strong> Revoking access is what hosted workspaces are genuinely better at. A file you handed to someone stays handed over, which is the honest cost of not needing anyone's server.</li>
+                        <li><strong>The recipient needs On Device AI.</strong> A pack is a file for this app, not a generic archive format.</li>
+                        <li><strong>Embedding models carry over.</strong> The imported library keeps the embedding identity it was built with. If that model was served by a provider the recipient has not configured, the app says so before the library is activated rather than returning weak matches, and the library can be reindexed with a local model instead.</li>
+                        <li><strong>Free tier has a ceiling.</strong> Without Pro, a device can import one pack of up to five documents and only when no library exists yet. Larger packs and additional libraries need Pro. Export is not gated.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Why this is not the same as a shared cloud knowledge base</h2>
+                    <p>Hosted knowledge tools are built around a central copy. The library becomes useful after it is uploaded, and it stays useful because the service keeps holding it. Sharing means granting access to that copy, so the material and the permission live in the same place, on infrastructure you do not run.</p>
+                    <p>On Device AI inverts the arrangement. The library is built on your device, the index is computed on your device, and sharing produces an artifact you own outright. The material moves; no permission system needs to exist; no service needs to be reachable for the recipient to read what you sent. On a plane, behind an air gap, or five years from now with the app installed offline, the pack still opens.</p>
+                    <p>That also makes a Knowledge Pack a reasonable backup. Export a library, store the file wherever you keep archives, and restore it later on any of your own devices.</p>
+                </section>
+
+                <section class="article-faq" aria-label="Frequently asked questions">
+                    <h2>Frequently asked questions</h2>
+                    <h3>Can I share a knowledge base privately without uploading it to the cloud?</h3>
+                    <p>Yes. On Device AI exports a Knowledge Library as a Knowledge Pack, a single <code>.kllib</code> file you deliver yourself through AirDrop, email, a messaging app, a shared drive, or a USB stick. There is no account to join and no server that holds a copy.</p>
+                    <h3>Is a Knowledge Pack encrypted?</h3>
+                    <p>Every pack carries app-level protection, so it is not a browsable archive. When you enable the password option at export, the library contents are additionally sealed with AES-256-GCM using a key derived by PBKDF2-HMAC-SHA256 at 100,000 iterations against a fresh 16-byte random salt generated for that export.</p>
+                    <h3>Does the recipient have to re-index the documents?</h3>
+                    <p>No. The pack carries the finished retrieval index, including the chunked text and the embedding vectors, alongside the documents. The imported library is searchable in AI Chat as soon as the import completes, with no re-processing and no network access.</p>
+                    <h3>What happens if I forget the Knowledge Pack password?</h3>
+                    <p>The pack cannot be opened. The password is never stored in the file, on the device, or on any server, so there is no reset link and no recovery path. Keep it somewhere durable, such as a password manager, before you send the pack.</p>
+                    <h3>Which devices support Knowledge Pack export and import?</h3>
+                    <p>Export and import work on iPhone, iPad, and Mac. iPhone and iPad hand the file to the standard share sheet, and Mac opens a save panel so you can choose where the pack lands.</p>
+                    <h3>Do I need a subscription to import a Knowledge Pack?</h3>
+                    <p>Free users can import one pack containing up to five documents, provided they do not already have a Knowledge Library. Importing beyond that, whether a larger pack or an additional library, requires Pro. Export itself is not gated.</p>
+                </section>
+
+                <aside class="article-cta" aria-label="Try it">
+                    <p>On Device AI runs local models on iPhone, iPad, Mac, and Vision Pro. Private by default, no account required.</p>
+                    <p><a href="https://apps.apple.com/app/id6497060890" class="nav-cta">Download On Device AI</a></p>
+                </aside>
+
+                <div class="article-signpost"><a href="index.html">← Back to News &amp; Blogs</a><a href="../docs/knowledge-libraries.html">Read the Knowledge Libraries guide →</a><a href="private-knowledge-workflow-on-device-ai.html">How the private knowledge workflow fits together →</a></div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><ul class="footer-links"><li><a href="../pages/terms-of-use.html">Terms of Use</a></li><li><a href="../pages/privacy-policy.html">Privacy Policy</a></li><li><a href="../docs/">Documentation</a></li>
+                <li><a href="../about.html">About</a></li></ul><p class="footer-copy">&copy; 2026 OnDevice-AI App.</p></div></footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
